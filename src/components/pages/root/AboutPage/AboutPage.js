@@ -178,30 +178,26 @@ const AboutPage = () => (
         <p>Typical project durations and budgets:</p>
 
         <ul>
-            <li>Development of a complex React/Next.js web app/website (for example, a custom E-commerce solution).
-                Duration: from 2 to 6 or more months. Budget:
-                from $6000 US to $24000+ US, depending on the project complexity. Conversion of an existing app
-                without adding new features takes considerably less time than developing from scratch. Time and
-                materials contract. Complete source code is provided after a milestone or the final payment has been
-                made.
+            <li>Development of a complex React/Next.js or React/Gatsby web app/website (for example, a custom E-commerce
+                solution). Duration: from 2 to 8 or more months. Budget: from $6000 US to $32000+ US, depending on the
+                project complexity. Conversion of an existing app without adding new features takes considerably less
+                time than developing from scratch. Time and materials contract. Complete source code is provided after a
+                milestone or the final payment has been made.
             </li>
             <li>Development of a static website in Gatsby/React with content provided by
-                the client. Duration: from 1 to 4 or more weeks. Budget: from $1000 US to $4000+ US, depending
-                on
-                the project complexity. Time and materials or fixed-price contract. Complete source code is
-                provided after the final payment has been made. Programmatic generation of landing pages for
-                your Gatsby website is available for an additional fee, depending on project size and
-                complexity.
+                the client. Duration: from 1 to 8 or more weeks. Budget: from $1000 US to $8000+ US, depending
+                on the project complexity. Time and materials or fixed-price contract. Complete source code is provided
+                after the final payment has been made. Programmatic generation of landing pages for your Gatsby website
+                is available for an additional fee, depending on project size and complexity.
             </li>
             <li>Development of an image-processing Node.js app (for example, an ad banner generator),
                 command-line utility, or Adobe Illustrator script. Duration: from 2 days to 4 or more weeks.
                 Budget: from $200 US to $4000+ US, depending on complexity. Time and materials or fixed-price
                 contract. Delivery of source code is subject to negotiation.
             </li>
-            <li>Project maintenance (minor enhancements, bug fixes, adding or updating content). Duration: from
-                1 hour to 1 or more weeks
-                per month. Budget: from $50 US to $1000+ US, depending on complexity. Time and materials or
-                fixed-price retainer contract. Complete source code is provided.
+            <li>Project maintenance (minor enhancements, bug fixes, adding or updating content). Duration: from 1 hour
+                to 1 or more weeks per month. Budget: from $50 US to $1000+ US, depending on complexity. Time and
+                materials or fixed-price retainer contract. Complete source code is provided.
             </li>
         </ul>
     </Page>
