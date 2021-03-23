@@ -5,7 +5,7 @@ const classNames = require('classnames');
 
 import LazyLoad from 'react-lazyload';
 
-import { useIsHovered } from 'hooks/useIsHovered';
+import useIsHovered from 'hooks/useIsHovered';
 
 import styles from './Thumbnail.module.scss';
 

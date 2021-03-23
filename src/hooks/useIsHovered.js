@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useIsHovered = () => {
+const useIsHovered = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const ref = useRef(null);
@@ -27,3 +27,5 @@ export const useIsHovered = () => {
 
     return [ref, isHovered, setIsHovered];
 };
+
+export default useIsHovered;

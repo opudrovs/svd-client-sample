@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
-import { useIsMounted } from 'hooks/useIsMounted';
+import useIsMounted from 'hooks/useIsMounted';
 
 import { isBrowser } from 'utils/SystemUtils';
 

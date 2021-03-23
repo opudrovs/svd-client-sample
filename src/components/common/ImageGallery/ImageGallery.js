@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 
 import ThumbnailsContainer from './ThumbnailsContainer/ThumbnailsContainer';
 
-import { useIsHovered } from 'hooks/useIsHovered';
+import useIsHovered from 'hooks/useIsHovered';
 
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
 
