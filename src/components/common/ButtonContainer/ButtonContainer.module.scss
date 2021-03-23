@@ -1,0 +1,71 @@
+@mixin defaultButtonColors($defaultButtonColor, $defaultTextColor, $isOutline: false) {
+    border-color: $defaultButtonColor;
+    color: $defaultTextColor;
+
+    & svg {
+        fill: $defaultTextColor;
+    }
+
+    @if not $isOutline {
+        background-color: $defaultButtonColor;
+    }
+}
+
+@mixin defaultButtonState($defaultButtonColor, $defaultTextColor, $isOutline: false) {
+    @include defaultButtonColors($defaultButtonColor, $defaultTextColor, $isOutline);
+
+    @include maxTabletBreakpoint {
+        &:hover, &:focus, &:active {
+            @include defaultButtonColors($defaultButtonColor, $defaultTextColor, $isOutline);
+        }
+    }
+}
+
+@mixin activeButtonStates($activeButtonColor, $activeTextColor, $isOutline: false) {
+    @include tabletBreakpoint {
+        &:hover {
+            border-color: $activeButtonColor;
+            color: $activeTextColor;
+
+            @if not $isOutline {
+                background-color: $activeButtonColor;
+            }
+        }
+    }
+}
+
+.button {
+    @include rem('height', 40px);
+    @include rem('padding-right', 20px);
+    @include rem('padding-left', 20px);
+    @include buttonBorder;
+    @include buttonFont;
+}
+
+.outlineButton {
+    background-color: $brandingColor1;
+}
+
+.blueButton {
+    @include defaultButtonState($brandingColor11, $brandingColor1);
+    @include activeButtonStates($brandingColor4, $brandingColor1);
+}
+
+.blueOutlineButton {
+    @include defaultButtonState($brandingColor11, $brandingColor11, true);
+    @include activeButtonStates($brandingColor4, $brandingColor4, true);
+}
+
+.greenButton {
+    @include defaultButtonState($brandingColor14, $brandingColor1);
+    @include activeButtonStates($brandingColor15, $brandingColor1);
+}
+
+.disabledButton {
+    &, &:hover, &:active, &:focus {
+        background-color: $brandingColor16;
+        border-color: $brandingColor16;
+        color: $brandingColor1;
+        pointer-events: none;
+    }
+}

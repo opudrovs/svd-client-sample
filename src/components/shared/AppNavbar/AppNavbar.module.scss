@@ -1,0 +1,72 @@
+.navbar {
+    @include maxTabletBreakpoint {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    @include tabletBreakpoint {
+        position: relative;
+        z-index: auto;
+    }
+
+    background-image: linear-gradient(to left, #667eea 0%, #764ba2 100%);
+}
+
+.navbarPadding {
+    @include remValues('padding', 10px, 15px, 10px, 15px);
+}
+
+.navbarPaddingMenu {
+    @include rem('padding-bottom', 2px);
+
+    @include tabletBreakpoint {
+        @include rem('padding-bottom', 10px);
+    }
+}
+
+.logoImage {
+    @include rem('height', 40px);
+    @include linkPadding;
+}
+
+.toggle {
+    position: absolute;
+    @include rem('top', 10px);
+    @include rem('right', 10px);
+    @include rem('padding', 8px);
+    border: none;
+
+    @include tabletBreakpoint {
+        display: none;
+    }
+
+    &:focus, &:active {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    background-color: transparent;
+}
+
+.icon > svg {
+    fill: $brandingColor1;
+    height: auto;
+}
+
+.menuIcon > svg {
+    @include rem('width', 22px);
+}
+
+.closeIcon > svg {
+    @include rem('width', 20px);
+}
+
+.modal {
+    background-color: getRgbaColorWithOpacity($brandingColor2, $navbarOverlayOpacity);
+}
