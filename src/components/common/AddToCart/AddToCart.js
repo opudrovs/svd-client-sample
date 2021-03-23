@@ -19,12 +19,7 @@ import styles from './AddToCart.module.scss';
  * AddToCart component.
  */
 
-const AddToCart = ({
-    productPassthrough,
-    productTitle,
-    externalClassName,
-    getProductLicense
-}) => {
+const AddToCart = ({ externalClassName, getProductLicense }) => {
     const selectOptions = [
         {
             value: LICENSES.COMMERCIAL.id,

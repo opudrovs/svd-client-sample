@@ -68,9 +68,9 @@ const FaqPage = () => (
             )}>3. Are payments for bundle and pack licenses
                             at {COMPANY_NAME} website secure?</span></h2>
 
-            <p>Yes, all payments are powered by safe and secure <a href="https://www.paddle.com"
-                                                                   rel="nofollow">Paddle.com</a> payment service.
-            </p>
+            <p>Yes, all payments are powered by safe and secure <a href="https://www.paddle.com" rel="nofollow">
+                Paddle.com
+            </a> payment service.</p>
 
             <p>I do not have access to any sensitive payment information. I only receive the data which is
                 required for fulfilling your order: your order number, name, email address, and the name of
