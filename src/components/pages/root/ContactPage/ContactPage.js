@@ -1,6 +1,5 @@
 import Page from 'components/shared/Page/Page';
 
-import { CONTACT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, COMPANY_EMAIL_SUPPORT, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
 import styles from './ContactPage.module.scss';

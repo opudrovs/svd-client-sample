@@ -1,6 +1,5 @@
 import Page from 'components/shared/Page/Page';
 
-import { TERMS_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
 import styles from './TermsPage.module.scss';

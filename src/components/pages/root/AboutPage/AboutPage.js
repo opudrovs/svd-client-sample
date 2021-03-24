@@ -1,6 +1,6 @@
 import Page from 'components/shared/Page/Page';
 
-import { ABOUT_PATH, COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
+import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
 import {
     COMPANY_NAME,
     COMPANY_EMAIL_JOB

@@ -2,7 +2,7 @@ import Page from 'components/shared/Page/Page';
 
 import BundlesPreview from 'components/pages/root/BundlesPageContainer/BundlesPreview/BundlesPreview';
 
-import { INDEX_PATH, ABOUT_PATH } from 'constants/NavigationConstants';
+import { ABOUT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
 import styles from './HomePage.module.scss';

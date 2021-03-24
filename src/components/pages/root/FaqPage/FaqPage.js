@@ -2,7 +2,7 @@ const classNames = require('classnames');
 
 import Page from 'components/shared/Page/Page';
 
-import { ABOUT_PATH, FAQ_PATH } from 'constants/NavigationConstants';
+import { ABOUT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
 import styles from './FaqPage.module.scss';

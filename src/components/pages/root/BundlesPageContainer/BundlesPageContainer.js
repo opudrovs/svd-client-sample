@@ -2,7 +2,6 @@ import Page from 'components/shared/Page/Page';
 
 import BundlesPreview from './BundlesPreview/BundlesPreview';
 
-import { BUNDLES_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME } from 'constants/TextConstants';
 
 import styles from './BundlesPageContainer.module.scss';
