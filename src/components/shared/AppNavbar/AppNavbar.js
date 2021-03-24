@@ -6,8 +6,8 @@ import { Navbar } from 'react-bootstrap';
 
 import Menu from './Menu/Menu';
 
-import MenuIcon from 'components/assets/icons/MenuIcon';
 import CloseIcon from 'components/assets/icons/CloseIcon';
+import MenuIcon from 'components/assets/icons/MenuIcon';
 
 import Logo from 'components/common/Logo/Logo';
 

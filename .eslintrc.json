@@ -41,6 +41,12 @@
         ],
         "object-curly-spacing": ["error", "always"],
         "array-bracket-spacing": "off",
+        "sort-imports": ["error", {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": true,
+            "ignoreMemberSort": false,
+            "allowSeparatedGroups": true
+        }],
         "react/react-in-jsx-scope": "off",
         "react/no-unescaped-entities": "off",
         "react/jsx-closing-tag-location": "off",

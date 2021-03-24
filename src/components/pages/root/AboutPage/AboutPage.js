@@ -4,8 +4,8 @@ import Page from 'components/shared/Page/Page';
 
 import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
 import {
-    COMPANY_NAME,
-    COMPANY_EMAIL_JOB
+    COMPANY_EMAIL_JOB,
+    COMPANY_NAME
 } from 'constants/TextConstants';
 
 import styles from './AboutPage.module.scss';

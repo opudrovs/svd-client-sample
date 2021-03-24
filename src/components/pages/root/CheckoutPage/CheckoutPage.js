@@ -1,6 +1,6 @@
 import Page from 'components/shared/Page/Page';
 
-import { COMPANY_NAME, COMPANY_EMAIL_SUPPORT } from 'constants/TextConstants';
+import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/TextConstants';
 
 import styles from './CheckoutPage.module.scss';
 

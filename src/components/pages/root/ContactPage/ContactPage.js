@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import Page from 'components/shared/Page/Page';
 
-import { COMPANY_NAME, COMPANY_EMAIL_SUPPORT, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
+import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
 import styles from './ContactPage.module.scss';
 

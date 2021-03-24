@@ -1,4 +1,5 @@
 import NextHead from 'next/head';
+
 import PropTypes from 'prop-types';
 
 import CookieConsent from 'react-cookie-consent';

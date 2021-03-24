@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+
 import PropTypes from 'prop-types';
 
 import NextHead from 'next/head';
@@ -24,24 +25,24 @@ import {
     CDN_ROOT,
     SCREENSHOT_IMAGE_FORMAT
 } from 'constants/AssetConstants';
+import { LICENSES } from 'constants/CheckoutConstants';
 import { PACK_DATA_SEAMLESS_MODE_FULL } from 'constants/DataConstants';
 import {
     BUNDLE_PATH,
-    PACK_PATH,
+    COMPANY_WEBSITE_URL,
     INDEX_PATH,
-    COMPANY_WEBSITE_URL
+    PACK_PATH
 } from 'constants/NavigationConstants';
-import { LICENSES } from 'constants/CheckoutConstants';
 import {
-    COMPANY_NAME,
-    PRODUCT_META_DESCRIPTION_END,
     COLOR_DESCRIPTION_SOLIDS_NAMED,
+    COLOR_LIST_SOLIDS_NAMED,
     COLOR_LIST_TITLE_SOLIDS_NAMED,
-    COLOR_LIST_SOLIDS_NAMED
+    COMPANY_NAME,
+    PRODUCT_META_DESCRIPTION_END
 } from 'constants/TextConstants';
 
 import { partitionArray } from 'utils/ArrayUtils';
-import { getBundleLicense, getPackLicense, getFormattedPrice } from 'utils/CheckoutUtils';
+import { getBundleLicense, getFormattedPrice, getPackLicense } from 'utils/CheckoutUtils';
 import { mapScreenshotToImageDataObject } from 'utils/DataUtils';
 import { convertDataStringToHtml } from 'utils/StringUtils';
 

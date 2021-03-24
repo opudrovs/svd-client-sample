@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
@@ -11,7 +12,7 @@ import { LICENSES } from 'constants/CheckoutConstants';
 import { SECURE_CHECKOUT } from 'constants/TextConstants';
 import { BUTTON_THEME_GREEN } from 'constants/UiConstants';
 
-import { getFormattedPrice, getFormattedDiscount } from 'utils/CheckoutUtils';
+import { getFormattedDiscount, getFormattedPrice } from 'utils/CheckoutUtils';
 
 import styles from './AddToCart.module.scss';
 
