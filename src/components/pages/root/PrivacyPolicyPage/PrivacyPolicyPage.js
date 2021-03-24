@@ -17,7 +17,6 @@ const PrivacyPolicyPage = () => (
     <Page
         seoTitle={`Privacy Policy - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={PRIVACY_POLICY_PATH}
     >
         <h1 className={styles.title}>{COMPANY_NAME} Privacy Policy</h1>
 

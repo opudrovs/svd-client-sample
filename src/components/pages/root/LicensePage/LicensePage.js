@@ -17,7 +17,6 @@ const LicensePage = () => (
     <Page
         seoTitle={`Licenses - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={LICENSE_PATH}
     >
         <h1 className={styles.title}>{COMPANY_NAME} Licenses</h1>
 

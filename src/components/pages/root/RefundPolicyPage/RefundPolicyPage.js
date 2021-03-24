@@ -14,7 +14,6 @@ const RefundPolicyPage = () => (
     <Page
         seoTitle={`Refund Policy - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={REFUND_POLICY_PATH}
     >
         <h1 className={styles.title}>{COMPANY_NAME} Refund Policy</h1>
 

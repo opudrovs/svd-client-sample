@@ -17,7 +17,6 @@ const AboutPage = () => (
     <Page
         seoTitle={`React (Next.js or Gatsby) website development, graphic design automation, programmatic SEO - ${COMPANY_NAME}`}
         seoDescription="Custom software development services."
-        pathname={ABOUT_PATH}
         externalContentClassName={styles.content}
     >
         <h1 className={styles.title}>Custom Software Development Services</h1>

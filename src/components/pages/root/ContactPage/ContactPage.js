@@ -14,7 +14,6 @@ const ContactPage = () => (
     <Page
         seoTitle={`Contact Information - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={CONTACT_PATH}
         externalContentClassName={styles.content}
     >
         <h1 className={styles.title}>Contact Information</h1>

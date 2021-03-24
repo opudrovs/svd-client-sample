@@ -16,7 +16,6 @@ const FaqPage = () => (
     <Page
         seoTitle={`Frequently Asked Questions - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={FAQ_PATH}
         externalContentClassName={styles.content}
     >
         <h1 className={styles.title}>Frequently Asked Questions</h1>

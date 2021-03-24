@@ -18,7 +18,6 @@ const BundlesPageContainer = () => (
     <Page
         seoTitle={`Graphic Design Bundles - ${COMPANY_NAME}`}
         seoDescription="Huge affordable graphic design bundles with a commercial or print-on-demand license."
-        pathname={BUNDLES_PATH}
     >
         <main className="row">
             <div className="col-12">

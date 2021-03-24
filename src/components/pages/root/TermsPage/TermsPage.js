@@ -14,7 +14,6 @@ const TermsPage = () => (
     <Page
         seoTitle={`Terms of Service - ${COMPANY_NAME}`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={TERMS_PATH}
         externalContentClassName={styles.content}
     >
         <h1 className={styles.title}>{COMPANY_NAME} Terms of Service</h1>

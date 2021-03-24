@@ -18,7 +18,6 @@ const HomePage = () => (
     <Page
         seoTitle={`${COMPANY_NAME} - Large Professional High-Quality Background Bundles`}
         seoDescription={PRODUCT_META_DESCRIPTION_END}
-        pathname={INDEX_PATH}
     >
         <main className="row">
             <div className="col-12">

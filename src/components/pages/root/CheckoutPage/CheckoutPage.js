@@ -16,7 +16,6 @@ const CheckoutPage = () => {
         <Page
             seoTitle={`Secure Checkout - ${COMPANY_NAME}`}
             seoDescription=""
-            pathname={CHECKOUT_PATH}
             externalContentClassName={styles.content}
         >
             <h1 className={styles.title}>Your Cart</h1>
