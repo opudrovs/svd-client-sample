@@ -25,7 +25,7 @@ import styles from './AppNavbar.module.scss';
  * Contains the logo and navigation menu of the application.
  */
 
-const AppNavbar = ({ pathname }) => {
+const AppNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     /**
@@ -66,7 +66,7 @@ const AppNavbar = ({ pathname }) => {
                                 id="basic-navbar-nav"
                                 className="col justify-content-start justify-content-md-end"
                             >
-                                <Menu pathname={pathname} />
+                                <Menu />
                             </Navbar.Collapse>
                             <Navbar.Toggle
                                 aria-controls="basic-navbar-nav"
@@ -101,10 +101,6 @@ const AppNavbar = ({ pathname }) => {
             />}
         </>
     );
-};
-
-AppNavbar.propTypes = {
-    pathname: PropTypes.string
 };
 
 export default AppNavbar;

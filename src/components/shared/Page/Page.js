@@ -20,7 +20,6 @@ const Page = ({
     children,
     seoTitle,
     seoDescription,
-    pathname,
     isContentMain,
     topComponent,
     externalContentClassName
@@ -31,13 +30,10 @@ const Page = ({
         <>
             <NextHead>
                 <title>{seoTitle}</title>
-                <meta
-                    name="description"
-                    content={seoDescription}
-                />
+                <meta name="description" content={seoDescription} />
             </NextHead>
             <div className={styles.page}>
-                <AppNavbar pathname={pathname} />
+                <AppNavbar />
                 {topComponent}
                 <ContentTag className={classNames(
                     'container',
@@ -56,7 +52,6 @@ Page.propTypes = {
     children: PropTypes.node,
     seoTitle: PropTypes.string,
     seoDescription: PropTypes.string,
-    pathname: PropTypes.string,
     isContentMain: PropTypes.bool,
     topComponent: PropTypes.element,
     externalContentClassName: PropTypes.string

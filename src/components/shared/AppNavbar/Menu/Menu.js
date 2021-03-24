@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+
+import { useRouter } from 'next/router';
 
 const classNames = require('classnames');
 
@@ -23,26 +26,31 @@ const links = [
 
 ];
 
-const Menu = ({ pathname, externalClassName }) => (
-    <Nav
-        className={classNames(
-            'navbar-nav align-items-center justify-content-between',
-            externalClassName
-        )}
-    >
-        {links.map(({ href, text }, index) => (
-            <MenuNavLink
-                key={`nav-link-${index}`}
-                href={href}
-                text={text}
-                isActive={pathname === href}
-            />
-        ))}
-    </Nav>
-);
+const Menu = ({ externalClassName }) => {
+    const router = useRouter();
+
+    const pathname = router ? router.pathname : '';
+
+    return (
+        <Nav
+            className={classNames(
+                'navbar-nav align-items-center justify-content-between',
+                externalClassName
+            )}
+        >
+            {links.map(({ href, text }, index) => (
+                <MenuNavLink
+                    key={`nav-link-${index}`}
+                    href={href}
+                    text={text}
+                    isActive={pathname === href}
+                />
+            ))}
+        </Nav>
+    );
+};
 
 Menu.propTypes = {
-    pathname: PropTypes.string,
     externalClassName: PropTypes.string
 };
 
