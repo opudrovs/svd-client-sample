@@ -158,7 +158,7 @@ const AboutPage = () => (
             You</h2>
 
         <p>If you are a hobbyist/crafter/agency, you can order a pack of SVG/PNG/JPG backgrounds or clip art
-            images based on your image templates and a list of colors (yours or mine).</p>
+            images based on your image templates and a list of colors, which can be provided by you or me.</p>
 
         <p>My proprietary scripts and utilities can handle recoloring and resizing of hundreds of thousands of
             images within a single task running in the background.</p>
@@ -184,18 +184,18 @@ const AboutPage = () => (
                 milestone or the final payment has been made.
             </li>
             <li>Development of a static website in Gatsby/React with content provided by
-                the client. Duration: from 1 to 4 or more weeks. Budget: from $1200 US to $6000+ US, depending
+                the client. Duration: from 1 week to 2 or more months. Budget: from $1200 US to $10000+ US, depending
                 on the project complexity. Time and materials or fixed-price contract. Complete source code is provided
                 after the final payment has been made. Programmatic generation of landing pages for your Gatsby website
                 is available for an additional fee, depending on project size and complexity.
             </li>
             <li>Development of an image-processing Node.js app (for example, an ad banner generator),
-                command-line utility, or Adobe Illustrator script. Duration: from 2 days to 4 or more weeks.
+                a command-line utility, or an Adobe Illustrator script. Duration: from 2 days to 4 or more weeks.
                 Budget: from $200 US to $5000+ US, depending on complexity. Time and materials or fixed-price
                 contract. Delivery of source code is subject to negotiation.
             </li>
             <li>Project maintenance (minor enhancements, bug fixes, adding or updating content). Duration: from 1 hour
-                to 1 or more weeks per month. Budget: from $50 US to $1200+ US, depending on complexity. Time and
+                to 1 or more weeks per month. Budget: from $50 US to $1200+ US per month, depending on complexity. Time and
                 materials or fixed-price retainer contract. Complete source code is provided.
             </li>
         </ul>
