@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import ErrorMessage from 'components/common/ErrorMessage/ErrorMessage';
@@ -26,4 +27,4 @@ ErrorPage.propTypes = {
     errorMessage: PropTypes.string.isRequired
 };
 
-export default ErrorPage;
+export default memo(ErrorPage);

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Page from 'components/shared/Page/Page';
 
 import {
@@ -23,4 +25,4 @@ const PrivacyPolicyPage = () => (
     </Page>
 );
 
-export default PrivacyPolicyPage;
+export default memo(PrivacyPolicyPage);

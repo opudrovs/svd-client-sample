@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Page from 'components/shared/Page/Page';
 
 import { COMPANY_NAME, COMPANY_EMAIL_SUPPORT, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
@@ -24,4 +26,4 @@ const ContactPage = () => (
     </Page>
 );
 
-export default ContactPage;
+export default memo(ContactPage);

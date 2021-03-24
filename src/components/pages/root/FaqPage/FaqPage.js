@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const classNames = require('classnames');
 
 import Page from 'components/shared/Page/Page';
@@ -244,4 +246,4 @@ const FaqPage = () => (
     </Page>
 );
 
-export default FaqPage;
+export default memo(FaqPage);

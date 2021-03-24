@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
@@ -26,4 +27,4 @@ ErrorMessage.propTypes = {
     externalClassName: PropTypes.string
 };
 
-export default ErrorMessage;
+export default memo(ErrorMessage);

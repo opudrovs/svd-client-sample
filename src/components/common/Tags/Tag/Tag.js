@@ -1,9 +1,10 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Tag.module.scss';
 
 /**
- * Tag.
+ * Tag component.
  */
 
 const Tag = ({ text }) => (
@@ -14,4 +15,4 @@ Tag.propTypes = {
     text: PropTypes.string.isRequired
 };
 
-export default Tag;
+export default memo(Tag);

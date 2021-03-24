@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Page from 'components/shared/Page/Page';
 
 import styles from './PackPageContainer.module.scss';
@@ -18,4 +20,4 @@ const PackPageContainer = () => (
     </Page>
 );
 
-export default PackPageContainer;
+export default memo(PackPageContainer);

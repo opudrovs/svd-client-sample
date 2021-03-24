@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Page from 'components/shared/Page/Page';
 
 import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
@@ -202,4 +204,4 @@ const AboutPage = () => (
     </Page>
 );
 
-export default AboutPage;
+export default memo(AboutPage);

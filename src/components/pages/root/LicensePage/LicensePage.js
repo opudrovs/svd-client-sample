@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import Page from 'components/shared/Page/Page';
 
 import {
@@ -23,4 +25,4 @@ const LicensePage = () => (
     </Page>
 );
 
-export default LicensePage;
+export default memo(LicensePage);

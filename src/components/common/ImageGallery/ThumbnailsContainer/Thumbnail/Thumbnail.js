@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
@@ -78,4 +78,4 @@ Thumbnail.propTypes = {
     onClickHandler: PropTypes.func.isRequired
 };
 
-export default Thumbnail;
+export default memo(Thumbnail);

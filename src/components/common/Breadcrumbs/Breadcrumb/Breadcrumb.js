@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
@@ -21,4 +22,4 @@ Breadcrumb.propTypes = {
     url: PropTypes.string
 };
 
-export default Breadcrumb;
+export default memo(Breadcrumb);

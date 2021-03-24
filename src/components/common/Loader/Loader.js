@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
@@ -61,4 +61,4 @@ Loader.defaultProps = {
     isOnButton: false
 };
 
-export default Loader;
+export default memo(Loader);
