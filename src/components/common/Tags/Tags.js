@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
-import Tag from './Tag/Tag';
+import Tag from './Tag';
 
 import styles from './Tags.module.scss';
 

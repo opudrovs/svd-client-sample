@@ -1,4 +1,4 @@
-import TermsPage from 'components/pages/root/TermsPage/TermsPage';
+import TermsPage from 'components/pages/root/TermsPage';
 
 const Terms = () => <TermsPage />;
 

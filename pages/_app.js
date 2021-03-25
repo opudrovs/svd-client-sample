@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import CookieConsent from 'react-cookie-consent';
 
-import ErrorPage from 'components/pages/root/ErrorPage/ErrorPage';
+import ErrorPage from 'components/pages/root/ErrorPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css/normalize.css';

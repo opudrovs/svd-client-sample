@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
-import Button from './Button/Button';
-import LinkButton from './LinkButton/LinkButton';
+import Button from './Button';
+import LinkButton from './LinkButton';
 
 import { BUTTON_THEME_BLUE, BUTTON_THEME_GREEN } from 'constants/UiConstants';
 

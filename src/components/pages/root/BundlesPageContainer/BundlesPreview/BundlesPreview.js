@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
-import BundlePreview from './BundlePreview/BundlePreview';
+import BundlePreview from './BundlePreview';
 
 import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/AssetConstants';
 import { LICENSES } from 'constants/CheckoutConstants';

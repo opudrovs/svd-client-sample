@@ -6,13 +6,13 @@ const classNames = require('classnames');
 
 import LazyLoad from 'react-lazyload';
 
-import ThumbnailsContainer from './ThumbnailsContainer/ThumbnailsContainer';
+import ThumbnailsContainer from './ThumbnailsContainer';
 
 import useIsHovered from 'hooks/useIsHovered';
 
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
 
-import Loader from 'components/common/Loader/Loader';
+import Loader from 'components/common/Loader';
 
 import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
 

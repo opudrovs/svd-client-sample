@@ -1,4 +1,4 @@
-import BundlePageContainer from 'components/pages/bundle/BundlePageContainer/BundlePageContainer';
+import BundlePageContainer from 'components/pages/bundle/BundlePageContainer';
 
 import { API_ROUTE_BUNDLE_PREVIEW } from 'constants/ApiConstants';
 import { errorMessages } from 'constants/MessageConstants';

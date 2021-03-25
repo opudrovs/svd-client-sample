@@ -4,8 +4,8 @@ import NextHead from 'next/head';
 
 const classNames = require('classnames');
 
-import AppNavbar from 'components/shared/AppNavbar/AppNavbar';
-import Footer from 'components/shared/Footer/Footer';
+import AppNavbar from 'components/shared/AppNavbar';
+import Footer from 'components/shared/Footer';
 
 import styles from './Page.module.scss';
 

@@ -1,6 +1,6 @@
-import BundlesPreview from './BundlesPreview/BundlesPreview';
+import BundlesPreview from './BundlesPreview';
 
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 import { COMPANY_NAME } from 'constants/TextConstants';
 

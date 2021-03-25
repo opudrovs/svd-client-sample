@@ -1,4 +1,4 @@
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/TextConstants';
 

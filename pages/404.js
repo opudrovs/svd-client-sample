@@ -1,4 +1,4 @@
-import ErrorPage from 'components/pages/root/ErrorPage/ErrorPage';
+import ErrorPage from 'components/pages/root/ErrorPage';
 
 import { errorMessages } from 'constants/MessageConstants';
 

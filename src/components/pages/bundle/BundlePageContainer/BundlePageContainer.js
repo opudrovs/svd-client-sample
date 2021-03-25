@@ -11,15 +11,15 @@ const htmlParser = require('html-react-parser');
 import Collapse, { Panel } from 'rc-collapse';
 import Tippy from '@tippyjs/react';
 
-import AddToCart from 'components/common/AddToCart/AddToCart';
-import Breadcrumbs from 'components/common/Breadcrumbs/Breadcrumbs';
-import ErrorMessage from 'components/common/ErrorMessage/ErrorMessage';
-import ImageGallery from 'components/common/ImageGallery/ImageGallery';
-import Tags from 'components/common/Tags/Tags';
+import AddToCart from 'components/common/AddToCart';
+import Breadcrumbs from 'components/common/Breadcrumbs';
+import ErrorMessage from 'components/common/ErrorMessage';
+import ImageGallery from 'components/common/ImageGallery';
+import Tags from 'components/common/Tags';
 
-import PackPreview from 'components/pages/bundle/BundlePageContainer/PackPreview/PackPreview';
+import PackPreview from 'components/pages/bundle/BundlePageContainer/PackPreview';
 
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 import {
     CDN_ROOT,

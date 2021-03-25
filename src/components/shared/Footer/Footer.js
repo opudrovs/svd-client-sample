@@ -2,10 +2,10 @@ const classNames = require('classnames');
 
 import InstagramIcon from 'components/assets/icons/InstagramIcon';
 
-import Logo from 'components/common/Logo/Logo';
+import Logo from 'components/common/Logo';
 
-import FooterLink from './FooterLink/FooterLink';
-import FooterLinkGroup from './FooterLinkGroup/FooterLinkGroup';
+import FooterLink from './FooterLink';
+import FooterLinkGroup from './FooterLinkGroup';
 
 import * as urls from 'constants/ExternalUrlConstants';
 import * as paths from 'constants/NavigationConstants';

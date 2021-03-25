@@ -2,9 +2,9 @@ import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
-import ErrorMessage from 'components/common/ErrorMessage/ErrorMessage';
+import ErrorMessage from 'components/common/ErrorMessage';
 
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 /**
  * Custom Error page.

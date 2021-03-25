@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
-import Thumbnail from './Thumbnail/Thumbnail';
+import Thumbnail from './Thumbnail';
 
 import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
 

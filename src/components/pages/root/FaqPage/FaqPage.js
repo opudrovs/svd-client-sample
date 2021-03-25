@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 const classNames = require('classnames');
 
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 import { ABOUT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';

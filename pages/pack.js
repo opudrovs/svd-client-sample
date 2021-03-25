@@ -1,4 +1,4 @@
-import PackPageContainer from 'components/pages/pack/PackPageContainer/PackPageContainer';
+import PackPageContainer from 'components/pages/pack/PackPageContainer';
 
 const Pack = () => <PackPageContainer />;
 

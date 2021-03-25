@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import Page from 'components/shared/Page/Page';
+import Page from 'components/shared/Page';
 
 import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
 import {

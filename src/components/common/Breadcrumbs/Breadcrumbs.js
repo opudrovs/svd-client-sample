@@ -6,7 +6,7 @@ import NextHead from 'next/head';
 
 const classNames = require('classnames');
 
-import Breadcrumb from './Breadcrumb/Breadcrumb';
+import Breadcrumb from './Breadcrumb';
 
 import { COMPANY_WEBSITE_URL, INDEX_PATH } from 'constants/NavigationConstants';
 

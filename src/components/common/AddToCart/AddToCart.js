@@ -6,7 +6,7 @@ const classNames = require('classnames');
 
 import ReactSelect from 'react-select';
 
-import ButtonContainer from 'components/common/ButtonContainer/ButtonContainer';
+import ButtonContainer from 'components/common/ButtonContainer';
 
 import { LICENSES } from 'constants/CheckoutConstants';
 import { SECURE_CHECKOUT } from 'constants/TextConstants';

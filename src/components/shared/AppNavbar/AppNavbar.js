@@ -4,14 +4,14 @@ const classNames = require('classnames');
 
 import { Navbar } from 'react-bootstrap';
 
-import Menu from './Menu/Menu';
+import Menu from './Menu';
 
 import CloseIcon from 'components/assets/icons/CloseIcon';
 import MenuIcon from 'components/assets/icons/MenuIcon';
 
-import Logo from 'components/common/Logo/Logo';
+import Logo from 'components/common/Logo';
 
-import Modal from 'components/dialogs/Modal/Modal';
+import Modal from 'components/dialogs/Modal';
 
 import * as paths from 'constants/NavigationConstants';
 import { BOOTSTRAP_RESET } from 'constants/UiConstants';

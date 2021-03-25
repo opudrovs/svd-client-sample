@@ -1,4 +1,4 @@
-import AboutPage from 'components/pages/root/AboutPage/AboutPage';
+import AboutPage from 'components/pages/root/AboutPage';
 
 const About = () => <AboutPage />;
 

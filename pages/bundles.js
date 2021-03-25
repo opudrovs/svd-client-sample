@@ -1,4 +1,4 @@
-import BundlesPageContainer from 'components/pages/root/BundlesPageContainer/BundlesPageContainer';
+import BundlesPageContainer from 'components/pages/root/BundlesPageContainer';
 
 const Bundles = () => <BundlesPageContainer />;
 

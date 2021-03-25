@@ -6,7 +6,7 @@ const classNames = require('classnames');
 
 import { Nav } from 'react-bootstrap';
 
-import MenuNavLink from './MenuNavLink/MenuNavLink';
+import MenuNavLink from './MenuNavLink';
 
 import * as paths from 'constants/NavigationConstants';
 
