@@ -26,7 +26,7 @@ import styles from './BundlesPreview.module.scss';
 
 
 /**
- * Bundles preview.
+ * Bundles preview component.
  */
 
 const BundlesPreview = ({ data, externalClassName }) => (

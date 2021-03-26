@@ -14,7 +14,7 @@ import styles from './Breadcrumb.module.scss';
 
 
 /**
- * Breadcrumb.
+ * Breadcrumb component.
  */
 
 const Breadcrumb = ({ text, url }) => (

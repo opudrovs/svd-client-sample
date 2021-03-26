@@ -12,7 +12,7 @@ import styles from './FooterLink.module.scss';
 
 
 /**
- * Footer link.
+ * Footer link component.
  * Allows to navigate to a page.
  */
 

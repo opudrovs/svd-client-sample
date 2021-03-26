@@ -21,7 +21,7 @@ import styles from './PackPreview.module.scss';
 
 
 /**
- * Pack preview.
+ * Pack preview component.
  */
 
 const PackPreview = ({

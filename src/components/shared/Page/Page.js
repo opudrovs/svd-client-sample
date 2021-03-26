@@ -23,7 +23,7 @@ import styles from './Page.module.scss';
 /**
  * Page component.
  * A shared component (repeats across multiple pages).
- * Can wrap other shared components (`<head>` contents and footer) on a page.
+ * Can wrap other shared components (header and footer) on a page.
  * Other shared components can also be used without the Page component.
  */
 

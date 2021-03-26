@@ -32,7 +32,7 @@ const links = [
 
 
 /**
- * Main menu.
+ * Main menu component.
  * Contains navigation links.
  */
 

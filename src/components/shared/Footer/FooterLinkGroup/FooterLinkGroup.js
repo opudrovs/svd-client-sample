@@ -12,7 +12,7 @@ import styles from './FooterLinkGroup.module.scss';
 
 
 /**
- * Footer link group.
+ * Footer link group component.
  * Groups footer links together.
  */
 

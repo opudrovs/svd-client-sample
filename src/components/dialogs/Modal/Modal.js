@@ -50,8 +50,7 @@ const enableDocumentScrolling = (isEnabled) => {
 /**
  * Modal dialog component.
  * Creates a modal dialog which accepts content as the `children` prop.
- * The modal can be closed with the Close button, which invokes the `onCloseHandler` prop when clicked.
- * The modal has `fixed` CSS position, thus is removed from the normal document flow, and overlays the page content.
+ * The modal has `fixed` CSS position, and  thus is removed from the normal document flow, and overlays the page content.
  * The modal's parent component is responsible for rendering and closing it if needed.
  * The modal component cannot render or close itself.
  * It can only notify the parent component via the `onCloseHandler` prop that the modal's Close button was clicked.
@@ -99,7 +98,7 @@ Modal.propTypes = {
     children: PropTypes.node,
     shouldCloseOnClick: PropTypes.bool,
     externalClassName: PropTypes.string,
-    onCloseHandler: PropTypes.func
+    onCloseHandler: PropTypes.func.isRequired
 };
 
 export default Modal;

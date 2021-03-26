@@ -12,7 +12,7 @@ import styles from './MenuNavLink.module.scss';
 
 
 /**
- * Menu navigation link.
+ * Menu navigation link component.
  * Allows to navigate to a page.
  */
 

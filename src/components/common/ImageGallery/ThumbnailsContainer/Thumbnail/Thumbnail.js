@@ -20,7 +20,7 @@ import styles from './Thumbnail.module.scss';
 
 
 /**
- * Thumbnail.
+ * Thumbnail component.
  */
 
 const Thumbnail = ({

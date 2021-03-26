@@ -19,4 +19,3 @@ export const PRODUCT_META_DESCRIPTION_END = 'Download 70000+ free geometric PNG 
 /* Checkout */
 
 export const SECURE_CHECKOUT = <>Safe and secure checkout powered by <a href="https://www.paddle.com" rel="nofollow">Paddle.com</a>.</>;
-
