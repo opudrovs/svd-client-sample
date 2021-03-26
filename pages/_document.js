@@ -5,8 +5,8 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 /**
  * Next.js custom document component.
- * Renders React components added to it on all pages of the application
- * in addition to the specific content of the pages.
+ * Allows to add content/attributes the application's <html> and <body> tags.
+ * The custom document is only rendered on the server, React components added to it outside of `Main` will not be initialized.
  */
 
 class MyDocument extends Document {
