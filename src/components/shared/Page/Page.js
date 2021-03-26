@@ -1,19 +1,30 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
+
+/* NEXT.JS */
 
 import NextHead from 'next/head';
 
+/* LIBRARIES */
+
 const classNames = require('classnames');
+
+/* SHARED COMPONENTS */
 
 import AppNavbar from 'components/shared/AppNavbar';
 import Footer from 'components/shared/Footer';
 
+/* STYLES */
+
 import styles from './Page.module.scss';
+
 
 /**
  * Page component.
  * A shared component (repeats across multiple pages).
  * Can wrap other shared components (`<head>` contents and footer) on a page.
- * Shared components can also be used without the Page component.
+ * Other shared components can also be used without the Page component.
  */
 
 const Page = ({

@@ -1,4 +1,7 @@
+/* REACT */
+
 import { memo } from 'react';
+
 
 /**
  * Cart icon for rendering as inline SVG.

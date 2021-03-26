@@ -1,7 +1,10 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
 
+
 /**
- * Constants used for typing component props.
+ * Constants used for validating types of component props.
  */
 
 const ERROR_MESSAGE = 'Either or both of "src" and "srcLarge" props must be provided.';

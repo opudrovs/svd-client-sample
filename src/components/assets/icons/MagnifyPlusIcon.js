@@ -1,4 +1,7 @@
+/* REACT */
+
 import { memo } from 'react';
+
 
 /**
  * Magnifying glass with plus sign icon for rendering as inline SVG.

@@ -1,16 +1,29 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* COMPONENTS */
+
 import BundlePreview from './BundlePreview';
+
+/* CONSTANTS */
 
 import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/AssetConstants';
 import { LICENSES } from 'constants/CheckoutConstants';
 import { BUNDLE_PATH } from 'constants/NavigationConstants';
 
+/* UTILS */
+
 import { getBundleLicense } from 'utils/CheckoutUtils';
 
+/* STYLES */
+
 import styles from './BundlesPreview.module.scss';
+
 
 /**
  * Bundles preview.

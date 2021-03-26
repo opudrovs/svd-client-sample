@@ -1,4 +1,7 @@
+/* CONSTANTS */
+
 import { BUNDLE_PRODUCTS, PACK_PRODUCTS } from 'constants/CheckoutConstants';
+
 
 /**
  * Checkout utility functions

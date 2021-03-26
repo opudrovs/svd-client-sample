@@ -1,8 +1,15 @@
+/* REACT */
+
 import { memo } from 'react';
+
+/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
+/* STYLES */
+
 import styles from './PackPageContainer.module.scss';
+
 
 /**
  * Container for the Pack page.

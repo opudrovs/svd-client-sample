@@ -1,10 +1,19 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* COMPONENTS */
+
 import Tag from './Tag';
 
+/* STYLES */
+
 import styles from './Tags.module.scss';
+
 
 /**
  * Tags container.

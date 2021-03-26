@@ -1,4 +1,7 @@
+/* REACT */
+
 import { memo } from 'react';
+
 
 /**
  * Close icon for rendering as inline SVG.

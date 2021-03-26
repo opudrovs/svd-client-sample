@@ -1,14 +1,23 @@
+/* REACT */
+
 import { memo, useState } from 'react';
 
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import LazyLoad from 'react-lazyload';
 
+/* HOOKS */
+
 import useIsHovered from 'hooks/useIsHovered';
 
+/* STYLES */
+
 import styles from './Thumbnail.module.scss';
+
 
 /**
  * Thumbnail.

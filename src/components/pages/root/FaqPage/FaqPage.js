@@ -1,13 +1,24 @@
+/* REACT */
+
 import { memo } from 'react';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* SHARED COMPONENTS */
+
 import Page from 'components/shared/Page';
+
+/* CONSTANTS */
 
 import { ABOUT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './FaqPage.module.scss';
+
 
 /**
  * Container for the FAQ page.

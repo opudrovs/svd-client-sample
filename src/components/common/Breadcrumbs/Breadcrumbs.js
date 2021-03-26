@@ -1,16 +1,29 @@
+/* REACT */
+
 import { Fragment } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
 import NextHead from 'next/head';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* COMPONENTS */
+
 import Breadcrumb from './Breadcrumb';
+
+/* CONSTANTS */
 
 import { COMPANY_WEBSITE_URL, INDEX_PATH } from 'constants/NavigationConstants';
 
+/* STYLES */
+
 import styles from './Breadcrumbs.module.scss';
+
 
 /**
  * Breadcrumbs navigation.

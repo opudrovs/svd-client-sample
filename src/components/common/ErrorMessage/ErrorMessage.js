@@ -1,10 +1,17 @@
+/* REACT */
+
 import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* LIBRARIES */
+
 const classNames = require('classnames');
 
+/* STYLES */
+
 import styles from './ErrorMessage.module.scss';
+
 
 /**
  * Error Message component.

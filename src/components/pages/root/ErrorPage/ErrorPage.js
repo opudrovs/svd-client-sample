@@ -1,10 +1,17 @@
+/* REACT */
+
 import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* COMMON COMPONENTS */
+
 import ErrorMessage from 'components/common/ErrorMessage';
 
+/* SHARED COMPONENTS */
+
 import Page from 'components/shared/Page';
+
 
 /**
  * Custom Error page.

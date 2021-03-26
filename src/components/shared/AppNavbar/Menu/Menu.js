@@ -1,19 +1,24 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
 import { useRouter } from 'next/router';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import { Nav } from 'react-bootstrap';
 
+/* COMPONENTS */
+
 import MenuNavLink from './MenuNavLink';
 
-import * as paths from 'constants/NavigationConstants';
+/* CONSTANTS */
 
-/**
- * Main menu.
- * Contains navigation links.
- */
+import * as paths from 'constants/NavigationConstants';
 
 const links = [
     { href: paths.BUNDLES_PATH, text: 'Bundles' },
@@ -24,6 +29,12 @@ const links = [
     { href: paths.CONTACT_PATH, text: 'Contact' }
 
 ];
+
+
+/**
+ * Main menu.
+ * Contains navigation links.
+ */
 
 const Menu = ({ externalClassName }) => {
     const router = useRouter();

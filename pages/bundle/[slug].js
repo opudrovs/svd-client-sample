@@ -1,9 +1,16 @@
+/* COMPONENTS */
+
 import BundlePageContainer from 'components/pages/bundle/BundlePageContainer';
+
+/* CONSTANTS */
 
 import { API_ROUTE_BUNDLE_PREVIEW } from 'constants/ApiConstants';
 import { errorMessages } from 'constants/MessageConstants';
 
+/* DATA */
+
 import dataBundles from 'data/bundles/bundles.js';
+
 
 const Bundle = (props) => <BundlePageContainer {...props} />;
 

@@ -1,4 +1,7 @@
+/* NEXT.JS */
+
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+
 
 /**
  * Next.js custom document component.

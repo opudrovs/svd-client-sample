@@ -1,17 +1,29 @@
+/* LIBRARIES */
+
 const classNames = require('classnames');
 
-import InstagramIcon from 'components/assets/icons/InstagramIcon';
-
-import Logo from 'components/common/Logo';
+/* COMPONENTS */
 
 import FooterLink from './FooterLink';
 import FooterLinkGroup from './FooterLinkGroup';
 
-import * as urls from 'constants/ExternalUrlConstants';
+/* ASSET COMPONENTS */
+
+import InstagramIcon from 'components/assets/icons/InstagramIcon';
+
+/* COMMON COMPONENTS */
+
+import Logo from 'components/common/Logo';
+
+/* CONSTANTS */
+
 import * as paths from 'constants/NavigationConstants';
 import { COMPANY_NAME } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './Footer.module.scss';
+
 
 /**
  * Page footer.
@@ -31,7 +43,7 @@ const links = [
 const secondaryLinks = [
     { href: paths.TERMS_PATH, text: 'Terms of service' },
     { href: paths.PRIVACY_POLICY_PATH, text: 'Privacy Policy' },
-    { href: urls.INSTAGRAM_URL, text: 'Instagram', children: <div className={styles.linkIcon}><InstagramIcon /></div> }
+    { href: paths.INSTAGRAM_URL, text: 'Instagram', children: <div className={styles.linkIcon}><InstagramIcon /></div> }
 ];
 
 const groupElements = (items, numberOfElementsInGroup) => items.reduce((acc, currElement, index) => {

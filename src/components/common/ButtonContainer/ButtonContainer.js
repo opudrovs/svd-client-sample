@@ -1,13 +1,24 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
 
+/* LIBRARIES */
+
 const classNames = require('classnames');
+
+/* COMPONENTS */
 
 import Button from './Button';
 import LinkButton from './LinkButton';
 
+/* CONSTANTS */
+
 import { BUTTON_THEME_BLUE, BUTTON_THEME_GREEN } from 'constants/UiConstants';
 
+/* STYLES */
+
 import styles from './ButtonContainer.module.scss';
+
 
 /**
  * Button container component

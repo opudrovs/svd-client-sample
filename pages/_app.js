@@ -1,10 +1,20 @@
-import NextHead from 'next/head';
+/* REACT */
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
+import NextHead from 'next/head';
+
+/* LIBRARIES */
+
 import CookieConsent from 'react-cookie-consent';
 
+/* COMPONENTS */
+
 import ErrorPage from 'components/pages/root/ErrorPage';
+
+/* STYLES */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css/normalize.css';
@@ -12,6 +22,12 @@ import 'rc-collapse/assets/index.css';
 import 'tippy.js/dist/tippy.css';
 
 import 'styles/globals.scss';
+
+
+/**
+ * Next.js custom app (page wrapper component).
+ * Wraps other pages but does not create a shared state between them.
+ */
 
 const MyApp = ({ Component, pageProps }) => {
     const { error } = pageProps;

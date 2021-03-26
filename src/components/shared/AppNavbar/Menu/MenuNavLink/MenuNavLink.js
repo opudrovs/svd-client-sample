@@ -1,8 +1,15 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* STYLES */
+
 import styles from './MenuNavLink.module.scss';
+
 
 /**
  * Menu navigation link.

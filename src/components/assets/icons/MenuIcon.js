@@ -1,4 +1,7 @@
+/* REACT */
+
 import { memo } from 'react';
+
 
 /**
  * Menu icon for rendering as inline SVG.

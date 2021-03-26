@@ -1,5 +1,5 @@
 /**
- * Constants used for SEO.
+ * Constants for use in page text and for SEO purposes.
  */
 
 /* General */

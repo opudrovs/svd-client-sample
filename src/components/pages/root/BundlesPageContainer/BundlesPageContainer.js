@@ -1,12 +1,23 @@
+/* COMPONENTS */
+
 import BundlesPreview from './BundlesPreview';
+
+/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
+/* CONSTANTS */
+
 import { COMPANY_NAME } from 'constants/TextConstants';
+
+/* STYLES */
 
 import styles from './BundlesPageContainer.module.scss';
 
+/* DATA */
+
 import dataBundles from 'data/bundles/bundles.js';
+
 
 /**
  * Container for the Bundles page.

@@ -1,15 +1,24 @@
+/* REACT */
+
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-const htmlParser = require('html-react-parser');
-import LazyLoad from 'react-lazyload';
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+const htmlParser = require('html-react-parser');
+import LazyLoad from 'react-lazyload';
+
+/* UTILS */
+
 import { getFormattedPrice } from 'utils/CheckoutUtils';
 
+/* STYLES */
+
 import styles from './BundlePreview.module.scss';
+
 
 /**
  * Bundle preview.

@@ -1,22 +1,41 @@
+/* REACT */
+
 import { useState } from 'react';
 
+/* NEXT.JS */
+
 import { useRouter } from 'next/router';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import LazyLoad from 'react-lazyload';
 
+/* COMPONENTS */
+
 import ThumbnailsContainer from './ThumbnailsContainer';
+
+/* HOOKS */
 
 import useIsHovered from 'hooks/useIsHovered';
 
+/* ASSET COMPONENTS */
+
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
+
+/* COMMON COMPONENTS */
 
 import Loader from 'components/common/Loader';
 
+/* CONSTANTS */
+
 import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
 
+/* STYLES */
+
 import styles from './ImageGallery.module.scss';
+
 
 /**
  * Inline image gallery component.

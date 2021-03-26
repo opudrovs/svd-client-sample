@@ -1,12 +1,23 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
+/* COMPONENTS */
+
 import Thumbnail from './Thumbnail';
+
+/* CONSTANTS */
 
 import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
 
+/* STYLES */
+
 import styles from './ThumbnailsContainer.module.scss';
+
 
 /**
  * Thumbnails container.

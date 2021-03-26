@@ -1,13 +1,24 @@
+/* SHARED COMPONENTS */
+
 import Page from 'components/shared/Page';
 
+/* COMPONENTS */
+
 import BundlesPreview from 'components/pages/root/BundlesPageContainer/BundlesPreview';
+
+/* CONSTANTS */
 
 import { ABOUT_PATH } from 'constants/NavigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './HomePage.module.scss';
 
+/* DATA */
+
 import dataBundles from 'data/bundles/bundles.js';
+
 
 /**
  * Container for the Home page.

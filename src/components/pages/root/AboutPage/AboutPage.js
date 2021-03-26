@@ -1,6 +1,12 @@
+/* REACT */
+
 import { memo } from 'react';
 
+/* SHARED COMPONENTS */
+
 import Page from 'components/shared/Page';
+
+/* CONSTANTS */
 
 import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
 import {
@@ -8,7 +14,10 @@ import {
     COMPANY_NAME
 } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './AboutPage.module.scss';
+
 
 /**
  * Container for the About page.

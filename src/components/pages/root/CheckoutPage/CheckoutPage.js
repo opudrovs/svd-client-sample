@@ -1,8 +1,15 @@
+/* SHARED COMPONENTS */
+
 import Page from 'components/shared/Page';
+
+/* CONSTANTS */
 
 import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './CheckoutPage.module.scss';
+
 
 /**
  * Container for the Checkout page.

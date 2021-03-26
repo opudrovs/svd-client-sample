@@ -1,6 +1,11 @@
+/* REACT */
+
 import PropTypes from 'prop-types';
 
+/* LIBRARIES */
+
 const classNames = require('classnames');
+
 
 /**
  * Link styled as a button component. Rendered by the `ButtonContainer` component.

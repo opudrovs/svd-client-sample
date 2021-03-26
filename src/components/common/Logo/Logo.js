@@ -1,12 +1,21 @@
+/* REACT */
+
 import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* LIBRARIES */
+
 const classNames = require('classnames');
+
+/* CONSTANTS */
 
 import { COMPANY_NAME } from 'constants/TextConstants';
 
+/* STYLES */
+
 import styles from './Logo.module.scss';
+
 
 /**
  * The logo of the application.

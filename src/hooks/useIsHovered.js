@@ -1,4 +1,12 @@
+/* REACT */
+
 import { useEffect, useRef, useState } from 'react';
+
+
+/**
+ * useIsHovered hook.
+ * Checks if the component is hovered (for example, to update the component appearance).
+ */
 
 const useIsHovered = () => {
     const [isHovered, setIsHovered] = useState(false);

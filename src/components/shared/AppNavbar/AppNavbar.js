@@ -1,22 +1,39 @@
+/* REACT */
+
 import { useState } from 'react';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import { Navbar } from 'react-bootstrap';
 
+/* COMPONENTS */
+
 import Menu from './Menu';
+
+/* ASSET COMPONENTS */
 
 import CloseIcon from 'components/assets/icons/CloseIcon';
 import MenuIcon from 'components/assets/icons/MenuIcon';
 
+/* COMMON COMPONENTS */
+
 import Logo from 'components/common/Logo';
 
+/* DIALOG COMPONENTS */
+
 import Modal from 'components/dialogs/Modal';
+
+/* CONSTANTS */
 
 import * as paths from 'constants/NavigationConstants';
 import { BOOTSTRAP_RESET } from 'constants/UiConstants';
 
+/* STYLES */
+
 import styles from './AppNavbar.module.scss';
+
 
 /**
  * Main navigation bar component.

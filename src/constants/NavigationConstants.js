@@ -1,8 +1,8 @@
 /**
- * Application routes
+ * Application routes and absolute URLs.
  */
 
-/* Pages (routes) of the application. */
+/* Application routes. */
 
 export const INDEX_PATH = '/';
 export const BUNDLES_PATH = '/bundles';
@@ -17,4 +17,12 @@ export const CONTACT_PATH = '/contact';
 export const CHECKOUT_PATH = '/checkout';
 export const PACK_PATH = '/pack';
 
+/* Absolute URLs. */
+
+/* Company */
+
 export const COMPANY_WEBSITE_URL = 'https://www.smartvectordesign.com';
+
+/* Social */
+
+export const INSTAGRAM_URL = 'https://www.instagram.com/smartvectordesign/';

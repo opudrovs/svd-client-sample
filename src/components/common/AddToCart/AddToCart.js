@@ -1,20 +1,33 @@
+/* REACT */
+
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
+
+/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import ReactSelect from 'react-select';
 
+/* COMMON COMPONENTS */
+
 import ButtonContainer from 'components/common/ButtonContainer';
+
+/* CONSTANTS */
 
 import { LICENSES } from 'constants/CheckoutConstants';
 import { SECURE_CHECKOUT } from 'constants/TextConstants';
 import { BUTTON_THEME_GREEN } from 'constants/UiConstants';
 
+/* UTILS */
+
 import { getFormattedDiscount, getFormattedPrice } from 'utils/CheckoutUtils';
 
+/* STYLES */
+
 import styles from './AddToCart.module.scss';
+
 
 /**
  * AddToCart component.
