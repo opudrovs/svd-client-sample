@@ -14,7 +14,7 @@
  * to stop scrolling of the document's content when a modal is displayed.
  * It does not work on iOS devices because of a known issue.
  */
-.openModal {
+.modalOpen {
     height: 100%;
     overflow: hidden;
 }
@@ -23,7 +23,7 @@
  * This class is required to stop scrolling of the document's content on iOS devices.
  * It is added to the `<html>` element when a modal is displayed.
  */
-.openModalHtml {
+.modalOpenHtml {
     position: fixed;
     top: 0;
     left: 50%;
@@ -33,16 +33,7 @@
 
 .content {
     position: relative;
+    height: 100%;
     margin-right: auto;
     margin-left: auto;
-}
-
-.closeButton {
-    position: absolute;
-    @include rem('top', 22px);
-    @include rem('right', 32px);
-
-    @include tabletBreakpoint {
-        @include rem('right', 52px);
-    }
 }
