@@ -14,6 +14,7 @@ $borderWidth: 4px;
     @include tabletBreakpoint {
         width: auto;
         height: auto;
+        @include rem('padding-bottom', 3px);
         border-bottom: $borderWidth solid transparent;
         color: $brandingColor8;
         box-shadow: none;
