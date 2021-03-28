@@ -9,6 +9,11 @@ import NextHead from 'next/head';
 /* LIBRARIES */
 
 import CookieConsent from 'react-cookie-consent';
+import { Provider } from 'react-redux';
+
+/* REDUX */
+
+import { store } from 'redux/store';
 
 /* COMPONENTS */
 
@@ -53,11 +58,13 @@ const MyApp = ({ Component, pageProps }) => {
                     }}
                 />
             </NextHead>
-            {error
-                ?
-                <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
-                :
-                <Component {...pageProps} />}
+            <Provider store={store}>
+                {error
+                    ?
+                    <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
+                    :
+                    <Component {...pageProps} />}
+            </Provider>
             <CookieConsent
                 cookieName="SVDCookieConsent"
                 buttonText="Accept"

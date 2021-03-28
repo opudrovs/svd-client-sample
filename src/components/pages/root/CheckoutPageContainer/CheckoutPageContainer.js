@@ -1,3 +1,14 @@
+/* LIBRARIES */
+
+import { useDispatch, useSelector } from 'react-redux';
+
+/* REDUX */
+
+import {
+    removeProduct,
+    selectNumberOfProducts
+} from 'redux/checkout/checkoutSlice';
+
 /* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
@@ -8,7 +19,7 @@ import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/TextConstants';
 
 /* STYLES */
 
-import styles from './CheckoutPage.module.scss';
+import styles from './CheckoutPageContainer.module.scss';
 
 
 /**
@@ -16,7 +27,9 @@ import styles from './CheckoutPage.module.scss';
  * Contains all other components on the page.
  */
 
-const CheckoutPage = () => {
+const CheckoutPageContainer = () => {
+    const numberOfProducts = useSelector(selectNumberOfProducts);
+    const dispatch = useDispatch();
 
     return (
         <Page
@@ -26,7 +39,7 @@ const CheckoutPage = () => {
         >
             <h1 className={styles.title}>Your Cart</h1>
 
-            <p>Items in cart.</p>
+            <p>Items in cart - {numberOfProducts}.</p>
 
             <p>If there is a problem with your order, please send a message with your order number to <a
                 href={`mailto:${COMPANY_EMAIL_SUPPORT}`}>{COMPANY_EMAIL_SUPPORT}</a>.</p>
@@ -34,4 +47,4 @@ const CheckoutPage = () => {
     );
 };
 
-export default CheckoutPage;
+export default CheckoutPageContainer;
