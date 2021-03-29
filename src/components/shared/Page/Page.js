@@ -13,6 +13,7 @@ const classNames = require('classnames');
 /* SHARED COMPONENTS */
 
 import AppNavbar from 'components/shared/AppNavbar';
+import Cart from 'components/shared/Cart';
 import Footer from 'components/shared/Footer';
 
 /* STYLES */
@@ -51,6 +52,9 @@ const Page = ({
                     styles.content,
                     externalContentClassName
                 )}>
+                    <div className="d-flex justify-content-end">
+                        <Cart />
+                    </div>
                     {children}
                 </ContentTag>
                 <Footer />

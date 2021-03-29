@@ -141,7 +141,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
                 externalClassName={styles.addToCartButton}
                 theme={BUTTON_THEME_GREEN}
                 onClickHandler={() => dispatch(addProduct({
-                    id: productLicense.productId,
+                    id: `${productLicense.productId}_${productTitle}`,
                     title: productTitle,
                     price: productPrice
                 }))}

@@ -11,11 +11,19 @@ export const checkoutSlice = createSlice({
     initialState,
     reducers: {
         addProduct: (state, action) => {
-            // TODO: Add product to cart, using state and action payload.
-            state.products.push(action.payload);
+            let existingProduct = state.products.find(element => element.id === action.payload.id);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                state.products.push({
+                    ...action.payload,
+                    quantity: 1
+                });
+            }
         },
         removeProduct: (state, action) => {
-            // TODO: Remove product from cart, using state and action payload.
+            return state.filter(element => element.id !== action.payload);
         }
     }
 });
