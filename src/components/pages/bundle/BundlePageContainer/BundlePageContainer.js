@@ -218,7 +218,6 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
 
                         <div className={styles.addToCart}>
                             <AddToCart
-                                productPassthrough={`{"bundleId": "${bundleData.elementIdNumber}"}`}
                                 productTitle={bundleData.text.title}
                                 getProductLicense={licenseId => getBundleLicense(bundleData.elementId, licenseId)}
                             />

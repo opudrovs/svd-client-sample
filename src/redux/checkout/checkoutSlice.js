@@ -12,6 +12,7 @@ export const checkoutSlice = createSlice({
     reducers: {
         addProduct: (state, action) => {
             // TODO: Add product to cart, using state and action payload.
+            state.products.push(action.payload);
         },
         removeProduct: (state, action) => {
             // TODO: Remove product from cart, using state and action payload.
@@ -21,6 +22,6 @@ export const checkoutSlice = createSlice({
 
 export const { addProduct, removeProduct } = checkoutSlice.actions;
 
-export const selectNumberOfProducts = state => state.checkout.products.length;
+export const selectProducts = state => state.checkout.products;
 
 export default checkoutSlice.reducer;

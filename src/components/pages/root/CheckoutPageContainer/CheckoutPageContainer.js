@@ -4,10 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 /* REDUX */
 
-import {
-    removeProduct,
-    selectNumberOfProducts
-} from 'redux/checkout/checkoutSlice';
+import { removeProduct, selectProducts } from 'redux/checkout/checkoutSlice';
 
 /* SHARED COMPONENTS */
 
@@ -28,8 +25,8 @@ import styles from './CheckoutPageContainer.module.scss';
  */
 
 const CheckoutPageContainer = () => {
-    const numberOfProducts = useSelector(selectNumberOfProducts);
     const dispatch = useDispatch();
+    const numberOfProducts = useSelector(selectProducts).length;
 
     return (
         <Page
