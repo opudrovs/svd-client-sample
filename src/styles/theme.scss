@@ -15,14 +15,15 @@ $brandingColor6: #dedede;
 $brandingColor7: #666;
 $brandingColor8: #fafafa;
 $brandingColor9: #121212;
-$brandingColor10: #0099ff;
+$brandingColor10: #09f;
 $brandingColor11: #0070f0;
 $brandingColor12: #f8f8f8;
 $brandingColor13: #999;
 $brandingColor14: #40bf40;
-$brandingColor15: #66cc66;
+$brandingColor15: #6c6;
 $brandingColor16: #ccc;
 $brandingColor17: #aaa;
+$brandingColor18: #f00;
 
 @function getRgbaColorWithOpacity($hexColor, $opacity) {
     @return rgba(red($hexColor), green($hexColor), blue($hexColor), $opacity);
@@ -324,6 +325,12 @@ $font1Family: Roboto, -apple-system, sans-serif;
     @include narrowDesktopBreakpoint {
         @include largeCheckoutFont;
     }
+}
+
+@mixin cartFont {
+    @include font1Regular;
+    @include rem('font-size', 12px);
+    @include rem('line-height', 14px);
 }
 
 /* Disclaimer */

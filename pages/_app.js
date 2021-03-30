@@ -9,6 +9,13 @@ import NextHead from 'next/head';
 /* LIBRARIES */
 
 import CookieConsent from 'react-cookie-consent';
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+
+/* REDUX */
+
+import store from 'redux/store';
 
 /* COMPONENTS */
 
@@ -32,6 +39,8 @@ import 'styles/globals.scss';
 const MyApp = ({ Component, pageProps }) => {
     const { error } = pageProps;
 
+    const persistor = persistStore(store);
+
     return (
         <>
             <NextHead>
@@ -53,11 +62,15 @@ const MyApp = ({ Component, pageProps }) => {
                     }}
                 />
             </NextHead>
-            {error
-                ?
-                <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
-                :
-                <Component {...pageProps} />}
+            <Provider store={store}>
+                <PersistGate persistor={persistor}>
+                    {error
+                        ?
+                        <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
+                        :
+                        <Component {...pageProps} />}
+                </PersistGate>
+            </Provider>
             <CookieConsent
                 cookieName="SVDCookieConsent"
                 buttonText="Accept"

@@ -13,6 +13,7 @@ const classNames = require('classnames');
 /* SHARED COMPONENTS */
 
 import AppNavbar from 'components/shared/AppNavbar';
+import Cart from 'components/shared/Cart';
 import Footer from 'components/shared/Footer';
 
 /* STYLES */
@@ -33,9 +34,10 @@ const Page = ({
     seoDescription,
     isContentMain,
     topComponent,
+    shouldShowCart,
     externalContentClassName
 }) => {
-    const ContentTag = isContentMain ? 'main' : 'div' ;
+    const ContentTag = isContentMain ? 'main' : 'div';
 
     return (
         <>
@@ -51,6 +53,11 @@ const Page = ({
                     styles.content,
                     externalContentClassName
                 )}>
+                    {shouldShowCart
+                    &&
+                    <div className="d-flex justify-content-end">
+                        <Cart />
+                    </div>}
                     {children}
                 </ContentTag>
                 <Footer />
@@ -65,11 +72,13 @@ Page.propTypes = {
     seoDescription: PropTypes.string,
     isContentMain: PropTypes.bool,
     topComponent: PropTypes.element,
+    shouldShowCart: PropTypes.bool,
     externalContentClassName: PropTypes.string
 };
 
 Page.defaultProps = {
-    isContentMain: true
+    isContentMain: true,
+    shouldShowCart: true
 };
 
 export default Page;

@@ -8,7 +8,12 @@ import PropTypes from 'prop-types';
 
 const classNames = require('classnames');
 
+import { useDispatch } from 'react-redux';
 import ReactSelect from 'react-select';
+
+/* REDUX */
+
+import { addProduct } from 'redux/checkout/checkoutSlice';
 
 /* COMMON COMPONENTS */
 
@@ -33,7 +38,7 @@ import styles from './AddToCart.module.scss';
  * AddToCart component.
  */
 
-const AddToCart = ({ externalClassName, getProductLicense }) => {
+const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
     const selectOptions = [
         {
             value: LICENSES.COMMERCIAL.id,
@@ -70,16 +75,14 @@ const AddToCart = ({ externalClassName, getProductLicense }) => {
         })
     };
 
+    const dispatch = useDispatch();
+
     const [state, setState] = useState({
         license: LICENSES.COMMERCIAL,
         selectedOption: selectOptions[0]
     });
 
     const { license, selectedOption } = state;
-
-    const addToCart = () => {
-
-    };
 
     const onSelectChangeHandler = (selectedOption) => {
         let license = license;
@@ -99,6 +102,8 @@ const AddToCart = ({ externalClassName, getProductLicense }) => {
 
     const productLicense = getProductLicense(license.id);
 
+    const productPrice = getFormattedPrice(productLicense.price.usd);
+
     return (
         <div className={externalClassName}>
             <h2 className={styles.title}>Checkout</h2>
@@ -107,7 +112,7 @@ const AddToCart = ({ externalClassName, getProductLicense }) => {
                 'd-flex align-items-center',
                 styles.price
             )}>
-                <span>${getFormattedPrice(productLicense.price.usd)}</span>
+                <span>${productPrice}</span>
                 {productLicense.fullPrice
                     &&
                     <>
@@ -135,7 +140,11 @@ const AddToCart = ({ externalClassName, getProductLicense }) => {
             <ButtonContainer
                 externalClassName={styles.addToCartButton}
                 theme={BUTTON_THEME_GREEN}
-                onClickHandler={addToCart}
+                onClickHandler={() => dispatch(addProduct({
+                    id: `${productLicense.productId}_${productTitle}`,
+                    title: `${productTitle} ${productLicense.id.toUpperCase()} LICENSE`,
+                    price: productPrice
+                }))}
             >
                 Add to Cart
             </ButtonContainer>
@@ -148,8 +157,7 @@ const AddToCart = ({ externalClassName, getProductLicense }) => {
 };
 
 AddToCart.propTypes = {
-    productPassthrough: PropTypes.string.isRequired,
-    productTitle: PropTypes.string,
+    productTitle: PropTypes.string.isRequired,
     externalClassName: PropTypes.string,
     getProductLicense: PropTypes.func.isRequired
 };
