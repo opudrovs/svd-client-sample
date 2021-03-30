@@ -28,7 +28,7 @@ import styles from './Cart.module.scss';
  */
 
 const Cart = () => {
-    const numberOfProducts = useSelector(selectProducts).length;
+    const numberOfProducts = useSelector(selectProducts).reduce((acc, currElement) => acc + currElement.quantity, 0);
 
     return (
         <a

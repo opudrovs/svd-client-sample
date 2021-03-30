@@ -142,7 +142,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
                 theme={BUTTON_THEME_GREEN}
                 onClickHandler={() => dispatch(addProduct({
                     id: `${productLicense.productId}_${productTitle}`,
-                    title: productTitle,
+                    title: `${productTitle} ${productLicense.id.toUpperCase()} LICENSE`,
                     price: productPrice
                 }))}
             >
