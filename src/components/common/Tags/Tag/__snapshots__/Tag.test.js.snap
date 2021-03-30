@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing Tag shows 'Test text' 1`] = `
+<div
+  className="tag"
+>
+  Test text
+</div>
+`;
