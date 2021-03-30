@@ -13,8 +13,11 @@ import Tag from './Tag.js';
 
 const text = 'Test text';
 
+
+/* TESTS */
+
 describe('With Enzyme', () => {
-    it(`Tag shows '${text}'`, () => {
+    it(`Component shows '${text}'`, () => {
         const component = shallow(<Tag text={text} />);
 
         expect(component.find('div')
@@ -23,10 +26,13 @@ describe('With Enzyme', () => {
     });
 });
 
+/* SNAPSHOT TESTS */
+
 describe('With Snapshot Testing', () => {
-    it(`Tag shows '${text}'`, () => {
+    it(`Component shows '${text}'`, () => {
         const component = renderer.create(<Tag text={text} />);
         const tree = component.toJSON();
+
         expect(tree)
             .toMatchSnapshot();
     });
