@@ -2,9 +2,14 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
+
 const initialState = {
     products: []
 };
+
+/**
+ * Checkout reducers and selectors.
+ */
 
 export const checkoutSlice = createSlice({
     name: 'checkout',

@@ -22,6 +22,10 @@ import checkoutReducer from './checkout/checkoutSlice';
 import storage from './storage';
 
 
+/**
+ * Redux store with support for persisting Redux data.
+ */
+
 const persistConfig = {
     key: 'root',
     storage,
@@ -37,7 +41,7 @@ const store = configureStore({
     reducer: persistedReducer,
     middleware: getDefaultMiddleware({
         serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+            ignoredActions: [FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE]
         }
     })
 });

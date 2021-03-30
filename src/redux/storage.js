@@ -7,8 +7,12 @@ import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 import { isBrowser } from 'utils/SystemUtils';
 
 
-// Workaround for redux-persist SSR errors, based on the following suggestion:
-// https://github.com/vercel/next.js/discussions/15687#discussioncomment-45319
+/**
+ * Dummy server-side storage.
+ * Workaround for redux-persist SSR errors, based on the following suggestion:
+ * https://github.com/vercel/next.js/discussions/15687#discussioncomment-45319
+ */
+
 const createNoopStorage = () => {
     return {
         getItem(_key) {
