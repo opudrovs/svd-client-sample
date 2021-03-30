@@ -1,3 +1,5 @@
 .next
 dist
 src/data
+src/redux/storage.js
+*.test.js
