@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing Component shows 'Test text' 1`] = `
+<span
+  className="breadcrumb"
+>
+  Test text
+</span>
+`;
+
+exports[`With Snapshot Testing Component shows 'Test text' and has 'https://www.smartvectordesign.com' for href 1`] = `
+<a
+  className="breadcrumb link"
+  href="https://www.smartvectordesign.com"
+>
+  Test text
+</a>
+`;
