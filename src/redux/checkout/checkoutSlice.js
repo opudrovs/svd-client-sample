@@ -23,7 +23,7 @@ export const checkoutSlice = createSlice({
             }
         },
         removeProduct: (state, action) => {
-            return state.filter(element => element.id !== action.payload);
+            state.products = state.products.filter(element => element.id !== action.payload);
         }
     }
 });
