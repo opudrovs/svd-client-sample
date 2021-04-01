@@ -8,7 +8,7 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { COMPANY_WEBSITE_URL } from 'constants/NavigationConstants';
+import { COMPANY_WEBSITE_URL, LINKEDIN_URL } from 'constants/NavigationConstants';
 import {
     COMPANY_EMAIL_JOB,
     COMPANY_NAME
@@ -28,6 +28,7 @@ const AboutPage = () => (
     <Page
         seoTitle={`React (Next.js or Gatsby) website development, graphic design automation, programmatic SEO - ${COMPANY_NAME}`}
         seoDescription="Custom software development services."
+        shouldShowCart={false}
         externalContentClassName={styles.content}
     >
         <h1 className={styles.title}>Custom Software Development Services</h1>
@@ -37,6 +38,16 @@ const AboutPage = () => (
         <p>Hi, I am Olga, a Ukrainian web and mobile developer with BSc in Computer Engineering with Honors who
             worked remotely with leading US media companies and prominent startups. I am always on the lookout
             for new projects.</p>
+
+        <p>My <a href={LINKEDIN_URL} rel="nofollow">LinkedIn Profile</a></p>
+
+        <p>
+            A large <a href="https://github.com/opudrovs/svd-client-sample" rel="nofollow">
+            sample of my code
+            </a> based on <a href={COMPANY_WEBSITE_URL}>
+                {COMPANY_WEBSITE_URL}
+            </a> code.
+        </p>
 
         <h2 id="about-contact" className={styles.subtitle}>Contact Information</h2>
 
@@ -89,8 +100,8 @@ const AboutPage = () => (
 
         <p>To add new website content, you would be able to use text templates in <a
             href="https://guides.github.com/features/mastering-markdown/"
-            rel="nofollow">Markdown</a> format, WordPress
-            as a headless CMS (content management system), or another CMS, for example, Contentful or TinaCMS.</p>
+            rel="nofollow">Markdown</a> format, WordPress or Shopify
+            as a headless CMS (content management system), or another headless CMS.</p>
 
         <p>The key benefits of Gatsby are as follows:</p>
 
@@ -153,7 +164,7 @@ const AboutPage = () => (
             <li>generating new vector and raster images based on vector templates, color and font data, and
                 user's choice;
             </li>
-            <li>creating vector generative art based on your templates and specifications;</li>
+            <li>creating generative vector art (for example, NFT art) based on graphic templates and specifications;</li>
             <li>populating mockups;</li>
             <li>generating TXT or JSON files based on templates and provided data.</li>
         </ul>
@@ -206,7 +217,8 @@ const AboutPage = () => (
                 contract. Delivery of source code is subject to negotiation.
             </li>
             <li>Project maintenance (minor enhancements, bug fixes, adding or updating content). Duration: from 1 hour
-                to 1 or more weeks per month. Budget: from $50 US to $1200+ US per month, depending on complexity. Time and
+                to 1 or more weeks per month. Budget: from $50 US to $1200+ US per month, depending on complexity. Time
+                and
                 materials or fixed-price retainer contract. Complete source code is provided.
             </li>
         </ul>
