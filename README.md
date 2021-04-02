@@ -2,6 +2,8 @@
 
 This is a code sample abstracted from the source code of [https://www.smartvectordesign.com](https://www.smartvectordesign.com) website.
 
+You can view the working demo of this code sample [HERE](https://www.smartvectordesign.com/code-sample/).
+
 You can view the whole project with several different page types at: [https://www.smartvectordesign.com](https://www.smartvectordesign.com).
 
 Pages examples:
@@ -12,6 +14,13 @@ Pages examples:
 - [Product (image) page](https://www.smartvectordesign.com/product/rose-red-houndstooth-seamless-pattern-background-20521), on which you can download the image for free. There are 70000 product pages in the full project. All images, page titles and URLs, and product keywords were generated programmatically.
 
 The code sample includes only bundle pages, About (Hire Me!) and FAQ pages.
+
+## Table of Contents
+
+[Project Packages and Components](#project-packages-and-components)  
+[Project Structure and Code Style](#project-structure-and-code-style)  
+[Known Issues and Potential Optimizations](#known-issues-and-potential-optimizations)  
+[How to Run the App](#how-to-run-the-app)  
 
 ## Project Packages and Components
 
@@ -55,9 +64,11 @@ Components are arranged by folders:
   - `styles` - global app styles.
   - `utils` - small focused utility functions for working with strings, arrays, data etc.
 
+Code style is validated by ESLint with a custom config (run `npm run lint` from the project folder) and manually.
+
 Imports in each module are organized by categories and alphabetically, by module name and import names.
 
-## Known Issues/Potential Optimizations
+## Known Issues and Potential Optimizations
 
 - There is a known issue with Next.js that it sometimes does not preserve the correct order of CSS chunk imports in development builds. Because of that, some overridden Bootstrap styles (padding and margins) might be re-enabled in development builds. Please use the production mode to preview the final styling.
 
@@ -91,31 +102,3 @@ npx next start
 ```
 
 Then open `http://localhost:3000/` in your browser.
-
-## How to Export the Static App for Deployment
-
-`cd` in Terminal to the app's root directory and run `npm install` to install the packages.
-
-Run
-
-```
-npx next build
-npx next export
-```
-
-The exported app is placed in the `out` folder and can be deployed.
-
-## How to Run the Exported Static App
-
-Run
-
-```
-cd out
-npx serve -p 8089
-```
-
-Open `http://localhost:8089/` in your browser.
-
-(Alternatively, you can run `npm run serve` from the app's root directory.)
-
-You can enter a different port number. There can be an issue with running the app on port 8080 under macOS.
