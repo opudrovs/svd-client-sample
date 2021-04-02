@@ -1,0 +1,7 @@
+.footerLinkGroup:not(:last-child) {
+    @include rem('margin-bottom', 15px);
+
+    @include tabletBreakpoint {
+        margin-bottom: 0;
+    }
+}

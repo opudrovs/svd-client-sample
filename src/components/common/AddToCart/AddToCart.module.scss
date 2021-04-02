@@ -1,0 +1,44 @@
+.title {
+    @include rem('margin-bottom', 12px);
+    @include productSubtitle;
+}
+
+.price {
+    @include rem('margin-bottom', 12px);
+    color: $brandingColor11;
+    @include checkoutPriceFont;
+}
+
+.fullPrice {
+    color: $brandingColor17;
+}
+
+.discount {
+    @include remValues('padding', 2px, 4px, 2px, 4px);
+    @include rem('border-radius', 2px);
+    background-color: $brandingColor14;
+    color: $brandingColor1;
+    @include checkoutDiscountFont;
+    text-transform: uppercase;
+}
+
+.select {
+    color: $brandingColor2;
+    @include checkoutSelectFont;
+}
+
+.addToCartButton {
+    width: 100%;
+    @include rem('height', 52px);
+    @include rem('margin-top', 12px);
+}
+
+.disclaimer {
+    @include rem('margin-top', 12px);
+    @include disclaimerFont;
+    color: $brandingColor7;
+
+    a {
+        text-decoration: underline;
+    }
+}

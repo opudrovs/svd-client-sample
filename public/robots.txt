@@ -1,0 +1,18 @@
+# Group: All
+
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /api/
+Disallow: /api/*
+Disallow: /api-data
+Disallow: /api-data/
+Disallow: /api-data/*
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /checkout-success
+Disallow: /checkout-success/
+
+# Group: Sitemap
+
+Sitemap: https://smartvectordesign.com/sitemap_index.xml

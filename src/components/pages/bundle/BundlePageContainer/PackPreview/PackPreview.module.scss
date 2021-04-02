@@ -1,0 +1,56 @@
+.packPreview {
+    position: relative;
+    overflow: hidden;
+    @include rem('border-radius', $bundleBorderRadiusPx);
+    background-color: $brandingColor1;
+    box-shadow: $packBoxShadow;
+
+    &:hover {
+        box-shadow: $packBoxShadowHover;
+    }
+}
+
+.imageLink {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.imagePlaceholder {
+    @include imagePlaceholder;
+    background-color: $brandingColor12;
+}
+
+.textContainer {
+    @include remValues('padding', 10px, 10px, 14px, 10px);
+}
+
+.titleContainer {
+    @include rem('height', 16px);
+}
+
+.title {
+    width: 100%;
+    overflow: hidden;
+    @include previewSubtitleFont;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include desktopBreakpoint {
+        @include previewTitleFont;
+    }
+
+    &:hover {
+        color: $brandingColor4;
+    }
+}
+
+.price {
+    @include rem('margin-top', 8px);
+    color: $brandingColor7;
+    @include previewSecondaryContentFont;
+    text-align: center;
+}

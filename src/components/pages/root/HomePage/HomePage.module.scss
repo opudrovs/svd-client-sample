@@ -1,0 +1,17 @@
+.title {
+    @include titleFont;
+    text-align: center;
+}
+
+.subtitle {
+    @include subtitleFont;
+    text-align: center;
+
+    &:first-child {
+        @include rem('margin-top', 48px);
+    }
+}
+
+.link {
+    @include linkText;
+}

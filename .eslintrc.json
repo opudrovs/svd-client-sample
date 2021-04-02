@@ -1,0 +1,81 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "ignoredNodes": ["TemplateLiteral *", "JSXElement *", "JSXElement"],
+                "offsetTernaryExpressions": false
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": "off",
+        "sort-imports": ["error", {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": true,
+            "ignoreMemberSort": false,
+            "allowSeparatedGroups": true
+        }],
+        "react/react-in-jsx-scope": "off",
+        "react/no-unescaped-entities": "off",
+        "react/jsx-closing-tag-location": "off",
+        "react/jsx-closing-bracket-location": ["error", {
+            "nonEmpty": false,
+            "selfClosing": "tag-aligned"
+        }],
+        "react/jsx-max-props-per-line": ["error", { "when": "multiline", "maximum": 1 }],
+        "react/jsx-indent-props": "error",
+        "react/jsx-tag-spacing": ["error", {
+            "closingSlash": "never",
+            "beforeSelfClosing": "always",
+            "afterOpening": "never",
+            "beforeClosing": "allow"
+        }]
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass", // Regex for Component Factory to use,
+            // default to "createReactClass"
+            "pragma": "React",  // Pragma to use, default to "React"
+            "fragment": "Fragment",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
+            "version": "detect" // React version. "detect" automatically picks the version you have installed.
+        },
+        "propWrapperFunctions": [
+            // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+            "forbidExtraProps",
+            { "property": "freeze", "object": "Object" },
+            { "property": "myFavoriteWrapper" }
+        ]
+    }
+}

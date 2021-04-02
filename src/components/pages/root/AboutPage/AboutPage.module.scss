@@ -1,0 +1,15 @@
+.title {
+    @include titleFont;
+    text-align: center;
+}
+
+.subtitle {
+    @include subtitleFont;
+    text-align: center;
+}
+
+.content {
+    a {
+        @include linkText;
+    }
+}

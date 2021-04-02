@@ -1,0 +1,7 @@
+.breadcrumb {
+    @include linkPadding;
+}
+
+.link {
+    @include linkText;
+}
