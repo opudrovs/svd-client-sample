@@ -2,7 +2,7 @@
 
 This is a code sample abstracted from the source code of [https://www.smartvectordesign.com](https://www.smartvectordesign.com) website.
 
-You can view the working demo of this code sample [HERE](https://www.smartvectordesign.com/code-sample/).
+You can view the working demo of this code sample [HERE](https://svd-client-sample.vercel.app/).
 
 You can view the whole project with several different page types at: [https://www.smartvectordesign.com](https://www.smartvectordesign.com).
 
