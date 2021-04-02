@@ -8,7 +8,7 @@ const initialState = {
 };
 
 /**
- * Checkout reducers and selectors.
+ * Checkout reducers, actions, and selectors. Includes the initial checkout state.
  */
 
 export const checkoutSlice = createSlice({
