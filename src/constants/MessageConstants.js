@@ -4,7 +4,7 @@
 
 /* Error messages */
 
-export const errorMessages = {
+export const ERROR_MESSAGE = {
     404: 'Oops! Page not found!',
-    DEFAULT: 'An error has occured.'
+    default: 'An error has occurred.'
 };

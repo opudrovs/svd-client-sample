@@ -6,5 +6,7 @@
 * Can be any non-empty string.*/
 export const BOOTSTRAP_RESET = 'bs-reset';
 
-export const BUTTON_THEME_BLUE = 'blue';
-export const BUTTON_THEME_GREEN = 'green';
+export const BUTTON_THEME = {
+    blue: 'blue',
+    green: 'green'
+};

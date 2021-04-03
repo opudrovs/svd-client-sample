@@ -13,7 +13,7 @@ import LinkButton from './LinkButton';
 
 /* CONSTANTS */
 
-import { BUTTON_THEME_BLUE, BUTTON_THEME_GREEN } from 'constants/UiConstants';
+import { BUTTON_THEME } from 'constants/UiConstants';
 
 /* STYLES */
 
@@ -43,7 +43,7 @@ const ButtonContainer = ({
             ?
             styles.blueOutlineButton
             :
-            theme === BUTTON_THEME_GREEN ? styles.greenButton : styles.blueButton,
+            theme === BUTTON_THEME.green ? styles.greenButton : styles.blueButton,
         {
             [styles.outlineButton]: isOutline,
             [styles.disabledButton]: !isEnabled
@@ -94,7 +94,7 @@ ButtonContainer.propTypes = {
 
 ButtonContainer.defaultProps = {
     type: 'button',
-    theme: BUTTON_THEME_BLUE,
+    theme: BUTTON_THEME.blue,
     isEnabled: true
 };
 

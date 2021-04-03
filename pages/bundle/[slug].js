@@ -5,7 +5,7 @@ import BundlePageContainer from 'components/pages/bundle/BundlePageContainer';
 /* CONSTANTS */
 
 import { API_ROUTE_BUNDLE_PREVIEW } from 'constants/ApiConstants';
-import { errorMessages } from 'constants/MessageConstants';
+import { ERROR_MESSAGE } from 'constants/MessageConstants';
 
 /* DATA */
 
@@ -36,7 +36,7 @@ export const getServerSideProps = async ({ params }) => {
             bundlePreviewData,
             {
                 errorCode: 404,
-                errorMessage: errorMessages[404]
+                errorMessage: ERROR_MESSAGE[404]
             });
     }
 
@@ -57,7 +57,7 @@ export const getServerSideProps = async ({ params }) => {
             bundlePreviewData,
             {
                 errorCode: 404,
-                errorMessage: errorMessages.DEFAULT
+                errorMessage: ERROR_MESSAGE.default
             });
     }
 
@@ -66,7 +66,7 @@ export const getServerSideProps = async ({ params }) => {
         bundlePreviewData,
         {
             errorCode: 404,
-            errorMessage: errorMessages[404]
+            errorMessage: ERROR_MESSAGE[404]
         });
 };
 

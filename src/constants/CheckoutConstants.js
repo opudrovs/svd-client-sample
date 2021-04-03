@@ -2,16 +2,16 @@
  * Checkout constants
  */
 
-export const LICENSES = {
-    COMMERCIAL: {
+export const LICENSE = {
+    commercial: {
         id: 'commercial',
         name: 'COMMERCIAL'
     },
-    EXTENDED: {
+    extended: {
         id: 'extended',
         name: 'EXTENDED/POD'
     },
-    APP: {
+    app: {
         id: 'app',
         name: 'APP'
     }
@@ -22,7 +22,7 @@ export const BUNDLE_PRODUCTS = [
         elementId: 'solidsTinted0001',
         productLicenses: [
             {
-                id: LICENSES.COMMERCIAL.id,
+                id: LICENSE.commercial.id,
                 price: {
                     usd: '39'
                 },
@@ -33,7 +33,7 @@ export const BUNDLE_PRODUCTS = [
                 discount: '86'
             },
             {
-                id: LICENSES.EXTENDED.id,
+                id: LICENSE.extended.id,
                 price: {
                     usd: '79'
                 },
@@ -44,7 +44,7 @@ export const BUNDLE_PRODUCTS = [
                 discount: '86'
             },
             {
-                id: LICENSES.APP.id,
+                id: LICENSE.app.id,
                 price: {
                     usd: '239'
                 },
@@ -60,7 +60,7 @@ export const BUNDLE_PRODUCTS = [
         elementId: 'solidsOnBg0002',
         productLicenses: [
             {
-                id: LICENSES.COMMERCIAL.id,
+                id: LICENSE.commercial.id,
                 price: {
                     usd: '39'
                 },
@@ -71,7 +71,7 @@ export const BUNDLE_PRODUCTS = [
                 discount: '86'
             },
             {
-                id: LICENSES.EXTENDED.id,
+                id: LICENSE.extended.id,
                 price: {
                     usd: '79'
                 },
@@ -82,7 +82,7 @@ export const BUNDLE_PRODUCTS = [
                 discount: '86'
             },
             {
-                id: LICENSES.APP.id,
+                id: LICENSE.app.id,
                 price: {
                     usd: '239'
                 },
@@ -98,21 +98,21 @@ export const BUNDLE_PRODUCTS = [
 
 export const PACK_PRODUCTS = [
     {
-        id: LICENSES.COMMERCIAL.id,
+        id: LICENSE.commercial.id,
         price: {
             usd: '4'
         },
         productId: '643840'
     },
     {
-        id: LICENSES.EXTENDED.id,
+        id: LICENSE.extended.id,
         price: {
             usd: '8'
         },
         productId: '643841'
     },
     {
-        id: LICENSES.APP.id,
+        id: LICENSE.app.id,
         price: {
             usd: '24'
         },

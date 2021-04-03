@@ -57,8 +57,8 @@ Components are arranged by folders:
     - `pages` - route-specific components.
     - `shared` - components, present on all (or almost all) pages, like app navigation bar and footer.
    
-  - `constants` - hardcoded data which helps avoid using "magic" strings and numbers.
-  - `data` - more complex hardcoded data in JSON format which can be stored in the application instead of loading it via API.
+  - `constants` - help avoid using "magic" strings and numbers.
+  - `data` - more complex data in JSON format which can be stored in the application instead of loading it via API.
   - `hooks` - custom hooks.
   - `redux` - global Redux store, Redux slices (which are organized by feature folders and contain feature-specific initial state, actions, reducers, and selectors), and custom dummy server-side storage.
   - `styles` - global app styles.
@@ -67,6 +67,8 @@ Components are arranged by folders:
 Code style is validated by ESLint with a custom config (run `npm run lint` from the project folder) and manually.
 
 Imports in each module are organized by categories and alphabetically, by module name and import names.
+
+Exported constants are all caps, constants used locally are camel case. Object constants are named in singular, array constants are named in plural. Keys of object constants are in lowercase.
 
 ## Known Issues and Potential Optimizations
 
