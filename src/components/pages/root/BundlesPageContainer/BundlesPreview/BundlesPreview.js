@@ -13,7 +13,7 @@ import BundlePreview from './BundlePreview';
 /* CONSTANTS */
 
 import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/AssetConstants';
-import { LICENSES } from 'constants/CheckoutConstants';
+import { LICENSE } from 'constants/CheckoutConstants';
 import { BUNDLE_PATH } from 'constants/NavigationConstants';
 
 /* UTILS */
@@ -52,7 +52,7 @@ const BundlesPreview = ({ data, externalClassName }) => (
                         alt={screenshot.alt}
                         title={elementBundle.text.title}
                         subtitle={elementBundle.text.subtitle}
-                        license={getBundleLicense(elementBundle.elementId, LICENSES.COMMERCIAL.id)}
+                        license={getBundleLicense(elementBundle.elementId, LICENSE.commercial.id)}
                     />
                 </div>
             );

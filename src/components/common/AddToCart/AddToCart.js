@@ -21,9 +21,9 @@ import ButtonContainer from 'components/common/ButtonContainer';
 
 /* CONSTANTS */
 
-import { LICENSES } from 'constants/CheckoutConstants';
+import { LICENSE } from 'constants/CheckoutConstants';
 import { SECURE_CHECKOUT } from 'constants/TextConstants';
-import { BUTTON_THEME_GREEN } from 'constants/UiConstants';
+import { BUTTON_THEME } from 'constants/UiConstants';
 
 /* UTILS */
 
@@ -41,16 +41,16 @@ import styles from './AddToCart.module.scss';
 const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
     const selectOptions = [
         {
-            value: LICENSES.COMMERCIAL.id,
-            label: `${LICENSES.COMMERCIAL.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSES.COMMERCIAL.id).price.usd)}`
+            value: LICENSE.commercial.id,
+            label: `${LICENSE.commercial.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSE.commercial.id).price.usd)}`
         },
         {
-            value: LICENSES.EXTENDED.id,
-            label: `${LICENSES.EXTENDED.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSES.EXTENDED.id).price.usd)}`
+            value: LICENSE.extended.id,
+            label: `${LICENSE.extended.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSE.extended.id).price.usd)}`
         },
         {
-            value: LICENSES.APP.id,
-            label: `${LICENSES.APP.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSES.APP.id).price.usd)}`
+            value: LICENSE.app.id,
+            label: `${LICENSE.app.name} LICENSE $${getFormattedPrice(getProductLicense(LICENSE.app.id).price.usd)}`
         }
     ];
 
@@ -78,7 +78,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
     const dispatch = useDispatch();
 
     const [state, setState] = useState({
-        license: LICENSES.COMMERCIAL,
+        license: LICENSE.commercial,
         selectedOption: selectOptions[0]
     });
 
@@ -87,9 +87,9 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
     const onSelectChangeHandler = (selectedOption) => {
         let license = license;
 
-        for (const prop in LICENSES) {
-            if (Object.prototype.hasOwnProperty.call(LICENSES, prop) && selectedOption.value === LICENSES[prop].id) {
-                license = LICENSES[prop];
+        for (const prop in LICENSE) {
+            if (Object.prototype.hasOwnProperty.call(LICENSE, prop) && selectedOption.value === LICENSE[prop].id) {
+                license = LICENSE[prop];
             }
         }
 
@@ -139,7 +139,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
 
             <ButtonContainer
                 externalClassName={styles.addToCartButton}
-                theme={BUTTON_THEME_GREEN}
+                theme={BUTTON_THEME.green}
                 onClickHandler={() => dispatch(addProduct({
                     id: `${productLicense.productId}_${productTitle}`,
                     title: `${productTitle} ${productLicense.id.toUpperCase()} LICENSE`,

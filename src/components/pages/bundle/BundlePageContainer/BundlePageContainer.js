@@ -39,7 +39,7 @@ import {
     CDN_ROOT,
     SCREENSHOT_IMAGE_FORMAT
 } from 'constants/AssetConstants';
-import { LICENSES } from 'constants/CheckoutConstants';
+import { LICENSE } from 'constants/CheckoutConstants';
 import { PACK_DATA_SEAMLESS_MODE_FULL } from 'constants/DataConstants';
 import {
     BUNDLE_PATH,
@@ -100,8 +100,8 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
         .map(element => convertDataStringToHtml(element, 'p'))
         .join('');
 
-    const commercialBundleLicense = getBundleLicense(bundleData.elementId, LICENSES.COMMERCIAL.id);
-    const commercialPackLicense = getPackLicense(LICENSES.COMMERCIAL.id);
+    const commercialBundleLicense = getBundleLicense(bundleData.elementId, LICENSE.commercial.id);
+    const commercialPackLicense = getPackLicense(LICENSE.commercial.id);
 
     const productInfo = (
         <>
@@ -125,7 +125,7 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
         </>
     );
 
-    const bundlePrice = getFormattedPrice(getBundleLicense(bundleData.elementId, LICENSES.COMMERCIAL.id).price.usd);
+    const bundlePrice = getFormattedPrice(getBundleLicense(bundleData.elementId, LICENSE.commercial.id).price.usd);
 
     return (
         <>
