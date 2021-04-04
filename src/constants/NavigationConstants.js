@@ -26,4 +26,4 @@ export const COMPANY_WEBSITE_URL = 'https://www.smartvectordesign.com';
 /* Social */
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/smartvectordesign/';
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/olga-pudrovska-8a2738114/';
+export const RESUME_URL = 'https://www.dropbox.com/s/s2uy2vllhr2f95s/react_developer_resume_olga_pudrovska.pdf?dl=0';

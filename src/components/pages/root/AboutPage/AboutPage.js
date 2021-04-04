@@ -8,7 +8,7 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { COMPANY_WEBSITE_URL, LINKEDIN_URL } from 'constants/NavigationConstants';
+import { COMPANY_WEBSITE_URL, RESUME_URL } from 'constants/NavigationConstants';
 import {
     COMPANY_EMAIL_JOB,
     COMPANY_NAME
@@ -39,7 +39,7 @@ const AboutPage = () => (
             worked remotely with leading US media companies and prominent startups. I am always on the lookout
             for new projects.</p>
 
-        <p>My <a href={LINKEDIN_URL} rel="nofollow">LinkedIn Profile</a></p>
+        <p><a href={RESUME_URL} rel="nofollow">My resume</a></p>
 
         <p>
             A large <a href="https://github.com/opudrovs/svd-client-sample" rel="nofollow">
