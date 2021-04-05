@@ -6,7 +6,7 @@ You can view the working demo of this code sample [HERE](https://svd-client-samp
 
 You can view the whole project with several different page types at: [https://www.smartvectordesign.com](https://www.smartvectordesign.com).
 
-Pages examples:
+Page examples:
 - [Bundle page](https://www.smartvectordesign.com/bundle/52500-vector-backgrounds-bundle-250-named-colors-on-monochrome-background-2)
 
 - [Pack page](https://www.smartvectordesign.com/pack/houndstooth-seamless-vector-pattern-on-monochrome-background-backgrounds-pack-75)
