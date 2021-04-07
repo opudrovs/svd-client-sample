@@ -91,7 +91,7 @@ const AboutPage = () => (
         <h2 id="about-gatsby" className={styles.subtitle}>I Can Build a Static Website with Gatsby/React for
             You</h2>
 
-        <p>White I have most experience working with Next.js and React, I also have some experience with Gatsby
+        <p>While I have most experience working with Next.js and React, I also have some experience with Gatsby
             (a great React-based framework for static websites).</p>
 
         <p>I would be interested in creating a brochure website (a several-page website, listing your products
