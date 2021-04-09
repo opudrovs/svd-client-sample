@@ -47,7 +47,7 @@ This project uses
 ## Project Structure and Code Style
 
 Components are arranged by folders:
-- `pages` - app routes (Next.js routing is filesystem-based). They render route-specific components. Also contain export `getServerSideProps` functions (for example, in `pages/bundle/[slug].js`) to enable server-side rendering.
+- `pages` - app routes (Next.js routing is filesystem-based). They render top-level route-specific components and export `getServerSideProps` functions (for example, in `pages/bundle/[slug].js`) to enable server-side rendering.
 
 - `src`
   - `components` - app components.
