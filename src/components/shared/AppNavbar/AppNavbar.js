@@ -48,7 +48,7 @@ const AppNavbar = () => {
      * A callback fired when the `<Navbar>` body collapses or expands after clicking `<Navbar.Toggle>`.
      * @param {boolean} expanded Controls the visiblity of the navbar body
      */
-    const onToggleHandler = (expanded) => setIsOpen(expanded);
+    const onToggleHandler = expanded => setIsOpen(expanded);
 
     return (
         <>

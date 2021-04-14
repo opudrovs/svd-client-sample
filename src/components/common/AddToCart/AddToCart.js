@@ -84,7 +84,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
 
     const { license, selectedOption } = state;
 
-    const onSelectChangeHandler = (selectedOption) => {
+    const onSelectChangeHandler = selectedOption => {
         let license = license;
 
         for (const prop in LICENSE) {
