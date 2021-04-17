@@ -51,7 +51,7 @@ const ImageGallery = ({ imageData }) => {
 
     const router = useRouter();
 
-    const onImageLoadHandler = (imageIndex) => {
+    const onImageLoadHandler = imageIndex => {
         const { imageLoadedData } = state;
 
         if (!imageLoadedData) {
@@ -74,7 +74,7 @@ const ImageGallery = ({ imageData }) => {
         router.push(imageData[imageIndex].src);
     };
 
-    const onThumbnailClickHandler = (newImageIndex) => setState({
+    const onThumbnailClickHandler = newImageIndex => setState({
         ...state,
         imageIndex: newImageIndex
     });

@@ -32,7 +32,6 @@ const useIsHovered = () => {
         }
     }, [ref.current]);
 
-
     return [ref, isHovered, setIsHovered];
 };
 
