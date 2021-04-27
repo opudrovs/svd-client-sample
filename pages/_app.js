@@ -47,20 +47,6 @@ const MyApp = ({ Component, pageProps }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="max-snippet:320, max-image-preview:large" />
                 <link rel="icon" href="/favicon.ico" />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: '<!-- Global site tag (gtag.js) - Google Analytics -->'
-                    }}
-                />
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNR0XG2K4F" />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: 'window.dataLayer = window.dataLayer || [];\n' +
-                            '  function gtag(){dataLayer.push(arguments);}\n' +
-                            '  gtag(\'js\', new Date());\n' +
-                            '  gtag(\'config\', \'G-QNR0XG2K4F\');'
-                    }}
-                />
             </NextHead>
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
