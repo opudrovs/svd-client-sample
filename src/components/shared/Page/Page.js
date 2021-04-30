@@ -12,9 +12,7 @@ const classNames = require('classnames');
 
 /* SHARED COMPONENTS */
 
-import AppNavbar from 'components/shared/AppNavbar';
 import Cart from 'components/shared/Cart';
-import Footer from 'components/shared/Footer';
 
 /* STYLES */
 
@@ -46,7 +44,6 @@ const Page = ({
                 <meta name="description" content={seoDescription} />
             </NextHead>
             <div className={styles.page}>
-                <AppNavbar />
                 {topComponent}
                 <ContentTag className={classNames(
                     'container',
@@ -60,7 +57,6 @@ const Page = ({
                     </div>}
                     {children}
                 </ContentTag>
-                <Footer />
             </div>
         </>
     );

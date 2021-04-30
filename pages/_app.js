@@ -21,6 +21,11 @@ import store from 'redux/store';
 
 import ErrorPage from 'components/pages/root/ErrorPage';
 
+/* SHARED COMPONENTS */
+
+import AppNavbar from 'components/shared/AppNavbar';
+import Footer from 'components/shared/Footer';
+
 /* STYLES */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -50,11 +55,15 @@ const MyApp = ({ Component, pageProps }) => {
             </NextHead>
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
-                    {error
-                        ?
-                        <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
-                        :
-                        <Component {...pageProps} />}
+                    <>
+                        <AppNavbar />
+                        {error
+                            ?
+                            <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
+                            :
+                            <Component {...pageProps} />}
+                        <Footer />
+                    </>
                 </PersistGate>
             </Provider>
             <CookieConsent
