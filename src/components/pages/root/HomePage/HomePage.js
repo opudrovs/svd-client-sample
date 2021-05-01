@@ -1,10 +1,14 @@
-/* SHARED COMPONENTS */
+/* NEXT.JS */
 
-import Page from 'components/shared/Page';
+import Link from 'next/link';
 
 /* COMPONENTS */
 
 import BundlesPreview from 'components/pages/root/BundlesPageContainer/BundlesPreview';
+
+/* SHARED COMPONENTS */
+
+import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
@@ -44,7 +48,9 @@ const HomePage = () => (
             <div className="col">
                 <h2 className={styles.subtitle}>Custom Software Development Services</h2>
 
-                <p>If you need a React website or would like to automate repetitive graphic design tasks, please have a look at the <a href={ABOUT_PATH} className={styles.link}>Hire Me!</a> page for more information.</p>
+                <p>If you need a React website or would like to automate repetitive graphic design tasks, please have a
+                    look at the <Link href={ABOUT_PATH}><a className={styles.link}>Hire Me!</a></Link> page for more
+                    information.</p>
             </div>
         </div>
     </Page>

@@ -2,6 +2,10 @@
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -20,6 +24,7 @@ const FooterLink = ({
     children,
     href,
     text,
+    isExternal,
     externalClassName
 }) => {
     const linkClassName = classNames(
@@ -31,10 +36,25 @@ const FooterLink = ({
     );
 
     return (
-        <a href={href} className={linkClassName}>
-            {text}
-            {children}
-        </a>
+        <>
+            {isExternal
+                ?
+                <a
+                    href={href}
+                    className={linkClassName}
+                >
+                    {text}
+                    {children}
+                </a>
+                :
+                <Link href={href}>
+                    <a className={linkClassName}>
+                        {text}
+                        {children}
+                    </a>
+                </Link>
+            }
+        </>
     );
 };
 
@@ -42,6 +62,7 @@ FooterLink.propTypes = {
     children: PropTypes.node,
     href: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
+    isExternal: PropTypes.bool,
     externalClassName: PropTypes.string
 };
 

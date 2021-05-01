@@ -2,6 +2,10 @@
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -30,19 +34,19 @@ const MenuNavLink = ({
     );
 
     return (
-        <a
-            href={href}
-            className={linkClassName}
-        >
-            {text}
-        </a>
+        <Link href={href}>
+            <a className={linkClassName}>
+                {text}
+            </a>
+        </Link>
     );
 };
 
 MenuNavLink.propTypes = {
     href: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    isActive: PropTypes.bool
+    isActive: PropTypes.bool,
+    isExternal: PropTypes.bool
 };
 
 export default MenuNavLink;

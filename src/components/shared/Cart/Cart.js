@@ -1,3 +1,7 @@
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -31,16 +35,17 @@ const Cart = () => {
     const numberOfProducts = useSelector(selectProducts).reduce((acc, currElement) => acc + currElement.quantity, 0);
 
     return (
-        <a
-            href={CHECKOUT_PATH}
-            className={classNames(
-                'd-block',
-                styles.cart
-            )}
-        >
-            <CartIcon />
-            <div className={styles.caption}>{numberOfProducts}</div>
-        </a>
+        <Link href={CHECKOUT_PATH}>
+            <a
+                className={classNames(
+                    'd-block',
+                    styles.cart
+                )}
+            >
+                <CartIcon />
+                <div className={styles.caption}>{numberOfProducts}</div>
+            </a>
+        </Link>
     );
 };
 

@@ -32,6 +32,7 @@ const ButtonContainer = ({
     type,
     isOutline,
     href,
+    isExternal,
     isEnabled,
     theme,
     externalClassName,
@@ -63,6 +64,7 @@ const ButtonContainer = ({
                 ?
                 <LinkButton
                     href={href}
+                    isExternal={isExternal}
                     externalClassName={buttonClassName}
                 >
                     {children}
@@ -86,6 +88,7 @@ ButtonContainer.propTypes = {
     type: PropTypes.string,
     isOutline: PropTypes.bool,
     href: PropTypes.string,
+    isExternal: PropTypes.bool,
     isEnabled: PropTypes.bool,
     theme: PropTypes.string,
     externalClassName: PropTypes.string,

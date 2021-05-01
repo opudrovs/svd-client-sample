@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 /* NEXT.JS */
 
 import NextHead from 'next/head';
+import Link from 'next/link';
 
 /* LIBRARIES */
 
@@ -187,12 +188,12 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                                         {
                                             text: 'Home',
                                             name: 'Home',
-                                            url: INDEX_PATH
+                                            href: INDEX_PATH
                                         },
                                         {
                                             text: 'Bundle',
                                             name: bundleData.text.title,
-                                            url: `${BUNDLE_PATH}/${bundleData.url}`,
+                                            href: `${BUNDLE_PATH}/${bundleData.url}`,
                                             isDataOnly: true
                                         }
                                     ]}
@@ -323,15 +324,16 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                                         styles.backToTopLinkContainer
                                     )}>
                                         <div className="col">
-                                            <a
-                                                href="#main"
-                                                className={classNames(
-                                                    'd-inline-block',
-                                                    styles.link
-                                                )}
-                                            >
-                                                Back to top
-                                            </a>
+                                            <Link href="#main">
+                                                <a
+                                                    className={classNames(
+                                                        'd-inline-block',
+                                                        styles.link
+                                                    )}
+                                                >
+                                                    Back to top
+                                                </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </Fragment>

@@ -27,7 +27,6 @@ const links = [
     { href: paths.FAQ_PATH, text: 'FAQ' },
     { href: paths.ABOUT_PATH, text: 'Hire Me!' },
     { href: paths.CONTACT_PATH, text: 'Contact' }
-
 ];
 
 

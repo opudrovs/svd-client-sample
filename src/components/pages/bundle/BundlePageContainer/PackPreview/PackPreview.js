@@ -4,6 +4,10 @@ import { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -41,47 +45,49 @@ const PackPreview = ({
             styles.packPreview,
             externalClassName
         )}>
-            <a
-                href={href}
-                className={classNames(
-                    'd-flex',
-                    styles.imageLink
-                )}
-            >
-                {!isImageLoaded
-                    &&
-                    <div className={styles.imagePlaceholder} />}
-                <LazyLoad
-                    once
-                    offset={200}
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        position: isImageLoaded ? 'static' : 'absolute'
-                    }}
+            <Link href={href}>
+                <a
+                    className={classNames(
+                        'd-flex',
+                        styles.imageLink
+                    )}
                 >
-                    <img
-                        src={src}
-                        alt={alt}
-                        width="400"
-                        height="400"
-                        className={styles.image}
-                        onLoad={onImageLoadHandler}
-                    />
-                </LazyLoad>
-            </a>
+                    {!isImageLoaded
+                        &&
+                        <div className={styles.imagePlaceholder} />}
+                    <LazyLoad
+                        once
+                        offset={200}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            position: isImageLoaded ? 'static' : 'absolute'
+                        }}
+                    >
+                        <img
+                            src={src}
+                            alt={alt}
+                            width="400"
+                            height="400"
+                            className={styles.image}
+                            onLoad={onImageLoadHandler}
+                        />
+                    </LazyLoad>
+                </a>
+            </Link>
             <div className={styles.textContainer}>
                 <div className={styles.titleContainer}>
-                    <a
-                        href={href}
-                        title={title}
-                        className={classNames(
-                            'd-inline-block',
-                            styles.title
-                        )}
-                    >
-                        {htmlParser(title.replace(' - ', ' &mdash; '))}
-                    </a>
+                    <Link href={href}>
+                        <a
+                            title={title}
+                            className={classNames(
+                                'd-inline-block',
+                                styles.title
+                            )}
+                        >
+                            {htmlParser(title.replace(' - ', ' &mdash; '))}
+                        </a>
+                    </Link>
                 </div>
                 {license
                 &&
