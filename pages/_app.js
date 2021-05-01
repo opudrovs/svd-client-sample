@@ -55,15 +55,13 @@ const MyApp = ({ Component, pageProps }) => {
             </NextHead>
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
-                    <>
-                        <AppNavbar />
-                        {error
-                            ?
-                            <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
-                            :
-                            <Component {...pageProps} />}
-                        <Footer />
-                    </>
+                    <AppNavbar />
+                    {error
+                        ?
+                        <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
+                        :
+                        <Component {...pageProps} />}
+                    <Footer />
                 </PersistGate>
             </Provider>
             <CookieConsent
