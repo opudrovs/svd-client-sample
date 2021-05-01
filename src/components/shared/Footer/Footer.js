@@ -43,7 +43,12 @@ const links = [
 const secondaryLinks = [
     { href: paths.TERMS_PATH, text: 'Terms of service' },
     { href: paths.PRIVACY_POLICY_PATH, text: 'Privacy Policy' },
-    { href: paths.INSTAGRAM_URL, text: 'Instagram', children: <div className={styles.linkIcon}><InstagramIcon /></div> }
+    {
+        href: paths.INSTAGRAM_URL,
+        text: 'Instagram',
+        children: <div className={styles.linkIcon}><InstagramIcon /></div>,
+        isExternal: true
+    }
 ];
 
 const groupElements = (items, numberOfElementsInGroup) => items.reduce((acc, currElement, index) => {
@@ -67,10 +72,7 @@ const Footer = () => (
             <div className="row">
                 <div
                     className="col-12 col-md-5 col-lg-4 d-flex justify-content-center justify-content-md-start align-items-start">
-                    <Logo
-                        href={paths.INDEX_PATH}
-                        externalClassName={styles.logoImage}
-                    />
+                    <Logo externalClassName={styles.logo} />
                 </div>
                 <div className={classNames(
                     'col-12 col-md-5',

@@ -13,7 +13,7 @@ import Breadcrumb from './Breadcrumb.js';
 
 const text = 'Test text';
 
-const url = 'https://www.smartvectordesign.com';
+const href = 'https://www.smartvectordesign.com';
 
 
 /* TESTS */
@@ -29,15 +29,15 @@ describe('With Enzyme', () => {
 });
 
 describe('With Enzyme', () => {
-    it(`Component shows '${text}' and has '${url}' for href`, () => {
-        const component = shallow(<Breadcrumb url={url} text={text} />);
+    it(`Component shows '${text}' and has '${href}' for href`, () => {
+        const component = shallow(<Breadcrumb href={href} text={text} />);
 
         expect(component.find('a')
             .text())
             .toEqual(text);
 
-        expect(component.find('a').prop('href'))
-            .toEqual(url);
+        expect(component.find('Link').prop('href'))
+            .toEqual(href);
     });
 });
 
@@ -53,8 +53,8 @@ describe('With Snapshot Testing', () => {
 });
 
 describe('With Snapshot Testing', () => {
-    it(`Component shows '${text}' and has '${url}' for href`, () => {
-        const component = renderer.create(<Breadcrumb url={url} text={text} />);
+    it(`Component shows '${text}' and has '${href}' for href`, () => {
+        const component = renderer.create(<Breadcrumb href={href} text={text} />);
         const tree = component.toJSON();
 
         expect(tree)

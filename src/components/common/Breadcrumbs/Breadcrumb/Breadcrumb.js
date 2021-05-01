@@ -4,6 +4,10 @@ import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -17,17 +21,17 @@ import styles from './Breadcrumb.module.scss';
  * Breadcrumb component.
  */
 
-const Breadcrumb = ({ text, url }) => (
-    url
+const Breadcrumb = ({ text, href }) => (
+    href
         ?
-        <a href={url} className={classNames(styles.breadcrumb, styles.link)}>{text}</a>
+        <Link href={href}><a className={classNames(styles.breadcrumb, styles.link)}>{text}</a></Link>
         :
         <span className={styles.breadcrumb}>{text}</span>
 );
 
 Breadcrumb.propTypes = {
     text: PropTypes.string.isRequired,
-    url: PropTypes.string
+    href: PropTypes.string
 };
 
 export default memo(Breadcrumb);

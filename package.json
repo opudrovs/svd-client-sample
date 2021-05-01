@@ -8,6 +8,7 @@
         "start": "next start",
         "lint": "eslint . --ext ts --ext tsx --ext js",
         "test": "jest",
+        "testupdate": "jest -u",
         "testwatch": "jest --watchAll"
     },
     "dependencies": {
