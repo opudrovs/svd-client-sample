@@ -17,7 +17,7 @@ import { addProduct } from 'redux/checkout/checkoutSlice';
 
 /* COMMON COMPONENTS */
 
-import ButtonContainer from 'components/common/ButtonContainer';
+import Button from 'components/common/Buttons/Button';
 
 /* CONSTANTS */
 
@@ -137,9 +137,9 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
                 onChange={onSelectChangeHandler}
             />
 
-            <ButtonContainer
-                externalClassName={styles.addToCartButton}
+            <Button
                 theme={BUTTON_THEME.green}
+                externalClassName={styles.addToCartButton}
                 onClickHandler={() => dispatch(addProduct({
                     id: `${productLicense.productId}_${productTitle}`,
                     title: `${productTitle} ${productLicense.id.toUpperCase()} LICENSE`,
@@ -147,7 +147,7 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
                 }))}
             >
                 Add to Cart
-            </ButtonContainer>
+            </Button>
 
             <div className={styles.disclaimer}>
                 {SECURE_CHECKOUT}
