@@ -2,6 +2,10 @@
 
 import { memo } from 'react';
 
+/* NEXT.JS */
+
+import Link from 'next/link';
+
 /* LIBRARIES */
 
 const classNames = require('classnames');
@@ -54,7 +58,7 @@ const FaqPage = () => (
                 styles.highlighted
             )}>2. Can you develop a website for me or help me automate my graphic design tasks?</span></h2>
 
-            <p>I would be delighted to! Please have a look at the <a href={ABOUT_PATH}>Hire Me!</a> page for more
+            <p>I would be delighted to! Please have a look at the <Link href={ABOUT_PATH}><a>Hire Me!</a></Link> page for more
                 information.</p>
 
             <p>Please keep in mind that I specialize in custom web app/website development, when standard
@@ -66,8 +70,8 @@ const FaqPage = () => (
                 Squarespace.</p>
 
             <p>If you need a small static website, listing your products or services, I can create it for
-                you in Gatsby/React. I have detailed the main benefits of a Gatsby website <a
-                    href={`${ABOUT_PATH}#about-gatsby`}>here</a>.
+                you in Gatsby/React. I have detailed the main benefits of a Gatsby website <Link
+                    href={`${ABOUT_PATH}#about-gatsby`}><a>here</a></Link>.
             </p>
         </div>
 
@@ -123,8 +127,8 @@ const FaqPage = () => (
                 help of my custom
                 scripts and utilities.</p>
 
-            <p>This helps ensure image quality, consistency, and unique <a href="#answer-6">theming
-                capabilities</a>.</p>
+            <p>This helps ensure image quality, consistency, and unique <Link href="#answer-6"><a>theming
+                capabilities</a></Link>.</p>
 
 
             <p>If I use any third-party products, like glitter textures in the upcoming textured packs, I

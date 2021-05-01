@@ -45,13 +45,13 @@ const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
                                     "@type": "BreadcrumbList",
                                     "itemListElement": [
                                         ${breadcrumbs
-                                            .filter(({ url }) => url)
-                                            .map(({ name, url }, index) => (
+                                            .filter(({ href }) => href)
+                                            .map(({ name, href }, index) => (
                                                 `{
                                                     "@type": "ListItem",
                                                     "position": ${index + 1},
                                                     "name": "${name}",
-                                                    "item": "${COMPANY_WEBSITE_URL}${url === INDEX_PATH ? '' : url}"
+                                                    "item": "${COMPANY_WEBSITE_URL}${href === INDEX_PATH ? '' : href}"
                                                 }`
                                             ))
                                             .join(', ')}
@@ -75,8 +75,7 @@ const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
 Breadcrumbs.propTypes = {
     breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
+        href: PropTypes.string,
         isDataOnly: PropTypes.boolean
     })).isRequired,
     externalClassName: PropTypes.string

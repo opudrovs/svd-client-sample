@@ -27,7 +27,6 @@ import Modal from 'components/dialogs/Modal';
 
 /* CONSTANTS */
 
-import * as paths from 'constants/NavigationConstants';
 import { BOOTSTRAP_RESET } from 'constants/UiConstants';
 
 /* STYLES */
@@ -73,10 +72,7 @@ const AppNavbar = () => {
                             <div
                                 className="col d-flex justify-content-center align-items-center justify-content-md-start"
                             >
-                                <Logo
-                                    href={paths.INDEX_PATH}
-                                    externalClassName={styles.logoImage}
-                                />
+                                <Logo externalClassName={styles.logo} />
                             </div>
                             <Navbar.Collapse
                                 id="basic-navbar-nav"
