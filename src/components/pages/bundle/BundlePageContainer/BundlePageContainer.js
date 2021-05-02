@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 /* NEXT.JS */
 
 import NextHead from 'next/head';
-import Link from 'next/link';
 
 /* LIBRARIES */
 
@@ -324,16 +323,15 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                                         styles.backToTopLinkContainer
                                     )}>
                                         <div className="col">
-                                            <Link href="#main">
-                                                <a
-                                                    className={classNames(
-                                                        'd-inline-block',
-                                                        styles.link
-                                                    )}
-                                                >
-                                                    Back to top
-                                                </a>
-                                            </Link>
+                                            <a
+                                                href="#main"
+                                                className={classNames(
+                                                    'd-inline-block',
+                                                    styles.link
+                                                )}
+                                            >
+                                                Back to top
+                                            </a>
                                         </div>
                                     </div>
                                 </Fragment>
