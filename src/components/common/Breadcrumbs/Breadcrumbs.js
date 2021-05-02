@@ -62,9 +62,9 @@ const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
             </NextHead>
             {breadcrumbs
                 .filter(({ isDataOnly }) => !isDataOnly)
-                .map((element, index, filteredBreadcrumbs) => (
+                .map(({ text, href }, index, filteredBreadcrumbs) => (
                     <Fragment key={`breadcrumb-${index}`}>
-                        <Breadcrumb {...element} />
+                        <Breadcrumb text={text} href={href} />
                         {index < filteredBreadcrumbs.length - 1 && <>&nbsp;/&nbsp;</>}
                     </Fragment>
                 ))}
@@ -75,6 +75,7 @@ const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
 Breadcrumbs.propTypes = {
     breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string.isRequired,
+        name: PropTypes.string,
         href: PropTypes.string,
         isDataOnly: PropTypes.boolean
     })).isRequired,
