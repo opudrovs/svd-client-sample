@@ -45,8 +45,7 @@ const MenuNavLink = ({
 MenuNavLink.propTypes = {
     href: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    isActive: PropTypes.bool,
-    isExternal: PropTypes.bool
+    isActive: PropTypes.bool
 };
 
 export default MenuNavLink;
