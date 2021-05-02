@@ -127,8 +127,8 @@ const FaqPage = () => (
                 help of my custom
                 scripts and utilities.</p>
 
-            <p>This helps ensure image quality, consistency, and unique <Link href="#answer-6"><a>theming
-                capabilities</a></Link>.</p>
+            <p>This helps ensure image quality, consistency, and unique <a href="#answer-6">theming
+                capabilities</a></p>
 
 
             <p>If I use any third-party products, like glitter textures in the upcoming textured packs, I
