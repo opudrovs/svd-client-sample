@@ -29,7 +29,7 @@ const FooterLink = ({
 }) => {
     const linkClassName = classNames(
         {
-            ['d-flex justify-content-center']: children
+            'd-flex justify-content-center': children
         },
         styles.footerLink,
         externalClassName
