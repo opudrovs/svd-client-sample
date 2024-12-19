@@ -73,8 +73,6 @@ The project is very image-heavy by design, the size of loaded images is much hig
 
 - The project uses Bootstrap grid (to place components) with custom styling to speed up development and make collaboration with other developers, if necessary, easier. It is possible to replace Bootstrap navigation bar classes with custom code and instead of importing the whole React Bootstrap code import only Bootstrap grid. This would allow to remove several tens of kilobytes of code from page imports.
 
-- The full project also imported third-party Paddle checkout code.
-
 - Almost all SCSS variables and mixins are contained in the `theme.scss` file, for simplicity and development speed. This file is automatically prepended to each SCSS file with SASS loader. This file can be split into smaller files to be imported on demand.
 
 ## How to Run the App
