@@ -4,7 +4,7 @@
 
 /* Route path prefixes */
 
-export const CDN_ROOT = 'https://www.smartvectordesign.com/images';
+export const CDN_ROOT = '/cdn_root';
 
 /* Image format */
 

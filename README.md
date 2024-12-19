@@ -1,17 +1,8 @@
 # svd-client-sample
 
-This is a code sample abstracted from the source code of [https://www.smartvectordesign.com](https://www.smartvectordesign.com) website.
+This is a code sample abstracted from the source code of my former E-commerce website selling digital products.
 
-You can view the working demo of this code sample [HERE](https://svd-client-sample.vercel.app/).
-
-You can view the whole project with several different page types at: [https://www.smartvectordesign.com](https://www.smartvectordesign.com).
-
-Page examples:
-- [Bundle page](https://www.smartvectordesign.com/bundle/52500-vector-backgrounds-bundle-250-named-colors-on-monochrome-background-2)
-
-- [Pack page](https://www.smartvectordesign.com/pack/houndstooth-seamless-vector-pattern-on-monochrome-background-backgrounds-pack-75)
-
-- [Product (image) page](https://www.smartvectordesign.com/product/rose-red-houndstooth-seamless-pattern-background-20521), on which you can download the image for free. There are 70000 product pages in the full project. All images, page titles and URLs, and product keywords were generated programmatically.
+[Live Demo](https://svd-client-sample.vercel.app/).
 
 The code sample includes only bundle pages, About (Hire Me!) and FAQ pages.
 
@@ -38,7 +29,9 @@ This project uses
 
 - `react-lazyload` package for lazily loading images on bundle and pack pages;
 
-- a custom inline image gallery component with thumbnails. A third-party image gallery popup library was removed from the project. A more stable library will be added in the future. For now, clicking on the large image preview in the inline image gallery opens the image directly in the browser.
+- a custom inline image gallery component with thumbnails. Third-party image gallery solutions did not fit my design concept, so I rolled out a fast gallery solution based on existing image galleries used on digital asset marketplaces.
+
+Clicking on the large image preview in the inline image gallery opens the image directly in the browser.
 
 - ESLint with custom config for analyzing the code;
 
@@ -52,13 +45,13 @@ Components are arranged by folders:
 - `src`
   - `components` - app components.
     - `assets` - inline SVG icons.
-    - `common` - components, used often and on several pages, but not on all pages.
+    - `common` - components, used often and on multiple pages, but not on all pages.
     - `dialogs` - modal dialogs/popups.
     - `pages` - route-specific components.
     - `shared` - components, present on all (or almost all) pages, like app navigation bar and footer.
    
   - `constants` - help avoid using "magic" strings and numbers.
-  - `data` - more complex data in JSON format which can be stored in the application instead of loading it via API.
+  - `data` - hardcoded data for preview purposes.
   - `hooks` - custom hooks.
   - `redux` - global Redux store, Redux slices (which are organized by feature folders and contain feature-specific initial state, actions, reducers, and selectors), and custom dummy server-side storage.
   - `styles` - global app styles.
@@ -80,7 +73,7 @@ The project is very image-heavy by design, the size of loaded images is much hig
 
 - The project uses Bootstrap grid (to place components) with custom styling to speed up development and make collaboration with other developers, if necessary, easier. It is possible to replace Bootstrap navigation bar classes with custom code and instead of importing the whole React Bootstrap code import only Bootstrap grid. This would allow to remove several tens of kilobytes of code from page imports.
 
-- The full project at [https://www.smartvectordesign.com](https://www.smartvectordesign.com) imports third-party Paddle checkout code in the custom Next.js document, as recommended. Loading Paddle code and checkout initialization slows down initial page load. Thus, moving checkout initialization to a separate checkout page (on which I started working in this code sample) would speed up page loading considerably.
+- The full project also imported third-party Paddle checkout code.
 
 - Almost all SCSS variables and mixins are contained in the `theme.scss` file, for simplicity and development speed. This file is automatically prepended to each SCSS file with SASS loader. This file can be split into smaller files to be imported on demand.
 
@@ -104,3 +97,7 @@ npx next start
 ```
 
 Then open `http://localhost:3000/` in your browser.
+
+## Demo
+
+[Live Demo](https://svd-client-sample.vercel.app/)

@@ -21,9 +21,9 @@ export const PACK_PATH = '/pack';
 
 /* Company */
 
-export const COMPANY_WEBSITE_URL = 'https://www.smartvectordesign.com';
+export const COMPANY_WEBSITE_URL = 'https://www.linkedin.com/in/olga-pudrovska/';
 
 /* Social */
 
-export const INSTAGRAM_URL = 'https://www.instagram.com/smartvectordesign/';
-export const RESUME_URL = 'https://www.dropbox.com/s/s2uy2vllhr2f95s/react_developer_resume_olga_pudrovska.pdf?dl=0';
+export const INSTAGRAM_URL = 'https://www.instagram.com/';
+export const RESUME_URL = 'https://drive.google.com/file/d/1UVHNlrDhIZwHV2N0XmGhOluLguZbZSiK/view?usp=sharing';

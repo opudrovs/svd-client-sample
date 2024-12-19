@@ -2,7 +2,7 @@
  * API constants
  */
 
-const API_ROOT = 'https://smartvectordesign.com/api-data';
+const API_ROOT = '/api_route';
 
 /* API routes */
 

@@ -5,8 +5,8 @@
 /* General */
 
 export const COMPANY_NAME = 'SmartVectorDesign';
-export const COMPANY_EMAIL_SUPPORT = 'support@smartvectordesign.com';
-export const COMPANY_EMAIL_JOB = 'olga@smartvectordesign.com';
+export const COMPANY_EMAIL_SUPPORT = 'opudrovs@gmail.com';
+export const COMPANY_EMAIL_JOB = 'opudrovs@gmail.com';
 
 export const COLOR_DESCRIPTION_SOLIDS_NAMED = 'Seven colors in each pack are custom. All other colors use exact color codes of popular named colors.\\n\\nImage files in each pack are sorted by hue. A large size color chart image is included with each pack for convenience.';
 export const COLOR_LIST_TITLE_SOLIDS_NAMED = 'Colors included (in alphabetical order):';

@@ -13,7 +13,7 @@ import Breadcrumb from './Breadcrumb.js';
 
 const text = 'Test text';
 
-const href = 'https://www.smartvectordesign.com';
+const href = 'https://www.test.com';
 
 
 /* TESTS */
