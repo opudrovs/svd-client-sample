@@ -69,7 +69,7 @@ Exported constants are all caps, constants used locally are camel case. Object c
 
 - Large complex components (in particular, page containers) could be split into smaller and simpler components to simplify readability, maintenance, and testing. For now, the app layout is frequently changed, and splitting the components was not deemed a priority.
 
-The project is very image-heavy by design, the size of loaded images is much higher than the size of JS and CSS code, and thus the following optimizations were not planned for the initial release because for such type of project they would be only marginally useful:
+- The project is very image-heavy by design, the size of loaded images is much higher than the size of JS and CSS code, and thus the following optimizations were not planned for the initial release because for such type of project they would be only marginally useful:
 
 - The project uses Bootstrap grid (to place components) with custom styling to speed up development and make collaboration with other developers, if necessary, easier. It is possible to replace Bootstrap navigation bar classes with custom code and instead of importing the whole React Bootstrap code import only Bootstrap grid. This would allow to remove several tens of kilobytes of code from page imports.
 
