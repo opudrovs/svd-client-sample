@@ -1,24 +1,14 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
-/* CONSTANTS */
-
 import { BUTTON_THEME } from 'constants/uiConstants';
 
-/* STYLES */
-
-import styles from '../Button.module.scss';
-
+import styles from './Button.module.scss';
 
 /**
  * Regular button component.
  */
-
 const Button = ({
     children,
     type,

@@ -5,13 +5,12 @@ import { useRouter } from 'next/router'
 const classNames = require('classnames');
 import LazyLoad from 'react-lazyload';
 
-import ThumbnailsContainer from './ThumbnailsContainer';
-
 import useIsHovered from 'hooks/useIsHovered';
 
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
 
 import Loader from 'components/common/Loader';
+import ThumbnailsContainer from './ThumbnailsContainer';
 
 import { IMAGE_DATA_TYPE } from 'constants/typeConstants';
 

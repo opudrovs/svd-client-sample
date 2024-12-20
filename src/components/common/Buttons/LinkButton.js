@@ -1,29 +1,17 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* NEXT.JS */
 
 import Link from 'next/link';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
-
-/* CONSTANTS */
 
 import { BUTTON_THEME } from 'constants/uiConstants';
 
-/* STYLES */
-
 import styles from '../Button.module.scss';
-
 
 /**
  * Link styled as a button component.
  * To render a regular button, use `Button` component.
  */
-
 const LinkButton = ({
     children,
     href,
