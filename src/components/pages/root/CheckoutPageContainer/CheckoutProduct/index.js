@@ -1,3 +1,1 @@
-import CheckoutProduct from './CheckoutProduct';
-
-export default CheckoutProduct;
+export { default } from './CheckoutProduct.jsx';

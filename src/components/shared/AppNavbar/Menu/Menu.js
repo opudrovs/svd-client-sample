@@ -18,7 +18,7 @@ import MenuNavLink from './MenuNavLink';
 
 /* CONSTANTS */
 
-import * as paths from 'constants/NavigationConstants';
+import * as paths from 'constants/navigationConstants';
 
 const links = [
     { href: paths.BUNDLES_PATH, text: 'Bundles' },

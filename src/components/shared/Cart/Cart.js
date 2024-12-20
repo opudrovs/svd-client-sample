@@ -18,7 +18,7 @@ import CartIcon from 'components/assets/icons/CartIcon';
 
 /* CONSTANTS */
 
-import { CHECKOUT_PATH } from 'constants/NavigationConstants';
+import { CHECKOUT_PATH } from 'constants/navigationConstants';
 
 /* STYLES */
 

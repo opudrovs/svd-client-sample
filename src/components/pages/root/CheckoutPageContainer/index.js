@@ -1,3 +1,1 @@
-import CheckoutPageContainer from './CheckoutPageContainer';
-
-export default CheckoutPageContainer;
+export { default } from './CheckoutPageContainer.jsx';

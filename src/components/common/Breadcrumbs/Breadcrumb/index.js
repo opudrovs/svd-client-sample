@@ -1,3 +1,2 @@
-import Breadcrumb from './Breadcrumb';
+export { default } from './Breadcrumb.jsx';
 
-export default Breadcrumb;

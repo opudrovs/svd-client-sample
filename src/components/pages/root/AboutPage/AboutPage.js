@@ -8,11 +8,11 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { COMPANY_WEBSITE_URL, RESUME_URL } from 'constants/NavigationConstants';
+import { COMPANY_WEBSITE_URL, RESUME_URL } from 'constants/navigationConstants';
 import {
     COMPANY_EMAIL_JOB,
     COMPANY_NAME
-} from 'constants/TextConstants';
+} from 'constants/textConstants';
 
 /* STYLES */
 

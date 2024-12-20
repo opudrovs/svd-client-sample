@@ -4,7 +4,7 @@ import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 
 /* UTILS */
 
-import { isBrowser } from 'utils/SystemUtils';
+import { isBrowser } from 'utils/systemUtils';
 
 
 /**

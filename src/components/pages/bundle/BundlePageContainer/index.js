@@ -1,3 +1,1 @@
-import BundlePageContainer from './BundlePageContainer';
-
-export default BundlePageContainer;
+export { default } from './BundlePageContainer.jsx';

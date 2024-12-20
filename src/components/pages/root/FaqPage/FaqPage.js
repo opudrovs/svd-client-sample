@@ -16,8 +16,8 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { ABOUT_PATH } from 'constants/NavigationConstants';
-import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
+import { ABOUT_PATH } from 'constants/navigationConstants';
+import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
 /* STYLES */
 

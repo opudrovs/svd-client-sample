@@ -8,7 +8,7 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/TextConstants';
+import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
 /* STYLES */
 

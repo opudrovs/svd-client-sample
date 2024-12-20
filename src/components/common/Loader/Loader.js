@@ -14,7 +14,7 @@ import useIsMounted from 'hooks/useIsMounted';
 
 /* UTILS */
 
-import { isBrowser } from 'utils/SystemUtils';
+import { isBrowser } from 'utils/systemUtils';
 
 /* STYLES */
 

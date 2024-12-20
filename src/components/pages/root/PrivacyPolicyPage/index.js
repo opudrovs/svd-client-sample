@@ -1,3 +1,1 @@
-import PrivacyPolicyPage from './PrivacyPolicyPage';
-
-export default PrivacyPolicyPage;
+export { default } from './PrivacyPolicyPage.jsx';

@@ -1,3 +1,1 @@
-import ImageGallery from './ImageGallery';
-
-export default ImageGallery;
+export { default } from './ImageGallery.jsx';

@@ -12,13 +12,13 @@ import BundlePreview from './BundlePreview';
 
 /* CONSTANTS */
 
-import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/AssetConstants';
-import { LICENSE } from 'constants/CheckoutConstants';
-import { BUNDLE_PATH } from 'constants/NavigationConstants';
+import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/assetConstants';
+import { LICENSE } from 'constants/checkoutConstants';
+import { BUNDLE_PATH } from 'constants/navigationConstants';
 
 /* UTILS */
 
-import { getBundleLicense } from 'utils/CheckoutUtils';
+import { getBundleLicense } from 'utils/checkoutUtils';
 
 /* STYLES */
 

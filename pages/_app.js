@@ -21,7 +21,6 @@ import 'tippy.js/dist/tippy.css';
 
 import 'styles/globals.scss';
 
-
 /**
  * Next.js custom app (page wrapper component).
  * Wraps other pages but does not create a shared state between them automatically.

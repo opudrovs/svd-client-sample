@@ -1,13 +1,7 @@
-/* COMPONENTS */
-
 import BundlePageContainer from 'components/pages/bundle/BundlePageContainer';
 
-/* CONSTANTS */
-
-import { API_ROUTE_BUNDLE_PREVIEW } from 'constants/ApiConstants';
-import { ERROR_MESSAGE } from 'constants/MessageConstants';
-
-/* DATA */
+import { API_ROUTE_BUNDLE_PREVIEW } from 'constants/apiConstants';
+import { ERROR_MESSAGE } from 'constants/messageConstants';
 
 import dataBundles from 'data/bundles/bundles.js';
 

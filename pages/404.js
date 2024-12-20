@@ -4,7 +4,7 @@ import ErrorPage from 'components/pages/root/ErrorPage';
 
 /* CONSTANTS */
 
-import { ERROR_MESSAGE } from 'constants/MessageConstants';
+import { ERROR_MESSAGE } from 'constants/messageConstants';
 
 const Custom404 = () => <ErrorPage errorCode={404} errorMessage={ERROR_MESSAGE[404]} />;
 

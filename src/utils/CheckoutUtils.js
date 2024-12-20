@@ -1,6 +1,6 @@
 /* CONSTANTS */
 
-import { BUNDLE_PRODUCTS, PACK_PRODUCTS } from 'constants/CheckoutConstants';
+import { BUNDLE_PRODUCTS, PACK_PRODUCTS } from 'constants/checkoutConstants';
 
 
 /**

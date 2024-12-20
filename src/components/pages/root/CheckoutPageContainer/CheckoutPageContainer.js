@@ -16,7 +16,7 @@ import Page from 'components/shared/Page';
 
 /* CONSTANTS */
 
-import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/TextConstants';
+import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/textConstants';
 
 /* STYLES */
 

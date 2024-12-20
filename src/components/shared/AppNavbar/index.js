@@ -1,3 +1,1 @@
-import AppNavbar from './AppNavbar';
-
-export default AppNavbar;
+export { default } from './AppNavbar.jsx';

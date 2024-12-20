@@ -18,7 +18,7 @@ import Breadcrumb from './Breadcrumb';
 
 /* CONSTANTS */
 
-import { COMPANY_WEBSITE_URL, INDEX_PATH } from 'constants/NavigationConstants';
+import { COMPANY_WEBSITE_URL, INDEX_PATH } from 'constants/navigationConstants';
 
 /* STYLES */
 

@@ -14,8 +14,8 @@ const classNames = require('classnames');
 
 /* CONSTANTS */
 
-import { INDEX_PATH } from 'constants/NavigationConstants';
-import { COMPANY_NAME } from 'constants/TextConstants';
+import { INDEX_PATH } from 'constants/navigationConstants';
+import { COMPANY_NAME } from 'constants/textConstants';
 
 /* STYLES */
 

@@ -8,7 +8,7 @@ const classNames = require('classnames');
 
 /* CONSTANTS */
 
-import { BUTTON_THEME } from 'constants/UiConstants';
+import { BUTTON_THEME } from 'constants/uiConstants';
 
 /* STYLES */
 

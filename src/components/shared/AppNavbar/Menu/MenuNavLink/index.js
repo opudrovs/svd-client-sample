@@ -1,3 +1,1 @@
-import MenuNavLink from './MenuNavLink';
-
-export default MenuNavLink;
+export { default } from './MenuNavLink.jsx';

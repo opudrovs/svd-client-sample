@@ -30,7 +30,7 @@ import Loader from 'components/common/Loader';
 
 /* CONSTANTS */
 
-import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
+import { IMAGE_DATA_TYPE } from 'constants/typeConstants';
 
 /* STYLES */
 

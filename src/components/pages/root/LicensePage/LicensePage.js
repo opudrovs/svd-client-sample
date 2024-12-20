@@ -11,7 +11,7 @@ import Page from 'components/shared/Page';
 import {
     COMPANY_NAME,
     PRODUCT_META_DESCRIPTION_END
-} from 'constants/TextConstants';
+} from 'constants/textConstants';
 
 /* STYLES */
 

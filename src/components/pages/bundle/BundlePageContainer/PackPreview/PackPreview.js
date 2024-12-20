@@ -17,7 +17,7 @@ import LazyLoad from 'react-lazyload';
 
 /* UTILS */
 
-import { getFormattedPrice } from 'utils/CheckoutUtils.js';
+import { getFormattedPrice } from 'utils/checkoutUtils.js';
 
 /* STYLES */
 

@@ -1,43 +1,27 @@
-/* REACT */
-
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
 import { useDispatch } from 'react-redux';
 import ReactSelect from 'react-select';
 
-/* REDUX */
-
 import { addProduct } from 'redux/checkout/checkoutSlice';
-
-/* COMMON COMPONENTS */
 
 import Button from 'components/common/Buttons/Button';
 
-/* CONSTANTS */
+import { LICENSE } from 'constants/checkoutConstants';
+import { SECURE_CHECKOUT } from 'constants/textConstants';
+import { BUTTON_THEME } from 'constants/uiConstants';
 
-import { LICENSE } from 'constants/CheckoutConstants';
-import { SECURE_CHECKOUT } from 'constants/TextConstants';
-import { BUTTON_THEME } from 'constants/UiConstants';
-
-/* UTILS */
-
-import { getFormattedDiscount, getFormattedPrice } from 'utils/CheckoutUtils';
-
-/* STYLES */
+import { getFormattedDiscount, getFormattedPrice } from 'utils/checkoutUtils';
 
 import styles from './AddToCart.module.scss';
-
 
 /**
  * AddToCart component.
  */
-
 const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
     const selectOptions = [
         {

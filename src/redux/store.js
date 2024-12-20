@@ -25,7 +25,7 @@ import storage from './storage';
 
 /* UTILS */
 
-import { isBrowser } from 'utils/SystemUtils';
+import { isBrowser } from 'utils/systemUtils';
 
 
 /**

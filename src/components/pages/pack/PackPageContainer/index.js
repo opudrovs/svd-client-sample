@@ -1,3 +1,1 @@
-import PackPageContainer from './PackPageContainer';
-
-export default PackPageContainer;
+export { default } from './PackPageContainer.jsx';

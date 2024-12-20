@@ -1,3 +1,1 @@
-import BundlePreview from './BundlePreview';
-
-export default BundlePreview;
+export { default } from './BundlePreview.jsx';

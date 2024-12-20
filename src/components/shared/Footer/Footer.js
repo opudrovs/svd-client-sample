@@ -17,8 +17,8 @@ import Logo from 'components/common/Logo';
 
 /* CONSTANTS */
 
-import * as paths from 'constants/NavigationConstants';
-import { COMPANY_NAME } from 'constants/TextConstants';
+import * as paths from 'constants/navigationConstants';
+import { COMPANY_NAME } from 'constants/textConstants';
 
 /* STYLES */
 

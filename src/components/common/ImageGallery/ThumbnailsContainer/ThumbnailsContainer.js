@@ -12,7 +12,7 @@ import Thumbnail from './Thumbnail';
 
 /* CONSTANTS */
 
-import { IMAGE_DATA_TYPE } from 'constants/TypeConstants';
+import { IMAGE_DATA_TYPE } from 'constants/typeConstants';
 
 /* STYLES */
 

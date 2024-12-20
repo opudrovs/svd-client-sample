@@ -38,29 +38,29 @@ import Page from 'components/shared/Page';
 import {
     CDN_ROOT,
     SCREENSHOT_IMAGE_FORMAT
-} from 'constants/AssetConstants';
-import { LICENSE } from 'constants/CheckoutConstants';
-import { PACK_DATA_SEAMLESS_MODE_FULL } from 'constants/DataConstants';
+} from 'constants/assetConstants';
+import { LICENSE } from 'constants/checkoutConstants';
+import { PACK_DATA_SEAMLESS_MODE_FULL } from 'constants/dataConstants';
 import {
     BUNDLE_PATH,
     COMPANY_WEBSITE_URL,
     INDEX_PATH,
     PACK_PATH
-} from 'constants/NavigationConstants';
+} from 'constants/navigationConstants';
 import {
     COLOR_DESCRIPTION_SOLIDS_NAMED,
     COLOR_LIST_SOLIDS_NAMED,
     COLOR_LIST_TITLE_SOLIDS_NAMED,
     COMPANY_NAME,
     PRODUCT_META_DESCRIPTION_END
-} from 'constants/TextConstants';
+} from 'constants/textConstants';
 
 /* UTILS */
 
-import { partitionArray } from 'utils/ArrayUtils';
-import { getBundleLicense, getFormattedPrice, getPackLicense } from 'utils/CheckoutUtils';
-import { mapScreenshotToImageDataObject } from 'utils/DataUtils';
-import { convertDataStringToHtml } from 'utils/StringUtils';
+import { partitionArray } from 'utils/arrayUtils';
+import { getBundleLicense, getFormattedPrice, getPackLicense } from 'utils/checkoutUtils';
+import { mapScreenshotToImageDataObject } from 'utils/dataUtils';
+import { convertDataStringToHtml } from 'utils/stringUtils';
 
 /* STYLES */
 

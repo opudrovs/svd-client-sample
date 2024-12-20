@@ -27,7 +27,7 @@ import Modal from 'components/dialogs/Modal';
 
 /* CONSTANTS */
 
-import { BOOTSTRAP_RESET } from 'constants/UiConstants';
+import { BOOTSTRAP_RESET } from 'constants/uiConstants';
 
 /* STYLES */
 

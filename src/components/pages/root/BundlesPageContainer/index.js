@@ -1,3 +1,1 @@
-import BundlesPageContainer from './BundlesPageContainer';
-
-export default BundlesPageContainer;
+export { default } from './BundlesPageContainer';
