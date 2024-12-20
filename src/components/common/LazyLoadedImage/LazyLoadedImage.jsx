@@ -23,16 +23,14 @@ const LazyLoadedImage = ({ src, alt }) => {
         alt={alt}
         layout="fill" // Makes image take up full container size
         objectFit="cover" // Optional: Adjusts how the image scales
-        loading="lazy" // Default behavior in next/image
-        onLoadingComplete={() => setImageLoaded(true)} // Track when image loads
-        placeholder="blur" // Optional: Use blur placeholder for a smooth load
-        blurDataURL="data:image/svg+xml;base64,..." // Optional: Blur base64
+        onLoadingComplete={() => setImageLoaded(true)}
+        placeholder="blur"
       />
     </div>
   );
 };
 
 LazyLoadedImage.propTypes = {
-    src: PropTypes.string,
+    src: PropTypes.string.isRequired,
     alt: PropTypes.string
 };
