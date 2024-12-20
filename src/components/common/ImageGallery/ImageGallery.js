@@ -1,56 +1,33 @@
-/* REACT */
-
 import { useState } from 'react';
 
-/* NEXT.JS */
-
-import { useRouter } from 'next/router';
-
-/* LIBRARIES */
+import { useRouter } from 'next/router'
 
 const classNames = require('classnames');
-
 import LazyLoad from 'react-lazyload';
-
-/* COMPONENTS */
 
 import ThumbnailsContainer from './ThumbnailsContainer';
 
-/* HOOKS */
-
 import useIsHovered from 'hooks/useIsHovered';
-
-/* ASSET COMPONENTS */
 
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
 
-/* COMMON COMPONENTS */
-
 import Loader from 'components/common/Loader';
-
-/* CONSTANTS */
 
 import { IMAGE_DATA_TYPE } from 'constants/typeConstants';
 
-/* STYLES */
-
 import styles from './ImageGallery.module.scss';
-
 
 /**
  * Inline image gallery component.
  * For the time being, does not use a lightbox component and on click opens large image preview in browser.
  */
-
 const ImageGallery = ({ imageData }) => {
     const [hoverRef, isHovered] = useIsHovered();
     const [state, setState] = useState({
         imageIndex: 0,
         imageLoadedData: imageData ? imageData.map(() => false) : null
     });
-
     const router = useRouter();
-
     const onImageLoadHandler = imageIndex => {
         const { imageLoadedData } = state;
 
@@ -63,7 +40,6 @@ const ImageGallery = ({ imageData }) => {
             imageLoadedData: [...imageLoadedData.slice(0, imageIndex), true, ...imageLoadedData.slice(imageIndex + 1)]
         });
     };
-
     const onPreviewClickHandler = () => {
         const { imageIndex, imageLoadedData } = state;
 
@@ -73,20 +49,14 @@ const ImageGallery = ({ imageData }) => {
 
         router.push(imageData[imageIndex].src);
     };
-
     const onThumbnailClickHandler = newImageIndex => setState({
         ...state,
         imageIndex: newImageIndex
     });
-
     const containsMultipleImages = imageData && imageData.length > 1;
-
     const { imageIndex, imageLoadedData } = state;
-
     const shouldShowOverlay = isHovered;
-
     const isImageLoaded = !containsMultipleImages || imageLoadedData && imageLoadedData[imageIndex];
-
     const image = (
         <>
             {imageData

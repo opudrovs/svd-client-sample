@@ -1,14 +1,8 @@
-/* REACT */
-
 import { Fragment, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import NextHead from 'next/head';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
@@ -17,23 +11,16 @@ const htmlParser = require('html-react-parser');
 import Collapse, { Panel } from 'rc-collapse';
 import Tippy from '@tippyjs/react';
 
-/* COMPONENTS */
-
 import PackPreview from './PackPreview';
-
-/* COMMON COMPONENTS */
 
 import AddToCart from 'components/common/AddToCart';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ErrorMessage from 'components/common/ErrorMessage';
 import ImageGallery from 'components/common/ImageGallery';
+
 import Tags from 'components/common/Tags';
 
-/* SHARED COMPONENTS */
-
 import Page from 'components/shared/Page';
-
-/* CONSTANTS */
 
 import {
     CDN_ROOT,
@@ -55,14 +42,10 @@ import {
     PRODUCT_META_DESCRIPTION_END
 } from 'constants/textConstants';
 
-/* UTILS */
-
 import { partitionArray } from 'utils/arrayUtils';
 import { getBundleLicense, getFormattedPrice, getPackLicense } from 'utils/checkoutUtils';
 import { mapScreenshotToImageDataObject } from 'utils/dataUtils';
 import { convertDataStringToHtml } from 'utils/stringUtils';
-
-/* STYLES */
 
 import styles from './BundlePageContainer.module.scss';
 
@@ -71,7 +54,6 @@ import styles from './BundlePageContainer.module.scss';
  * Container for the Bundle page.
  * Contains all other components on the page.
  */
-
 const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
     const [state] = useState({
         imageData: bundleData.screenshots
@@ -124,7 +106,6 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                 .format('MMMM D, YYYY')}</div>
         </>
     );
-
     const bundlePrice = getFormattedPrice(getBundleLicense(bundleData.elementId, LICENSE.commercial.id).price.usd);
 
     return (

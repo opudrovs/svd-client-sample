@@ -1,33 +1,20 @@
-/* REACT */
-
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import Link from 'next/link';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
-
 const htmlParser = require('html-react-parser');
 import LazyLoad from 'react-lazyload';
 
-/* UTILS */
-
 import { getFormattedPrice } from 'utils/checkoutUtils.js';
 
-/* STYLES */
-
 import styles from './PackPreview.module.scss';
-
 
 /**
  * Pack preview component.
  */
-
 const PackPreview = ({
     href,
     src,
@@ -37,7 +24,6 @@ const PackPreview = ({
     externalClassName
 }) => {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
-
     const onImageLoadHandler = () => setIsImageLoaded(true);
 
     return (
