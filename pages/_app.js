@@ -1,32 +1,18 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import NextHead from 'next/head';
-
-/* LIBRARIES */
 
 import CookieConsent from 'react-cookie-consent';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
-/* REDUX */
-
 import store from 'redux/store';
-
-/* COMPONENTS */
 
 import ErrorPage from 'components/pages/root/ErrorPage';
 
-/* SHARED COMPONENTS */
-
 import AppNavbar from 'components/shared/AppNavbar';
 import Footer from 'components/shared/Footer';
-
-/* STYLES */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css/normalize.css';
@@ -40,7 +26,6 @@ import 'styles/globals.scss';
  * Next.js custom app (page wrapper component).
  * Wraps other pages but does not create a shared state between them automatically.
  */
-
 const MyApp = ({ Component, pageProps }) => {
     const { error } = pageProps;
 

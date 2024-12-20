@@ -4,7 +4,7 @@ This is a code sample abstracted from the source code of my former E-commerce we
 
 [Live Demo](https://svd-client-sample.vercel.app/).
 
-The code sample includes only bundle pages, About (Hire Me!) and FAQ pages.
+The code sample includes only bundle pages, About, and FAQ pages.
 
 ## Table of Contents
 
