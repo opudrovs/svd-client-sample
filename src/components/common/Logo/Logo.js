@@ -1,31 +1,19 @@
-/* REACT */
-
 import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import Link from 'next/link';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
-
-/* CONSTANTS */
 
 import { INDEX_PATH } from 'constants/navigationConstants';
 import { COMPANY_NAME } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './Logo.module.scss';
-
 
 /**
  * The logo of the application.
  */
-
 const Logo = ({ externalClassName }) => (
     <Link href={INDEX_PATH}>
         <a

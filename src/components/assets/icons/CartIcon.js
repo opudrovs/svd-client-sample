@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 /**
- * Cart icon for rendering as inline SVG.
+ * Cart icon
  */
 const CartIcon = () => (
     <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

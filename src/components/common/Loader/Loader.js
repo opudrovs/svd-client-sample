@@ -1,30 +1,18 @@
-/* REACT */
-
 import { memo, useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
-
-/* HOOKS */
 
 import useIsMounted from 'hooks/useIsMounted';
 
-/* UTILS */
-
 import { isBrowser } from 'utils/systemUtils';
 
-/* STYLES */
-
 import styles from './Loader.module.scss';
-
 
 /**
  * Component to display a loading indicator, with or without delay.
  */
-
 const Loader = ({ delay, isOnButton, externalClassName }) => {
     const [shouldShowLoader, setShouldShowLoader] = useState(false);
 

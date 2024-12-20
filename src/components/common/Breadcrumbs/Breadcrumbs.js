@@ -1,34 +1,20 @@
-/* REACT */
-
 import { Fragment } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import NextHead from 'next/head';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
-/* COMPONENTS */
-
 import Breadcrumb from './Breadcrumb';
-
-/* CONSTANTS */
 
 import { COMPANY_WEBSITE_URL, INDEX_PATH } from 'constants/navigationConstants';
 
-/* STYLES */
-
 import styles from './Breadcrumbs.module.scss';
-
 
 /**
  * Breadcrumbs navigation.
  */
-
 const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
     <div className={classNames(
         'd-flex align-items-center flex-wrap',

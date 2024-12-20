@@ -7,10 +7,11 @@ import LazyLoad from 'react-lazyload';
 
 import useIsHovered from 'hooks/useIsHovered';
 
+import ThumbnailsContainer from './ThumbnailsContainer';
+
 import MagnifyPlusIcon from 'components/assets/icons/MagnifyPlusIcon';
 
 import Loader from 'components/common/Loader';
-import ThumbnailsContainer from './ThumbnailsContainer';
 
 import { IMAGE_DATA_TYPE } from 'constants/typeConstants';
 

@@ -1,6 +1,10 @@
-import Image from 'next/image';
 import { useState } from 'react';
 
+import Image from 'next/image';
+
+/**
+ * Image with lazy loading component.
+ */
 const LazyLoadedImage = ({ src, alt }) => {
   const [isImageLoaded, setImageLoaded] = useState(false);
 

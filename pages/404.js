@@ -1,8 +1,4 @@
-/* COMPONENTS */
-
 import ErrorPage from 'components/pages/root/ErrorPage';
-
-/* CONSTANTS */
 
 import { ERROR_MESSAGE } from 'constants/messageConstants';
 

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 /**
- * Close icon for rendering as inline SVG.
+ * Close icon
  */
 const CloseIcon = () => (
     <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -1,26 +1,16 @@
-/* REACT */
-
 import { memo } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* NEXT.JS */
-
 import Link from 'next/link';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
-/* STYLES */
-
 import styles from './Breadcrumb.module.scss';
-
 
 /**
  * Breadcrumb component.
  */
-
 const Breadcrumb = ({ text, href }) => (
     href
         ?

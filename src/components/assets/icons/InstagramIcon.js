@@ -1,5 +1,8 @@
 import { memo } from 'react';
 
+/**
+ * Instagram icon
+ */
 const InstagramIcon = () => (
     <svg id="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
