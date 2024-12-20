@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import NextHead from 'next/head';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 const dayjs = require('dayjs');
 const htmlParser = require('html-react-parser');
@@ -17,7 +17,6 @@ import AddToCart from 'components/common/AddToCart';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ErrorMessage from 'components/common/ErrorMessage';
 import ImageGallery from 'components/common/ImageGallery';
-
 import Tags from 'components/common/Tags';
 
 import Page from 'components/shared/Page';

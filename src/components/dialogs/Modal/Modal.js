@@ -1,14 +1,8 @@
-/* REACT */
-
 import { useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
-
-/* STYLES */
 
 import styles from './Modal.module.scss';
 
@@ -51,7 +45,6 @@ const enableDocumentScrolling = (isEnabled) => {
  * The modal component cannot show or close itself.
  * It can only notify the parent component via the `onCloseHandler` prop that the modal's Close button was clicked.
  */
-
 const Modal = ({
     children,
     shouldCloseOnClick,

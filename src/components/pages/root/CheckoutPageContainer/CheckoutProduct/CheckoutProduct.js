@@ -1,24 +1,14 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
-/* ASSET COMPONENTS */
-
 import CloseIcon from 'components/assets/icons/CloseIcon';
 
-/* STYLES */
-
 import styles from './CheckoutProduct.module.scss';
-
 
 /**
  * Checkout product component.
  */
-
 const CheckoutProduct = ({
     title,
     quantity,

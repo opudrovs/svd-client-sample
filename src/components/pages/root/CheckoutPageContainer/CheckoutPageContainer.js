@@ -1,33 +1,19 @@
-/* LIBRARIES */
-
 import { useDispatch, useSelector } from 'react-redux';
-
-/* REDUX */
 
 import { removeProduct, selectProducts } from 'redux/checkout/checkoutSlice';
 
-/* COMPONENTS */
-
 import CheckoutProduct from './CheckoutProduct';
-
-/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
-/* CONSTANTS */
-
 import { COMPANY_EMAIL_SUPPORT, COMPANY_NAME } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './CheckoutPageContainer.module.scss';
-
 
 /**
  * Container for the Checkout page.
  * Contains all other components on the page.
  */
-
 const CheckoutPageContainer = () => {
     const dispatch = useDispatch();
     const products = useSelector(selectProducts);

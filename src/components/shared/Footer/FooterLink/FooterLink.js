@@ -1,25 +1,15 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* NEXT.JS */
 
 import Link from 'next/link';
 
-/* LIBRARIES */
-
-const classNames = require('classnames');
-
-/* STYLES */
+import classNames from 'classnames';
 
 import styles from './FooterLink.module.scss';
-
 
 /**
  * Footer link component.
  * Allows to navigate to a page.
  */
-
 const FooterLink = ({
     children,
     href,

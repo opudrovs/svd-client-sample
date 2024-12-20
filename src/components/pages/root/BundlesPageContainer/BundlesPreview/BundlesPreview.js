@@ -1,34 +1,20 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* LIBRARIES */
 
 const classNames = require('classnames');
 
-/* COMPONENTS */
-
 import BundlePreview from './BundlePreview';
-
-/* CONSTANTS */
 
 import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/assetConstants';
 import { LICENSE } from 'constants/checkoutConstants';
 import { BUNDLE_PATH } from 'constants/navigationConstants';
 
-/* UTILS */
-
 import { getBundleLicense } from 'utils/checkoutUtils';
 
-/* STYLES */
-
 import styles from './BundlesPreview.module.scss';
-
 
 /**
  * Bundles preview component.
  */
-
 const BundlesPreview = ({ data, externalClassName }) => (
     <div className={classNames(
         'row',

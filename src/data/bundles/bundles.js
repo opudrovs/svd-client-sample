@@ -1,3 +1,7 @@
+/**
+ * Sample data
+ */
+
 const dataBundles = [
 	{
 		"elementId": "solidsTinted0001",

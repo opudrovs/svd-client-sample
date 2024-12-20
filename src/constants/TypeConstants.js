@@ -1,7 +1,4 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
 
 /**
  * Constants used for validating types of component props.

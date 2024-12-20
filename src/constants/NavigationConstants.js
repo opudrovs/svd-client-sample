@@ -1,5 +1,5 @@
 /**
- * Application routes and absolute URLs.
+ * Application routes and absolute URLs
  */
 
 /* Application routes. */

@@ -1,29 +1,17 @@
-/* COMPONENTS */
-
 import BundlesPreview from './BundlesPreview';
-
-/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
-/* CONSTANTS */
-
 import { COMPANY_NAME } from 'constants/textConstants';
-
-/* STYLES */
 
 import styles from './BundlesPageContainer.module.scss';
 
-/* DATA */
-
 import dataBundles from 'data/bundles/bundles.js';
-
 
 /**
  * Container for the Bundles page.
  * Contains all other components on the page.
  */
-
 const BundlesPageContainer = () => (
     <Page
         seoTitle={`Graphic Design Bundles - ${COMPANY_NAME}`}

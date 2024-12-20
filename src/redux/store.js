@@ -1,4 +1,6 @@
-/* LIBRARIES */
+/**
+ * Redux store with support for persisting Redux store locally and syncing Redux store state across tabs.
+ */
 
 import {
     combineReducers,
@@ -18,19 +20,10 @@ import {
 
 import { createStateSyncMiddleware, initStateWithPrevTab } from 'redux-state-sync';
 
-/* REDUX */
-
 import checkoutReducer from './checkout/checkoutSlice';
 import storage from './storage';
 
-/* UTILS */
-
 import { isBrowser } from 'utils/systemUtils';
-
-
-/**
- * Redux store with support for persisting Redux store locally and syncing Redux store state across tabs.
- */
 
 const rootReducer = combineReducers({
     checkout: checkoutReducer

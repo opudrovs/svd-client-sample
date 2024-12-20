@@ -1,23 +1,12 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* NEXT.JS */
 
 import NextHead from 'next/head';
 
-/* LIBRARIES */
-
-const classNames = require('classnames');
-
-/* SHARED COMPONENTS */
+import classNames from 'classnames';
 
 import Cart from 'components/shared/Cart';
 
-/* STYLES */
-
 import styles from './Page.module.scss';
-
 
 /**
  * Page component.
@@ -25,7 +14,6 @@ import styles from './Page.module.scss';
  * Can wrap other shared components (header and footer) on a page.
  * Other shared components can also be used without the Page component.
  */
-
 const Page = ({
     children,
     seoTitle,

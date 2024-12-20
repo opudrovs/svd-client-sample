@@ -1,12 +1,6 @@
-/* REACT */
-
 import { memo } from 'react';
 
-/* SHARED COMPONENTS */
-
 import Page from 'components/shared/Page';
-
-/* CONSTANTS */
 
 import { COMPANY_WEBSITE_URL, RESUME_URL } from 'constants/navigationConstants';
 import {
@@ -14,16 +8,12 @@ import {
     COMPANY_NAME
 } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './AboutPage.module.scss';
-
 
 /**
  * Container for the About page.
  * Contains all other components on the page.
  */
-
 const AboutPage = () => (
     <Page
         seoTitle={`React (Next.js or Gatsby) website development, graphic design automation, programmatic SEO - ${COMPANY_NAME}`}

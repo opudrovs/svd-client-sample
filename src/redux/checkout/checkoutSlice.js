@@ -1,12 +1,12 @@
+/**
+ * Checkout reducers, actions, and selectors. Includes the initial checkout state.
+ */
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     products: []
 };
-
-/**
- * Checkout reducers, actions, and selectors. Includes the initial checkout state.
- */
 
 export const checkoutSlice = createSlice({
     name: 'checkout',

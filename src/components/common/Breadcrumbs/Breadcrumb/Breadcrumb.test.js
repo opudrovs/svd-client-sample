@@ -1,22 +1,13 @@
-/* REACT */
-
 import React from 'react';
-
-/* LIBRARIES */
 
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-
-/* COMPONENTS */
 
 import Breadcrumb from './Breadcrumb.js';
 
 const text = 'Test text';
 
 const href = 'https://www.test.com';
-
-
-/* TESTS */
 
 describe('With Enzyme', () => {
     it(`Component shows '${text}'`, () => {
@@ -40,8 +31,6 @@ describe('With Enzyme', () => {
             .toEqual(href);
     });
 });
-
-/* SNAPSHOT TESTS */
 
 describe('With Snapshot Testing', () => {
     it(`Component shows '${text}'`, () => {

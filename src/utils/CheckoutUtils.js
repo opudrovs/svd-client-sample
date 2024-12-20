@@ -1,11 +1,8 @@
-/* CONSTANTS */
-
-import { BUNDLE_PRODUCTS, PACK_PRODUCTS } from 'constants/checkoutConstants';
-
-
 /**
  * Checkout utility functions
  */
+
+import { BUNDLE_PRODUCTS, PACK_PRODUCTS } from 'constants/checkoutConstants';
 
 export const getBundleLicense = (bundleId, licenseId) => {
     const products = BUNDLE_PRODUCTS.filter(elementProduct => elementProduct.elementId === bundleId);

@@ -1,25 +1,15 @@
-/* REACT */
-
 import PropTypes from 'prop-types';
-
-/* NEXT.JS */
 
 import Link from 'next/link';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
 
-/* STYLES */
-
 import styles from './MenuNavLink.module.scss';
-
 
 /**
  * Menu navigation link component.
  * Allows to navigate to a page.
  */
-
 const MenuNavLink = ({
     href,
     text,

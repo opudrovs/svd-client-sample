@@ -1,34 +1,20 @@
-/* REACT */
-
 import { memo } from 'react';
-
-/* NEXT.JS */
 
 import Link from 'next/link';
 
-/* LIBRARIES */
-
 const classNames = require('classnames');
 
-/* SHARED COMPONENTS */
-
 import Page from 'components/shared/Page';
-
-/* CONSTANTS */
 
 import { ABOUT_PATH } from 'constants/navigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './FaqPage.module.scss';
-
 
 /**
  * Container for the FAQ page.
  * Contains all other components on the page.
  */
-
 const FaqPage = () => (
     <Page
         seoTitle={`Frequently Asked Questions - ${COMPANY_NAME}`}

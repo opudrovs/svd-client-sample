@@ -1,34 +1,20 @@
-/* NEXT.JS */
-
 import Link from 'next/link';
-
-/* COMPONENTS */
 
 import BundlesPreview from 'components/pages/root/BundlesPageContainer/BundlesPreview';
 
-/* SHARED COMPONENTS */
-
 import Page from 'components/shared/Page';
-
-/* CONSTANTS */
 
 import { ABOUT_PATH } from 'constants/navigationConstants';
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './HomePage.module.scss';
 
-/* DATA */
-
 import dataBundles from 'data/bundles/bundles.js';
-
 
 /**
  * Container for the Home page.
  * Contains all other components on the page.
  */
-
 const HomePage = () => (
     <Page
         seoTitle={`${COMPANY_NAME} - Large Professional High-Quality Background Bundles`}

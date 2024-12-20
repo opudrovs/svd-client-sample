@@ -1,25 +1,15 @@
-/* REACT */
-
 import { memo } from 'react';
-
-/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
-/* CONSTANTS */
-
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './TermsPage.module.scss';
-
 
 /**
  * Container for the Terms page.
  * Contains all other components on the page.
  */
-
 const TermsPage = () => (
     <Page
         seoTitle={`Terms of Service - ${COMPANY_NAME}`}

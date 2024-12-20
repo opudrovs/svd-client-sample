@@ -1,25 +1,15 @@
-/* REACT */
-
 import { memo } from 'react';
-
-/* SHARED COMPONENTS */
 
 import Page from 'components/shared/Page';
 
-/* CONSTANTS */
-
 import { COMPANY_NAME, PRODUCT_META_DESCRIPTION_END } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './RefundPolicyPage.module.scss';
-
 
 /**
  * Container for the Refund Policy page.
  * Contains all other components on the page.
  */
-
 const RefundPolicyPage = () => (
     <Page
         seoTitle={`Refund Policy - ${COMPANY_NAME}`}

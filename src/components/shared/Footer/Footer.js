@@ -1,36 +1,22 @@
-/* LIBRARIES */
-
-const classNames = require('classnames');
-
-/* COMPONENTS */
+import classNames from 'classnames';
 
 import FooterLink from './FooterLink';
 import FooterLinkGroup from './FooterLinkGroup';
 
-/* ASSET COMPONENTS */
-
 import InstagramIcon from 'components/assets/icons/InstagramIcon';
 
-/* COMMON COMPONENTS */
-
 import Logo from 'components/common/Logo';
-
-/* CONSTANTS */
 
 import * as paths from 'constants/navigationConstants';
 import { COMPANY_NAME } from 'constants/textConstants';
 
-/* STYLES */
-
 import styles from './Footer.module.scss';
-
 
 /**
  * Page footer.
  * A shared component (repeats across multiple pages).
  * Should be present at bottom of each page of the application.
  */
-
 const links = [
     { href: paths.BUNDLES_PATH, text: 'Bundles' },
     { href: paths.LICENSE_PATH, text: 'Licenses' },
