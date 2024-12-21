@@ -27,22 +27,19 @@ const CheckoutPageContainer = () => {
     >
       <h1 className={styles.title}>Your Cart</h1>
 
-      <p>
-        <span className={styles.highlighted}>
-          The cart is under construction and displays simplified data and
-          styling.
-        </span>
-      </p>
-
       <div className={styles.productsContainer}>
-        {products.map(({ id, title, quantity }, index) => (
-          <CheckoutProduct
-            key={`checkout-product-${index}`}
-            title={title}
-            quantity={quantity}
-            onRemoveHandler={() => dispatch(removeProduct(id))}
-          />
-        ))}
+        {products.length > 0 ? (
+          products.map(({ id, title, quantity }, index) => (
+            <CheckoutProduct
+              key={`checkout-product-${index}`}
+              title={title}
+              quantity={quantity}
+              onRemoveHandler={() => dispatch(removeProduct(id))}
+            />
+          ))
+        ) : (
+          <span className={styles.highlighted}>Your cart is empty.</span>
+        )}
       </div>
 
       <p>

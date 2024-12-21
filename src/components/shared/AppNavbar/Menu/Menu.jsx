@@ -14,7 +14,7 @@ const links = [
   { href: paths.LICENSE_PATH, text: 'Licenses' },
   { href: paths.REFUND_POLICY_PATH, text: 'Refunds' },
   { href: paths.FAQ_PATH, text: 'FAQ' },
-  { href: paths.ABOUT_PATH, text: 'Hire Me!' },
+  { href: paths.ABOUT_PATH, text: 'About Me' },
   { href: paths.CONTACT_PATH, text: 'Contact' },
 ];
 

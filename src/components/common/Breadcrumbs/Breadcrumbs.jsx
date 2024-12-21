@@ -29,23 +29,23 @@ const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-                                    "@context": "https://schema.org",
-                                    "@type": "BreadcrumbList",
-                                    "itemListElement": [
-                                        ${breadcrumbs
-                                          .filter(({ href }) => href)
-                                          .map(
-                                            ({ name, href }, index) =>
-                                              `{
-                                                    "@type": "ListItem",
-                                                    "position": ${index + 1},
-                                                    "name": "${name}",
-                                                    "item": "${COMPANY_WEBSITE_URL}${href === INDEX_PATH ? '' : href}"
-                                                }`
-                                          )
-                                          .join(', ')}
-                                    ]
-                                }`,
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            ${breadcrumbs
+                              .filter(({ href }) => href)
+                              .map(
+                                ({ name, href }, index) =>
+                                  `{
+                                        "@type": "ListItem",
+                                        "position": ${index + 1},
+                                        "name": "${name}",
+                                        "item": "${COMPANY_WEBSITE_URL}${href === INDEX_PATH ? '' : href}"
+                                    }`
+                              )
+                              .join(', ')}
+                          ]
+                      }`,
           }}
         />
       </NextHead>

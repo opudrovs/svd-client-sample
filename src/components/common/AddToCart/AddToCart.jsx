@@ -68,14 +68,15 @@ const AddToCart = ({ productTitle, externalClassName, getProductLicense }) => {
   const { license, selectedOption } = state;
 
   const onSelectChangeHandler = (selectedOption) => {
-    let license = license;
+    let license = LICENSE.commercial;
 
     for (const prop in LICENSE) {
       if (
-        Object.prototype.hasOwnProperty.call(LICENSE, prop) &&
+        Object.hasOwn(LICENSE, prop) &&
         selectedOption.value === LICENSE[prop].id
       ) {
         license = LICENSE[prop];
+        break;
       }
     }
 

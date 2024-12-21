@@ -25,7 +25,7 @@ const ContactPage = () => (
     <p>
       Drop me a message at{' '}
       <a href={`mailto:${COMPANY_EMAIL_SUPPORT}`}>{COMPANY_EMAIL_SUPPORT}</a>{' '}
-      for any support or custom software development enquiries.
+      for any job-related inquiries.
     </p>
   </Page>
 );
