@@ -1,12 +1,12 @@
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: $minContentWidthPx;
-    background-color: $brandingColor2;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: $minContentWidthPx;
+  background-color: $brandingColor2;
+  z-index: 999;
 }
 
 /**
@@ -15,8 +15,8 @@
  * It does not work on iOS devices because of a known issue.
  */
 .modalOpen {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 /**
@@ -24,16 +24,16 @@
  * It is added to the `<html>` element when a modal is displayed.
  */
 .modalOpenHtml {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    width: 100vw; // Required for Android browsers.
-    transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100vw; // Required for Android browsers.
+  transform: translateX(-50%);
 }
 
 .content {
-    position: relative;
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
+  position: relative;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }

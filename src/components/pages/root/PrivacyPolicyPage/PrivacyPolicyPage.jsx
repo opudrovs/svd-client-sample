@@ -3,8 +3,8 @@ import { memo } from 'react';
 import Page from 'components/shared/Page';
 
 import {
-    COMPANY_NAME,
-    PRODUCT_META_DESCRIPTION_END
+  COMPANY_NAME,
+  PRODUCT_META_DESCRIPTION_END,
 } from 'constants/textConstants';
 
 import styles from './PrivacyPolicyPage.module.scss';
@@ -14,14 +14,14 @@ import styles from './PrivacyPolicyPage.module.scss';
  * Contains all other components on the page.
  */
 const PrivacyPolicyPage = () => (
-    <Page
-        seoTitle={`Privacy Policy - ${COMPANY_NAME}`}
-        seoDescription={PRODUCT_META_DESCRIPTION_END}
-    >
-        <h1 className={styles.title}>{COMPANY_NAME} Privacy Policy</h1>
+  <Page
+    seoTitle={`Privacy Policy - ${COMPANY_NAME}`}
+    seoDescription={PRODUCT_META_DESCRIPTION_END}
+  >
+    <h1 className={styles.title}>{COMPANY_NAME} Privacy Policy</h1>
 
-        <p>Privacy policy text (not included in the demo).</p>
-    </Page>
+    <p>Privacy policy text (not included in the demo).</p>
+  </Page>
 );
 
 export default memo(PrivacyPolicyPage);

@@ -21,99 +21,111 @@ import Tags from 'components/common/Tags';
 
 import Page from 'components/shared/Page';
 
-import {
-    CDN_ROOT,
-    SCREENSHOT_IMAGE_FORMAT
-} from 'constants/assetConstants';
+import { CDN_ROOT, SCREENSHOT_IMAGE_FORMAT } from 'constants/assetConstants';
 import { LICENSE } from 'constants/checkoutConstants';
 import { PACK_DATA_SEAMLESS_MODE_FULL } from 'constants/dataConstants';
 import {
-    BUNDLE_PATH,
-    COMPANY_WEBSITE_URL,
-    INDEX_PATH,
-    PACK_PATH
+  BUNDLE_PATH,
+  COMPANY_WEBSITE_URL,
+  INDEX_PATH,
+  PACK_PATH,
 } from 'constants/navigationConstants';
 import {
-    COLOR_DESCRIPTION_SOLIDS_NAMED,
-    COLOR_LIST_SOLIDS_NAMED,
-    COLOR_LIST_TITLE_SOLIDS_NAMED,
-    COMPANY_NAME,
-    PRODUCT_META_DESCRIPTION_END
+  COLOR_DESCRIPTION_SOLIDS_NAMED,
+  COLOR_LIST_SOLIDS_NAMED,
+  COLOR_LIST_TITLE_SOLIDS_NAMED,
+  COMPANY_NAME,
+  PRODUCT_META_DESCRIPTION_END,
 } from 'constants/textConstants';
 
 import { partitionArray } from 'utils/arrayUtils';
-import { getBundleLicense, getFormattedPrice, getPackLicense } from 'utils/checkoutUtils';
+import {
+  getBundleLicense,
+  getFormattedPrice,
+  getPackLicense,
+} from 'utils/checkoutUtils';
 import { mapScreenshotToImageDataObject } from 'utils/dataUtils';
 import { convertDataStringToHtml } from 'utils/stringUtils';
 
 import styles from './BundlePageContainer.module.scss';
-
 
 /**
  * Container for the Bundle page.
  * Contains all other components on the page.
  */
 const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
-    const [state] = useState({
-        imageData: bundleData.screenshots
-            .map(screenshot => mapScreenshotToImageDataObject(
-                screenshot,
-                `${CDN_ROOT}/${screenshot.subfolder}`,
-                SCREENSHOT_IMAGE_FORMAT
-            ))
-    });
+  const [state] = useState({
+    imageData: bundleData.screenshots.map((screenshot) =>
+      mapScreenshotToImageDataObject(
+        screenshot,
+        `${CDN_ROOT}/${screenshot.subfolder}`,
+        SCREENSHOT_IMAGE_FORMAT
+      )
+    ),
+  });
 
-    const { imageData } = state;
+  const { imageData } = state;
 
-    const [seamlessPacks, notSeamlessPacks] = bundlePreviewData
-        ?
-        partitionArray(bundlePreviewData.packs, element => element.seamlessMode === PACK_DATA_SEAMLESS_MODE_FULL)
-        :
-        [null, null];
+  const [seamlessPacks, notSeamlessPacks] = bundlePreviewData
+    ? partitionArray(
+        bundlePreviewData.packs,
+        (element) => element.seamlessMode === PACK_DATA_SEAMLESS_MODE_FULL
+      )
+    : [null, null];
 
-    const allPacks = bundlePreviewData ? [seamlessPacks, notSeamlessPacks] : [];
-    const allPacksSubtitles = ['Seamless Packs', 'Non-Seamless Packs'];
+  const allPacks = bundlePreviewData ? [seamlessPacks, notSeamlessPacks] : [];
+  const allPacksSubtitles = ['Seamless Packs', 'Non-Seamless Packs'];
 
-    const metaTitle = bundleData.text.title;
-    const metaDescription = `${metaTitle} - ${PRODUCT_META_DESCRIPTION_END}`;
+  const metaTitle = bundleData.text.title;
+  const metaDescription = `${metaTitle} - ${PRODUCT_META_DESCRIPTION_END}`;
 
-    const bundleDescriptionHtml = [bundleData.text.description, COLOR_DESCRIPTION_SOLIDS_NAMED]
-        .map(element => convertDataStringToHtml(element, 'p'))
-        .join('');
+  const bundleDescriptionHtml = [
+    bundleData.text.description,
+    COLOR_DESCRIPTION_SOLIDS_NAMED,
+  ]
+    .map((element) => convertDataStringToHtml(element, 'p'))
+    .join('');
 
-    const commercialBundleLicense = getBundleLicense(bundleData.elementId, LICENSE.commercial.id);
-    const commercialPackLicense = getPackLicense(LICENSE.commercial.id);
+  const commercialBundleLicense = getBundleLicense(
+    bundleData.elementId,
+    LICENSE.commercial.id
+  );
+  const commercialPackLicense = getPackLicense(LICENSE.commercial.id);
 
-    const productInfo = (
-        <>
-            <div className={styles.subtitle}>Product Information</div>
+  const productInfo = (
+    <>
+      <div className={styles.subtitle}>Product Information</div>
 
-            <div className={styles.productInfoSubtitle}>Image Format</div>
+      <div className={styles.productInfoSubtitle}>Image Format</div>
 
-            <Tags
-                tags={bundleData.fileFormats.map(element => element.toUpperCase())}
-            />
+      <Tags
+        tags={bundleData.fileFormats.map((element) => element.toUpperCase())}
+      />
 
-            <div className={styles.productInfoSubtitle}>Date Published</div>
+      <div className={styles.productInfoSubtitle}>Date Published</div>
 
-            <div>{dayjs(bundleData.datePublished, 'YYYY-MM-DD')
-                .format('MMMM D, YYYY')}</div>
+      <div>
+        {dayjs(bundleData.datePublished, 'YYYY-MM-DD').format('MMMM D, YYYY')}
+      </div>
 
-            <div className={styles.productInfoSubtitle}>Date Updated</div>
+      <div className={styles.productInfoSubtitle}>Date Updated</div>
 
-            <div>{dayjs(bundleData.dateModified, 'YYYY-MM-DD')
-                .format('MMMM D, YYYY')}</div>
-        </>
-    );
-    const bundlePrice = getFormattedPrice(getBundleLicense(bundleData.elementId, LICENSE.commercial.id).price.usd);
+      <div>
+        {dayjs(bundleData.dateModified, 'YYYY-MM-DD').format('MMMM D, YYYY')}
+      </div>
+    </>
+  );
+  const bundlePrice = getFormattedPrice(
+    getBundleLicense(bundleData.elementId, LICENSE.commercial.id).price.usd
+  );
 
-    return (
-        <>
-            <NextHead>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: `{
+  return (
+    <>
+      <NextHead>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
                                     "@context": "http://schema.org",
                                     "@type": "Product",
                                     "SKU": "BUNDLE${bundleData.elementIdNumber}",
@@ -135,214 +147,209 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                                             "offerCount": "1"
                                         }
                                     ]
-                                }`
-                    }}
+                                }`,
+          }}
+        />
+      </NextHead>
+      <Page
+        seoTitle={metaTitle}
+        seoDescription={metaDescription}
+        isContentMain={false}
+      >
+        {/* Main content */}
+
+        <main id="main" className="row">
+          {/* Product title */}
+
+          <div className="col-12">
+            <h1 className={styles.productTitle}>
+              {htmlParser(bundleData.text.title.replace(' - ', ' &mdash; '))}
+            </h1>
+
+            {/* Breadcrumbs navigation */}
+
+            <div className={classNames('row', styles.breadcrumbsContainer)}>
+              <div className="col">
+                <Breadcrumbs
+                  breadcrumbs={[
+                    {
+                      text: 'Home',
+                      name: 'Home',
+                      href: INDEX_PATH,
+                    },
+                    {
+                      text: 'Bundle',
+                      name: bundleData.text.title,
+                      href: `${BUNDLE_PATH}/${bundleData.url}`,
+                      isDataOnly: true,
+                    },
+                  ]}
                 />
-            </NextHead>
-            <Page
-                seoTitle={metaTitle}
-                seoDescription={metaDescription}
-                isContentMain={false}
+              </div>
+            </div>
+          </div>
+
+          {/* Product image */}
+
+          <div
+            className={classNames(
+              'col-12 col-md-7 col-lg-8 d-flex flex-column align-items-center',
+              styles.productPreviewContainer
+            )}
+          >
+            <ImageGallery imageData={imageData} />
+          </div>
+
+          <div
+            className={classNames('col-12 col-md-5 col-lg-4', styles.sideBar)}
+          >
+            {/* Add to cart */}
+
+            <div className={styles.addToCart}>
+              <AddToCart
+                productTitle={bundleData.text.title}
+                getProductLicense={(licenseId) =>
+                  getBundleLicense(bundleData.elementId, licenseId)
+                }
+              />
+            </div>
+
+            {/* Product information */}
+
+            <div
+              className={classNames('d-none d-md-block', styles.productInfo)}
             >
-                {/* Main content */}
+              {productInfo}
+            </div>
+          </div>
 
-                <main id="main" className="row">
-                    {/* Product title */}
+          {/* Product information */}
 
-                    <div className="col-12">
-                        <h1 className={styles.productTitle}>{htmlParser(bundleData.text.title.replace(
-                            ' - ',
-                            ' &mdash; '
-                        ))}</h1>
+          <div className="col-12 d-block d-md-none">
+            <div className={styles.productInfo}>{productInfo}</div>
+          </div>
 
-                        {/* Breadcrumbs navigation */}
+          {/* Product description */}
 
-                        <div className={classNames(
-                            'row',
-                            styles.breadcrumbsContainer
-                        )}>
-                            <div className="col">
-                                <Breadcrumbs
-                                    breadcrumbs={[
-                                        {
-                                            text: 'Home',
-                                            name: 'Home',
-                                            href: INDEX_PATH
-                                        },
-                                        {
-                                            text: 'Bundle',
-                                            name: bundleData.text.title,
-                                            href: `${BUNDLE_PATH}/${bundleData.url}`,
-                                            isDataOnly: true
-                                        }
-                                    ]}
-                                />
-                            </div>
+          <div
+            className={classNames('col-12', styles.productDescriptionContainer)}
+          >
+            <div className={styles.productDescription}>
+              <h2 className={styles.productDescriptionTitle}>
+                Bundle Description
+              </h2>
+
+              <div>{htmlParser(bundleDescriptionHtml)}</div>
+
+              <Collapse className={styles.colorList}>
+                <Panel
+                  header={COLOR_LIST_TITLE_SOLIDS_NAMED}
+                  headerClass={styles.colorListHeader}
+                  style={{ color: '#000' }}
+                >
+                  {COLOR_LIST_SOLIDS_NAMED}
+                </Panel>
+              </Collapse>
+            </div>
+          </div>
+        </main>
+
+        {/* Preview of all covers of packs in the bundle */}
+
+        {bundlePreviewData ? (
+          <>
+            <h2 className={styles.packPreviewsTitle}>
+              Get ALL these {bundleData.text.subtitle.toLowerCase()}
+              <span>
+                {' '}
+                for just&nbsp;
+                <Tippy content="Price for Commercial license.">
+                  <span className={styles.tooltipContent}>
+                    {`$${getFormattedPrice(commercialBundleLicense.price.usd)} US`}
+                  </span>
+                </Tippy>
+              </span>
+              !
+            </h2>
+
+            {allPacks.map((elementPacks, indexPacks) => {
+              return (
+                <Fragment key={`pack-previews-${indexPacks}`}>
+                  <h3
+                    className={styles.productSubtitle}
+                  >{`${allPacksSubtitles[indexPacks]} (${elementPacks.length} Packs):`}</h3>
+
+                  <div
+                    className={classNames('row', styles.packPreviewsContainer)}
+                  >
+                    {elementPacks.map((elementPack, index) => {
+                      const screenshot = elementPack.screenshots[0];
+                      const imageFolder = `${CDN_ROOT}/${screenshot.subfolder}`;
+
+                      return (
+                        <div
+                          key={`pack-preview-container-${index}`}
+                          className={classNames(
+                            'col-12 col-sm-6 col-lg-4',
+                            styles.packPreviewContainer
+                          )}
+                        >
+                          <PackPreview
+                            href={PACK_PATH}
+                            src={`${imageFolder}/${screenshot.tileLarge}.${SCREENSHOT_IMAGE_FORMAT}`}
+                            alt={screenshot.alt}
+                            title={screenshot.alt}
+                            license={commercialPackLicense}
+                          />
                         </div>
-                    </div>
+                      );
+                    })}
+                  </div>
 
-                    {/* Product image */}
+                  {/* Back to top link */}
 
-                    <div className={classNames(
-                        'col-12 col-md-7 col-lg-8 d-flex flex-column align-items-center',
-                        styles.productPreviewContainer
-                    )}>
-                        <ImageGallery imageData={imageData} />
-                    </div>
-
-                    <div className={classNames(
-                        'col-12 col-md-5 col-lg-4',
-                        styles.sideBar
-                    )}>
-                        {/* Add to cart */}
-
-                        <div className={styles.addToCart}>
-                            <AddToCart
-                                productTitle={bundleData.text.title}
-                                getProductLicense={licenseId => getBundleLicense(bundleData.elementId, licenseId)}
-                            />
-                        </div>
-
-                        {/* Product information */}
-
-                        <div className={classNames(
-                            'd-none d-md-block',
-                            styles.productInfo
-                        )}>
-                            {productInfo}
-                        </div>
-                    </div>
-
-                    {/* Product information */}
-
-                    <div className="col-12 d-block d-md-none">
-                        <div className={styles.productInfo}>
-                            {productInfo}
-                        </div>
-                    </div>
-
-                    {/* Product description */}
-
-                    <div className={classNames(
-                        'col-12',
-                        styles.productDescriptionContainer
-                    )}>
-                        <div className={styles.productDescription}>
-                            <h2 className={styles.productDescriptionTitle}>Bundle Description</h2>
-
-                            <div>{htmlParser(bundleDescriptionHtml)}</div>
-
-                            <Collapse className={styles.colorList}>
-                                <Panel
-                                    header={COLOR_LIST_TITLE_SOLIDS_NAMED}
-                                    headerClass={styles.colorListHeader}
-                                    style={{ color: '#000' }}
-                                >
-                                    {COLOR_LIST_SOLIDS_NAMED}
-                                </Panel>
-                            </Collapse>
-                        </div>
-                    </div>
-                </main>
-
-                {/* Preview of all covers of packs in the bundle */}
-
-                {bundlePreviewData
-                    ?
-                    <>
-                        <h2 className={styles.packPreviewsTitle}>
-                            Get ALL these {bundleData.text.subtitle.toLowerCase()}
-                            <span> for just&nbsp;
-                                <Tippy content="Price for Commercial license.">
-                                    <span className={styles.tooltipContent}>
-                                        {`$${getFormattedPrice(commercialBundleLicense.price.usd)} US`}
-                                    </span>
-                                </Tippy>
-                            </span>!
-                        </h2>
-
-                        {allPacks.map((elementPacks, indexPacks) => {
-                            return (
-                                <Fragment key={`pack-previews-${indexPacks}`}>
-                                    <h3 className={styles.productSubtitle}>{`${allPacksSubtitles[indexPacks]} (${elementPacks.length} Packs):`}</h3>
-
-                                    <div
-                                        className={classNames(
-                                            'row',
-                                            styles.packPreviewsContainer
-                                        )}
-                                    >
-                                        {elementPacks.map((elementPack, index) => {
-                                            const screenshot = elementPack.screenshots[0];
-                                            const imageFolder = `${CDN_ROOT}/${screenshot.subfolder}`;
-
-                                            return (
-                                                <div
-                                                    key={`pack-preview-container-${index}`}
-                                                    className={classNames(
-                                                        'col-12 col-sm-6 col-lg-4',
-                                                        styles.packPreviewContainer
-                                                    )}
-                                                >
-                                                    <PackPreview
-                                                        href={PACK_PATH}
-                                                        src={`${imageFolder}/${screenshot.tileLarge}.${SCREENSHOT_IMAGE_FORMAT}`}
-                                                        alt={screenshot.alt}
-                                                        title={screenshot.alt}
-                                                        license={commercialPackLicense}
-                                                    />
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-
-                                    {/* Back to top link */}
-
-                                    <div className={classNames(
-                                        'row',
-                                        styles.backToTopLinkContainer
-                                    )}>
-                                        <div className="col">
-                                            <a
-                                                href="#main"
-                                                className={classNames(
-                                                    'd-inline-block',
-                                                    styles.link
-                                                )}
-                                            >
-                                                Back to top
-                                            </a>
-                                        </div>
-                                    </div>
-                                </Fragment>
-                            );
-                        })}
-                    </>
-                    :
-                    <ErrorMessage errorMessage="Unable to load packs." externalClassName={styles.errorMessage} />}
-
-                {/* Product keywords */}
-
-                <div className={classNames(
-                    'row',
-                    styles.tagsContainer
-                )}>
+                  <div
+                    className={classNames('row', styles.backToTopLinkContainer)}
+                  >
                     <div className="col">
-                        <Tags
-                            tags={bundleData.tags}
-                            title="Bundle Keywords"
-                            externalClassName={styles.tags}
-                        />
+                      <a
+                        href="#main"
+                        className={classNames('d-inline-block', styles.link)}
+                      >
+                        Back to top
+                      </a>
                     </div>
-                </div>
-            </Page>
-        </>
-    );
+                  </div>
+                </Fragment>
+              );
+            })}
+          </>
+        ) : (
+          <ErrorMessage
+            errorMessage="Unable to load packs."
+            externalClassName={styles.errorMessage}
+          />
+        )}
+
+        {/* Product keywords */}
+
+        <div className={classNames('row', styles.tagsContainer)}>
+          <div className="col">
+            <Tags
+              tags={bundleData.tags}
+              title="Bundle Keywords"
+              externalClassName={styles.tags}
+            />
+          </div>
+        </div>
+      </Page>
+    </>
+  );
 };
 
 BundlePageContainer.propTypes = {
-    bundleData: PropTypes.object.isRequired,
-    bundlePreviewData: PropTypes.object
+  bundleData: PropTypes.object.isRequired,
+  bundlePreviewData: PropTypes.object,
 };
 
 export default BundlePageContainer;

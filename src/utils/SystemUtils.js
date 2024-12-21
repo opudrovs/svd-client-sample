@@ -7,5 +7,5 @@
  * @return {bool} The app is running in the browser
  */
 export const isBrowser = () => {
-    return typeof window !== 'undefined';
+  return typeof window !== 'undefined';
 };

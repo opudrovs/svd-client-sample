@@ -9,14 +9,11 @@ import styles from './PackPageContainer.module.scss';
  * Contains all other components on the page.
  */
 const PackPageContainer = () => (
-    <Page
-        seoTitle="Pack"
-        seoDescription="Background pack"
-    >
-        <h1 className={styles.title}>Sample Pack Page</h1>
+  <Page seoTitle="Pack" seoDescription="Background pack">
+    <h1 className={styles.title}>Sample Pack Page</h1>
 
-        <p>Pack data not included in the demo.</p>
-    </Page>
+    <p>Pack data not included in the demo.</p>
+  </Page>
 );
 
 export default memo(PackPageContainer);

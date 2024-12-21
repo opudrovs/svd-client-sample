@@ -18,21 +18,19 @@ import styles from './Cart.module.scss';
  * Displays a cart icon and shows the number of products in the cart.
  */
 const Cart = () => {
-    const numberOfProducts = useSelector(selectProducts).reduce((acc, currElement) => acc + currElement.quantity, 0);
+  const numberOfProducts = useSelector(selectProducts).reduce(
+    (acc, currElement) => acc + currElement.quantity,
+    0
+  );
 
-    return (
-        <Link href={CHECKOUT_PATH}>
-            <a
-                className={classNames(
-                    'd-block',
-                    styles.cart
-                )}
-            >
-                <CartIcon />
-                <div className={styles.caption}>{numberOfProducts}</div>
-            </a>
-        </Link>
-    );
+  return (
+    <Link href={CHECKOUT_PATH}>
+      <a className={classNames('d-block', styles.cart)}>
+        <CartIcon />
+        <div className={styles.caption}>{numberOfProducts}</div>
+      </a>
+    </Link>
+  );
 };
 
 export default Cart;

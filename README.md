@@ -11,7 +11,7 @@ The code sample includes only bundle pages, About, and FAQ pages.
 [Project Packages and Components](#project-packages-and-components)  
 [Project Structure and Code Style](#project-structure-and-code-style)  
 [Known Issues and Potential Optimizations](#known-issues-and-potential-optimizations)  
-[How to Run the App](#how-to-run-the-app)  
+[How to Run the App](#how-to-run-the-app)
 
 ## Project Packages and Components
 
@@ -40,6 +40,7 @@ Clicking on the large image preview in the inline image gallery opens the image 
 ## Project Structure and Code Style
 
 Components are arranged by folders:
+
 - `pages` - app routes (Next.js routing is filesystem-based). They render top-level route-specific components and export `getServerSideProps` functions (for example, in `pages/bundle/[slug].js`) to enable server-side rendering.
 
 - `src`
@@ -49,7 +50,6 @@ Components are arranged by folders:
     - `dialogs` - modal dialogs/popups.
     - `pages` - route-specific components.
     - `shared` - components, present on all (or almost all) pages, like app navigation bar and footer.
-   
   - `constants` - help avoid using "magic" strings and numbers.
   - `data` - hardcoded data for preview purposes.
   - `hooks` - custom hooks.
@@ -88,7 +88,7 @@ npm run dev
 ```
 
 To run the production build, run
- 
+
 ```
 npx next build
 npx next start

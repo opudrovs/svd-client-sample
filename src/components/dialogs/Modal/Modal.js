@@ -16,25 +16,29 @@ let scrollTop = 0;
  * @param {boolean} isEnabled Controls scrolling of content under the modal
  */
 const enableDocumentScrolling = (isEnabled) => {
-    const elementsWithClassNames = [
-        {
-            element: document.documentElement,
-            elementClassNames: [styles.modalOpen, styles.modalOpenHtml]
-        },
-        {
-            element: document.body,
-            elementClassNames: [styles.modalOpen]
-        }
-    ];
+  const elementsWithClassNames = [
+    {
+      element: document.documentElement,
+      elementClassNames: [styles.modalOpen, styles.modalOpenHtml],
+    },
+    {
+      element: document.body,
+      elementClassNames: [styles.modalOpen],
+    },
+  ];
 
-    if (isEnabled) {
-        elementsWithClassNames.forEach(({ element, elementClassNames }) => element.classList.remove(...elementClassNames));
-        window.scrollTo(0, scrollTop);
-    } else {
-        scrollTop = window.pageYOffset;
-        elementsWithClassNames.forEach(({ element, elementClassNames }) => element.classList.add(...elementClassNames));
-        document.body.scrollTop = scrollTop;
-    }
+  if (isEnabled) {
+    elementsWithClassNames.forEach(({ element, elementClassNames }) =>
+      element.classList.remove(...elementClassNames)
+    );
+    window.scrollTo(0, scrollTop);
+  } else {
+    scrollTop = window.pageYOffset;
+    elementsWithClassNames.forEach(({ element, elementClassNames }) =>
+      element.classList.add(...elementClassNames)
+    );
+    document.body.scrollTop = scrollTop;
+  }
 };
 
 /**
@@ -46,48 +50,40 @@ const enableDocumentScrolling = (isEnabled) => {
  * It can only notify the parent component via the `onCloseHandler` prop that the modal's Close button was clicked.
  */
 const Modal = ({
-    children,
-    shouldCloseOnClick,
-    externalClassName,
-    onCloseHandler
+  children,
+  shouldCloseOnClick,
+  externalClassName,
+  onCloseHandler,
 }) => {
-    useEffect(() => {
-        enableDocumentScrolling(false);
+  useEffect(() => {
+    enableDocumentScrolling(false);
 
-        return () => {
-            enableDocumentScrolling(true);
-        };
-    }, []);
+    return () => {
+      enableDocumentScrolling(true);
+    };
+  }, []);
 
-    return (
-        <div
-            className={classNames(
-                styles.modal,
-                externalClassName
-            )}
-            onClick={(e) => {
-                if (shouldCloseOnClick) {
-                    onCloseHandler && onCloseHandler();
-                } else {
-                    e.stopPropagation();
-                }
-            }}
-        >
-            <div className={classNames(
-                'container',
-                styles.content
-            )}>
-                {children}
-            </div>
-        </div>
-    );
+  return (
+    <div
+      className={classNames(styles.modal, externalClassName)}
+      onClick={(e) => {
+        if (shouldCloseOnClick) {
+          onCloseHandler && onCloseHandler();
+        } else {
+          e.stopPropagation();
+        }
+      }}
+    >
+      <div className={classNames('container', styles.content)}>{children}</div>
+    </div>
+  );
 };
 
 Modal.propTypes = {
-    children: PropTypes.node,
-    shouldCloseOnClick: PropTypes.bool,
-    externalClassName: PropTypes.string,
-    onCloseHandler: PropTypes.func.isRequired
+  children: PropTypes.node,
+  shouldCloseOnClick: PropTypes.bool,
+  externalClassName: PropTypes.string,
+  onCloseHandler: PropTypes.func.isRequired,
 };
 
 export default Modal;

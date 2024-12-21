@@ -21,9 +21,11 @@ export const PACK_PATH = '/pack';
 
 /* Company */
 
-export const COMPANY_WEBSITE_URL = 'https://www.linkedin.com/in/olga-pudrovska/';
+export const COMPANY_WEBSITE_URL =
+  'https://www.linkedin.com/in/olga-pudrovska/';
 
 /* Social */
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/';
-export const RESUME_URL = 'https://drive.google.com/file/d/1UVHNlrDhIZwHV2N0XmGhOluLguZbZSiK/view?usp=sharing';
+export const RESUME_URL =
+  'https://drive.google.com/file/d/1UVHNlrDhIZwHV2N0XmGhOluLguZbZSiK/view?usp=sharing';

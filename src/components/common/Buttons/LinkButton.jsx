@@ -13,57 +13,49 @@ import styles from '../Button.module.scss';
  * To render a regular button, use `Button` component.
  */
 const LinkButton = ({
-    children,
-    href,
-    isExternal,
-    theme,
-    isOutline,
-    externalClassName
+  children,
+  href,
+  isExternal,
+  theme,
+  isOutline,
+  externalClassName,
 }) => {
-    const linkClassName = classNames(
-        'd-inline-flex flex-nowrap justify-content-center align-items-center',
-        styles.button,
-        isOutline
-            ?
-            styles.blueOutlineButton
-            :
-            theme === BUTTON_THEME.green ? styles.greenButton : styles.blueButton,
-        {
-            [styles.outlineButton]: isOutline
-        },
-        externalClassName
-    );
+  const linkClassName = classNames(
+    'd-inline-flex flex-nowrap justify-content-center align-items-center',
+    styles.button,
+    isOutline
+      ? styles.blueOutlineButton
+      : theme === BUTTON_THEME.green
+        ? styles.greenButton
+        : styles.blueButton,
+    {
+      [styles.outlineButton]: isOutline,
+    },
+    externalClassName
+  );
 
-    return (
-        <>
-            {isExternal
-                ?
-                <a
-                    href={href}
-                    className={linkClassName}
-                >
-                    {children}
-                </a>
-                :
-                <Link href={href}>
-                    <a
-                        className={linkClassName}
-                    >
-                        {children}
-                    </a>
-                </Link>
-            }
-        </>
-    );
+  return (
+    <>
+      {isExternal ? (
+        <a href={href} className={linkClassName}>
+          {children}
+        </a>
+      ) : (
+        <Link href={href}>
+          <a className={linkClassName}>{children}</a>
+        </Link>
+      )}
+    </>
+  );
 };
 
 LinkButton.propTypes = {
-    children: PropTypes.node,
-    href: PropTypes.string.isRequired,
-    isExternal: PropTypes.bool,
-    theme: PropTypes.string,
-    isOutline: PropTypes.bool,
-    externalClassName: PropTypes.string
+  children: PropTypes.node,
+  href: PropTypes.string.isRequired,
+  isExternal: PropTypes.bool,
+  theme: PropTypes.string,
+  isOutline: PropTypes.bool,
+  externalClassName: PropTypes.string,
 };
 
 export default LinkButton;

@@ -15,7 +15,7 @@ const LazyLoadedImage = ({ src, alt }) => {
         width: '100%',
         height: '100%',
         position: isImageLoaded ? 'static' : 'absolute',
-        overflow: 'hidden' // Ensures proper sizing
+        overflow: 'hidden', // Ensures proper sizing
       }}
     >
       <Image
@@ -31,6 +31,6 @@ const LazyLoadedImage = ({ src, alt }) => {
 };
 
 LazyLoadedImage.propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 };

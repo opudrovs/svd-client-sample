@@ -16,56 +16,61 @@ import styles from './Breadcrumbs.module.scss';
  * Breadcrumbs navigation.
  */
 const Breadcrumbs = ({ breadcrumbs, externalClassName }) => (
-    <div className={classNames(
-        'd-flex align-items-center flex-wrap',
-        styles.breadcrumbs,
-        externalClassName
-    )}>
-        <>
-            <NextHead>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: `{
+  <div
+    className={classNames(
+      'd-flex align-items-center flex-wrap',
+      styles.breadcrumbs,
+      externalClassName
+    )}
+  >
+    <>
+      <NextHead>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
                                     "@context": "https://schema.org",
                                     "@type": "BreadcrumbList",
                                     "itemListElement": [
                                         ${breadcrumbs
-                                            .filter(({ href }) => href)
-                                            .map(({ name, href }, index) => (
-                                                `{
+                                          .filter(({ href }) => href)
+                                          .map(
+                                            ({ name, href }, index) =>
+                                              `{
                                                     "@type": "ListItem",
                                                     "position": ${index + 1},
                                                     "name": "${name}",
                                                     "item": "${COMPANY_WEBSITE_URL}${href === INDEX_PATH ? '' : href}"
                                                 }`
-                                            ))
-                                            .join(', ')}
+                                          )
+                                          .join(', ')}
                                     ]
-                                }`
-                    }}
-                />
-            </NextHead>
-            {breadcrumbs
-                .filter(({ isDataOnly }) => !isDataOnly)
-                .map(({ text, href }, index, filteredBreadcrumbs) => (
-                    <Fragment key={`breadcrumb-${index}`}>
-                        <Breadcrumb text={text} href={href} />
-                        {index < filteredBreadcrumbs.length - 1 && <>&nbsp;/&nbsp;</>}
-                    </Fragment>
-                ))}
-        </>
-    </div>
+                                }`,
+          }}
+        />
+      </NextHead>
+      {breadcrumbs
+        .filter(({ isDataOnly }) => !isDataOnly)
+        .map(({ text, href }, index, filteredBreadcrumbs) => (
+          <Fragment key={`breadcrumb-${index}`}>
+            <Breadcrumb text={text} href={href} />
+            {index < filteredBreadcrumbs.length - 1 && <>&nbsp;/&nbsp;</>}
+          </Fragment>
+        ))}
+    </>
+  </div>
 );
 
 Breadcrumbs.propTypes = {
-    breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string.isRequired,
-        name: PropTypes.string,
-        href: PropTypes.string,
-        isDataOnly: PropTypes.boolean
-    })).isRequired,
-    externalClassName: PropTypes.string
+  breadcrumbs: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      href: PropTypes.string,
+      isDataOnly: PropTypes.boolean,
+    })
+  ).isRequired,
+  externalClassName: PropTypes.string,
 };
 
 export default Breadcrumbs;

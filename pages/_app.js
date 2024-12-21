@@ -26,44 +26,50 @@ import 'styles/globals.scss';
  * Wraps other pages but does not create a shared state between them automatically.
  */
 const MyApp = ({ Component, pageProps }) => {
-    const { error } = pageProps;
+  const { error } = pageProps;
 
-    const persistor = persistStore(store);
+  const persistor = persistStore(store);
 
-    return (
-        <>
-            <NextHead>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="robots" content="max-snippet:320, max-image-preview:large" />
-                <link rel="icon" href="/favicon.ico" />
-            </NextHead>
-            <Provider store={store}>
-                <PersistGate persistor={persistor}>
-                    <AppNavbar />
-                    {error
-                        ?
-                        <ErrorPage errorCode={error.errorCode} errorMessage={error.errorMessage} />
-                        :
-                        <Component {...pageProps} />}
-                    <Footer />
-                </PersistGate>
-            </Provider>
-            <CookieConsent
-                cookieName="SVDCookieConsent"
-                buttonText="Accept"
-                buttonStyle={{
-                    borderRadius: '4px'
-                }}
-            >
-                This website uses cookies to enhance the user experience.
-            </CookieConsent>
-        </>
-    );
+  return (
+    <>
+      <NextHead>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="robots"
+          content="max-snippet:320, max-image-preview:large"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </NextHead>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <AppNavbar />
+          {error ? (
+            <ErrorPage
+              errorCode={error.errorCode}
+              errorMessage={error.errorMessage}
+            />
+          ) : (
+            <Component {...pageProps} />
+          )}
+          <Footer />
+        </PersistGate>
+      </Provider>
+      <CookieConsent
+        cookieName="SVDCookieConsent"
+        buttonText="Accept"
+        buttonStyle={{
+          borderRadius: '4px',
+        }}
+      >
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
+    </>
+  );
 };
 
 MyApp.propTypes = {
-    Component: PropTypes.elementType.isRequired,
-    pageProps: PropTypes.object.isRequired
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
 };
 
 export default MyApp;

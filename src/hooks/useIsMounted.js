@@ -5,19 +5,19 @@ import { useCallback, useEffect, useRef } from 'react';
  * Checks if the component is mounted (for example, to update the component state).
  */
 const useIsMounted = () => {
-    const ref = useRef(false);
+  const ref = useRef(false);
 
-    useEffect(() => {
-        if (!ref.current) {
-            ref.current = true;
-        }
+  useEffect(() => {
+    if (!ref.current) {
+      ref.current = true;
+    }
 
-        return () => {
-            ref.current = false;
-        };
-    }, []);
+    return () => {
+      ref.current = false;
+    };
+  }, []);
 
-    return useCallback(() => ref.current, []);
+  return useCallback(() => ref.current, []);
 };
 
 export default useIsMounted;

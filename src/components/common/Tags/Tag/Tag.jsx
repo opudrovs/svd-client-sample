@@ -10,7 +10,7 @@ import styles from './Tag.module.scss';
 const Tag = ({ text }) => <div className={styles.tag}>{text}</div>;
 
 Tag.propTypes = {
-    text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default memo(Tag);

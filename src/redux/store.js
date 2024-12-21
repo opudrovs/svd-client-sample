@@ -3,22 +3,25 @@
  */
 
 import {
-    combineReducers,
-    configureStore,
-    getDefaultMiddleware,
+  combineReducers,
+  configureStore,
+  getDefaultMiddleware,
 } from '@reduxjs/toolkit';
 
 import {
-    FLUSH,
-    PAUSE,
-    PERSIST,
-    PURGE,
-    REGISTER,
-    REHYDRATE,
-    persistReducer
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+  persistReducer,
 } from 'redux-persist';
 
-import { createStateSyncMiddleware, initStateWithPrevTab } from 'redux-state-sync';
+import {
+  createStateSyncMiddleware,
+  initStateWithPrevTab,
+} from 'redux-state-sync';
 
 import checkoutReducer from './checkout/checkoutSlice';
 import storage from './storage';
@@ -26,7 +29,7 @@ import storage from './storage';
 import { isBrowser } from 'utils/systemUtils';
 
 const rootReducer = combineReducers({
-    checkout: checkoutReducer
+  checkout: checkoutReducer,
 });
 
 const IGNORED_ACTIONS = [FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE];
@@ -34,19 +37,24 @@ const IGNORED_ACTIONS = [FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE];
 const IS_BROWSER = isBrowser();
 
 const store = configureStore({
-    reducer: persistReducer({
-        key: 'root',
-        storage,
-    }, rootReducer),
-    middleware: getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: IGNORED_ACTIONS
-        }
-    }).concat(IS_BROWSER ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS }) : [])
+  reducer: persistReducer(
+    {
+      key: 'root',
+      storage,
+    },
+    rootReducer
+  ),
+  middleware: getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: IGNORED_ACTIONS,
+    },
+  }).concat(
+    IS_BROWSER ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS }) : []
+  ),
 });
 
 if (IS_BROWSER) {
-    initStateWithPrevTab(store);
+  initStateWithPrevTab(store);
 }
 
 export default store;
