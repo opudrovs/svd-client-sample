@@ -6,9 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "checkformat": "npx eslint .",
-    "format": "npx eslint . --fix",
+    "lint:check": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "test": "jest",
     "testupdate": "jest -u",
     "testwatch": "jest --watchAll"
