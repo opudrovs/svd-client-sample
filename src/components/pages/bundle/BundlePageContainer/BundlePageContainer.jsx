@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 import NextHead from 'next/head';
 
 import classNames from 'classnames';
-
-const dayjs = require('dayjs');
-const htmlParser = require('html-react-parser');
+import dayjs from 'dayjs';
+import htmlParser from 'html-react-parser';
 import Collapse, { Panel } from 'rc-collapse';
 import Tippy from '@tippyjs/react';
 

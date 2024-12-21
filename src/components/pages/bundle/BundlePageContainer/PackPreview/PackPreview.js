@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import classNames from 'classnames';
-const htmlParser = require('html-react-parser');
+import htmlParser from 'html-react-parser';
 import LazyLoad from 'react-lazyload';
 
 import { getFormattedPrice } from 'utils/checkoutUtils.js';
