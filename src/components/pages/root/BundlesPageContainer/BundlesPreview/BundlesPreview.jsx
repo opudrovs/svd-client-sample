@@ -17,7 +17,7 @@ import styles from './BundlesPreview.module.scss';
  */
 const BundlesPreview = ({ data, externalClassName }) => (
   <div className={classNames('row', externalClassName)}>
-    {data.map((elementBundle, index) => {
+    {data.map((elementBundle) => {
       const screenshot = elementBundle.screenshots[0];
       const subfolder = screenshot.subfolder;
 

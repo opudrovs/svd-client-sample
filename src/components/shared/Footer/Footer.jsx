@@ -93,9 +93,10 @@ const Footer = () => (
             © 2020-2025 {AUTHOR_NAME}. All Rights Reserved.
           </div>
           <div className="d-flex">
-            {secondaryLinks.map((props, index) => (
+            {secondaryLinks.map(({ href, ...props }) => (
               <FooterLink
-                key={props.href}
+                key={href}
+                href={href}
                 {...props}
                 externalClassName={styles.secondaryLink}
               />
