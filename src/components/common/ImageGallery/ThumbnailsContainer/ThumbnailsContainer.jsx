@@ -28,7 +28,7 @@ const ThumbnailsContainer = ({
       <div className="row">
         {imageData.map((element, index) => (
           <Thumbnail
-            key={`thumbnail-${index}`}
+            key={element.thumb}
             src={element.thumb}
             alt={element.alt}
             isActive={index === imageIndex}

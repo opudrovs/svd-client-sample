@@ -34,9 +34,9 @@ const Menu = ({ externalClassName }) => {
         externalClassName
       )}
     >
-      {links.map(({ href, text }, index) => (
+      {links.map(({ href, text }) => (
         <MenuNavLink
-          key={`nav-link-${index}`}
+          key={href}
           href={href}
           text={text}
           isActive={pathname === href}

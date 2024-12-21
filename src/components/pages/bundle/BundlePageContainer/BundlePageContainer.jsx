@@ -281,13 +281,13 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
                   <div
                     className={classNames('row', styles.packPreviewsContainer)}
                   >
-                    {elementPacks.map((elementPack, index) => {
+                    {elementPacks.map((elementPack) => {
                       const screenshot = elementPack.screenshots[0];
                       const imageFolder = `${CDN_ROOT}/${screenshot.subfolder}`;
 
                       return (
                         <div
-                          key={`pack-preview-container-${index}`}
+                          key={title}
                           className={classNames(
                             'col-12 col-sm-6 col-lg-4',
                             styles.packPreviewContainer

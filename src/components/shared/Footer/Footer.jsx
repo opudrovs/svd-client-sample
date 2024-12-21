@@ -61,12 +61,12 @@ const Footer = () => (
           <div className="row w-100">
             {groupElements(links, 3).map((children, childIndex) => (
               <FooterLinkGroup
-                key={`footer-link-group-${childIndex}`}
+                key={childIndex}
                 externalClassName="col-12 col-md-6"
               >
-                {children.map((props, index) => (
+                {children.map((props) => (
                   <div
-                    key={`footer-link-container-${index}`}
+                    key={props.href}
                     className={classNames('d-flex', styles.linkContainer)}
                   >
                     <FooterLink {...props} externalClassName={styles.link} />
@@ -91,7 +91,7 @@ const Footer = () => (
           <div className="d-flex">
             {secondaryLinks.map((props, index) => (
               <FooterLink
-                key={`secondary-footer-link-${index}`}
+                key={props.href}
                 {...props}
                 externalClassName={styles.secondaryLink}
               />

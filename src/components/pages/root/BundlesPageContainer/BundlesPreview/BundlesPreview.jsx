@@ -23,7 +23,7 @@ const BundlesPreview = ({ data, externalClassName }) => (
 
       return (
         <div
-          key={`bundle-preview-${index}`}
+          key={elementBundle.text.title}
           className={classNames(
             'col-12 col-sm-6',
             styles.bundlePreviewContainer

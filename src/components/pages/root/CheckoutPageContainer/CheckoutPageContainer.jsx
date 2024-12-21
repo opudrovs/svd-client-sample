@@ -31,7 +31,7 @@ const CheckoutPageContainer = () => {
         {products.length > 0 ? (
           products.map(({ id, title, quantity }, index) => (
             <CheckoutProduct
-              key={`checkout-product-${index}`}
+              key={id}
               title={title}
               quantity={quantity}
               onRemoveHandler={() => dispatch(removeProduct(id))}
