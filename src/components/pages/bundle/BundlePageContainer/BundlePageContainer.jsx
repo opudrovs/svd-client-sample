@@ -125,28 +125,28 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-                                    "@context": "http://schema.org",
-                                    "@type": "Product",
-                                    "SKU": "BUNDLE${bundleData.elementIdNumber}",
-                                    "productId": "BUNDLE${bundleData.elementIdNumber}",
-                                    "url": "${COMPANY_WEBSITE_URL}${BUNDLE_PATH}/${bundleData.url}",
-                                    "name": "${bundleData.text.title}",
-                                    "image": "${imageData[0].src}",
-                                    "description": "${bundleData.text.title} by ${COMPANY_NAME} available for $${bundlePrice} at ${COMPANY_WEBSITE_URL}",
-                                    "brand": "${COMPANY_NAME}",
-                                    "releaseDate": "${bundleData.dateModified}",
-                                    "category": "Software > Digital Goods",
-                                    "offers": [
-                                        {
-                                            "@type": "AggregateOffer",
-                                            "availability": "http://schema.org/InStock",
-                                            "lowPrice": "${bundlePrice}",
-                                            "highPrice": "${bundlePrice}",
-                                            "priceCurrency": "USD",
-                                            "offerCount": "1"
-                                        }
-                                    ]
-                                }`,
+                        "@context": "http://schema.org",
+                        "@type": "Product",
+                        "SKU": "BUNDLE${bundleData.elementIdNumber}",
+                        "productId": "BUNDLE${bundleData.elementIdNumber}",
+                        "url": "${COMPANY_WEBSITE_URL}${BUNDLE_PATH}/${bundleData.url}",
+                        "name": "${bundleData.text.title}",
+                        "image": "${imageData[0].src}",
+                        "description": "${bundleData.text.title} by ${COMPANY_NAME} available for $${bundlePrice} at ${COMPANY_WEBSITE_URL}",
+                        "brand": "${COMPANY_NAME}",
+                        "releaseDate": "${bundleData.dateModified}",
+                        "category": "Software > Digital Goods",
+                        "offers": [
+                            {
+                                "@type": "AggregateOffer",
+                                "availability": "http://schema.org/InStock",
+                                "lowPrice": "${bundlePrice}",
+                                "highPrice": "${bundlePrice}",
+                                "priceCurrency": "USD",
+                                "offerCount": "1"
+                            }
+                        ]
+                      }`,
           }}
         />
       </NextHead>
