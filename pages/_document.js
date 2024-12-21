@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head />
         <body>
           {/* Fix for flashes of unstyled content in Firefox, based on:
-                    https://github.com/vercel/next.js/issues/15642#issuecomment-710747889*/}
+          https://github.com/vercel/next.js/issues/15642#issuecomment-710747889*/}
           <script>0</script>
           <Main />
           <NextScript />
