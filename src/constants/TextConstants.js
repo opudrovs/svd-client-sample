@@ -4,6 +4,7 @@
 
 /* General */
 
+export const AUTHOR_NAME = 'Olga Pudrovska';
 export const COMPANY_NAME = 'SmartVectorDesign';
 export const COMPANY_EMAIL_SUPPORT = 'opudrovs@gmail.com';
 export const COMPANY_EMAIL_JOB = 'opudrovs@gmail.com';

@@ -55,7 +55,7 @@ const MyApp = ({ Component, pageProps }) => {
         </PersistGate>
       </Provider>
       <CookieConsent
-        cookieName="SVDCookieConsent"
+        cookieName="svd-cookie-consent"
         buttonText="Accept"
         buttonStyle={{
           borderRadius: '4px',

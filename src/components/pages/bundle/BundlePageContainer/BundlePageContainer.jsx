@@ -273,7 +273,7 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
 
             {allPacks.map((elementPacks, indexPacks) => {
               return (
-                <Fragment key={`pack-previews-${indexPacks}`}>
+                <Fragment key={elementPacks}>
                   <h3
                     className={styles.productSubtitle}
                   >{`${allPacksSubtitles[indexPacks]} (${elementPacks.length} Packs):`}</h3>

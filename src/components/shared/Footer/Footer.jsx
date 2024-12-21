@@ -8,7 +8,7 @@ import InstagramIcon from 'components/assets/icons/InstagramIcon';
 import Logo from 'components/common/Logo';
 
 import * as paths from 'constants/navigationConstants';
-import { COMPANY_NAME } from 'constants/textConstants';
+import { AUTHOR_NAME } from 'constants/textConstants';
 
 import styles from './Footer.module.scss';
 
@@ -86,7 +86,7 @@ const Footer = () => (
               styles.copyright
             )}
           >
-            © 2020-2021 {COMPANY_NAME}. All Rights Reserved.
+            © 2020-2025 {AUTHOR_NAME}. All Rights Reserved.
           </div>
           <div className="d-flex">
             {secondaryLinks.map((props, index) => (
