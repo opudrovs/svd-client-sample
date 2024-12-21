@@ -18,7 +18,8 @@ const Logo = ({ externalClassName }) => (
   <Link
     href={INDEX_PATH}
     title={COMPANY_NAME}
-    className={classNames('d-inline-flex', styles.logo, externalClassName)}>
+    className={classNames('d-inline-flex', styles.logo, externalClassName)}
+  >
     <svg
       id="logo"
       xmlns="http://www.w3.org/2000/svg"

@@ -64,12 +64,16 @@ const Footer = () => (
                 key={childIndex}
                 externalClassName="col-12 col-md-6"
               >
-                {children.map((props) => (
+                {children.map(({ href, ...props }) => (
                   <div
-                    key={props.href}
+                    key={href}
                     className={classNames('d-flex', styles.linkContainer)}
                   >
-                    <FooterLink {...props} externalClassName={styles.link} />
+                    <FooterLink
+                      href={href}
+                      {...props}
+                      externalClassName={styles.link}
+                    />
                   </div>
                 ))}
               </FooterLinkGroup>

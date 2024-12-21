@@ -24,10 +24,10 @@ const Cart = () => {
   );
 
   return (
-    (<Link href={CHECKOUT_PATH} className={classNames('d-block', styles.cart)}>
+    <Link href={CHECKOUT_PATH} className={classNames('d-block', styles.cart)}>
       <CartIcon />
       <div className={styles.caption}>{numberOfProducts}</div>
-    </Link>)
+    </Link>
   );
 };
 

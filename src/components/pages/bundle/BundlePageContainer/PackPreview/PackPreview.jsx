@@ -19,17 +19,17 @@ const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
   const onImageLoadHandler = () => setIsImageLoaded(true);
 
   return (
-    (<div className={classNames(styles.packPreview, externalClassName)}>
+    <div className={classNames(styles.packPreview, externalClassName)}>
       <Link href={href} className={classNames('d-flex', styles.imageLink)}>
         {!isImageLoaded && <div className={styles.imagePlaceholder} />}
         <img
-            src={src}
-            alt={alt}
-            width="400"
-            height="400"
-            className={styles.image}
-            onLoad={onImageLoadHandler}
-          />
+          src={src}
+          alt={alt}
+          width="400"
+          height="400"
+          className={styles.image}
+          onLoad={onImageLoadHandler}
+        />
         {/* <LazyLoad
           once
           offset={200}
@@ -54,7 +54,8 @@ const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
           <Link
             href={href}
             title={title}
-            className={classNames('d-inline-block', styles.title)}>
+            className={classNames('d-inline-block', styles.title)}
+          >
             {htmlParser(title.replace(' - ', ' &mdash; '))}
           </Link>
         </div>
@@ -64,7 +65,7 @@ const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
           </div>
         )}
       </div>
-    </div>)
+    </div>
   );
 };
 

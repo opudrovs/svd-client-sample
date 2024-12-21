@@ -1,10 +1,7 @@
-import Link from 'next/link';
-
 import BundlesPreview from 'components/pages/root/BundlesPageContainer/BundlesPreview';
 
 import Page from 'components/shared/Page';
 
-import { ABOUT_PATH } from 'constants/navigationConstants';
 import {
   COMPANY_NAME,
   PRODUCT_META_DESCRIPTION_END,

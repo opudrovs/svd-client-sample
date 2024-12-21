@@ -20,9 +20,9 @@ const MenuNavLink = ({ href, text, isActive }) => {
   );
 
   return (
-    (<Link href={href} className={linkClassName}>
+    <Link href={href} className={linkClassName}>
       {text}
-    </Link>)
+    </Link>
   );
 };
 

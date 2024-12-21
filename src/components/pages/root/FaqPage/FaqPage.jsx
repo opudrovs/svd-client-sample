@@ -45,14 +45,10 @@ const FaqPage = () => (
 
     <div className={styles.answer}>
       <h2 id="answer-2" className={styles.subtitle}>
-        <span className={styles.question}>
-          2. Question 2
-        </span>
+        <span className={styles.question}>2. Question 2</span>
       </h2>
 
-      <p>
-        Answer 2
-      </p>
+      <p>Answer 2</p>
     </div>
   </Page>
 );

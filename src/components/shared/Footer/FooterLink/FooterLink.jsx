@@ -25,19 +25,21 @@ const FooterLink = ({
     externalClassName
   );
 
-  return (<>
-    {isExternal ? (
-      <a href={href} className={linkClassName}>
-        {text}
-        {children}
-      </a>
-    ) : (
-      <Link href={href} className={linkClassName}>
-        {text}
-        {children}
-      </Link>
-    )}
-  </>);
+  return (
+    <>
+      {isExternal ? (
+        <a href={href} className={linkClassName}>
+          {text}
+          {children}
+        </a>
+      ) : (
+        <Link href={href} className={linkClassName}>
+          {text}
+          {children}
+        </Link>
+      )}
+    </>
+  );
 };
 
 FooterLink.propTypes = {

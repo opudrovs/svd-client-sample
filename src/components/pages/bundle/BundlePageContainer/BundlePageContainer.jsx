@@ -287,7 +287,7 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
 
                       return (
                         <div
-                          key={title}
+                          key={screenshot.alt}
                           className={classNames(
                             'col-12 col-sm-6 col-lg-4',
                             styles.packPreviewContainer

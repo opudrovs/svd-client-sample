@@ -45,7 +45,9 @@ const store = configureStore({
         ignoredActions: IGNORED_ACTIONS,
       },
     }).concat(
-      IS_BROWSER ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS }) : []
+      IS_BROWSER
+        ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS })
+        : []
     ),
 });
 

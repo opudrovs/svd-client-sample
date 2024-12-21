@@ -34,17 +34,19 @@ const LinkButton = ({
     externalClassName
   );
 
-  return (<>
-    {isExternal ? (
-      <a href={href} className={linkClassName}>
-        {children}
-      </a>
-    ) : (
-      <Link href={href} className={linkClassName}>
-        {children}
-      </Link>
-    )}
-  </>);
+  return (
+    <>
+      {isExternal ? (
+        <a href={href} className={linkClassName}>
+          {children}
+        </a>
+      ) : (
+        <Link href={href} className={linkClassName}>
+          {children}
+        </Link>
+      )}
+    </>
+  );
 };
 
 LinkButton.propTypes = {

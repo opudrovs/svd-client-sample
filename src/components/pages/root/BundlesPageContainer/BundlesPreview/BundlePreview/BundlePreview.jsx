@@ -27,17 +27,17 @@ const BundlePreview = ({
   const onImageLoadHandler = () => setIsImageLoaded(true);
 
   return (
-    (<div className={classNames(styles.bundlePreview, externalClassName)}>
+    <div className={classNames(styles.bundlePreview, externalClassName)}>
       <Link href={href} className={classNames('d-flex', styles.imageLink)}>
         {!isImageLoaded && <div className={styles.imagePlaceholder} />}
         <img
-            src={src}
-            alt={alt}
-            width="400"
-            height="400"
-            className={styles.image}
-            onLoad={onImageLoadHandler}
-          />
+          src={src}
+          alt={alt}
+          width="400"
+          height="400"
+          className={styles.image}
+          onLoad={onImageLoadHandler}
+        />
         {/* <LazyLoad
           once
           offset={10000}
@@ -63,14 +63,14 @@ const BundlePreview = ({
             </span>
           </div>
         )}
-
       </Link>
       <div className={styles.textContainer}>
         <div className={styles.titleContainer}>
           <Link
             href={href}
             title={title}
-            className={classNames('d-inline-block', styles.title)}>
+            className={classNames('d-inline-block', styles.title)}
+          >
             {htmlParser(title.replace(' - ', ' &mdash; '))}
           </Link>
         </div>
@@ -80,7 +80,7 @@ const BundlePreview = ({
           </div>
         )}
       </div>
-    </div>)
+    </div>
   );
 };
 

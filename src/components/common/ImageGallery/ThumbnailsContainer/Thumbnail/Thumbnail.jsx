@@ -31,15 +31,15 @@ const Thumbnail = ({ src, alt, isActive, onClickHandler }) => {
       >
         {!isImageLoaded && <div className={styles.imagePlaceholder} />}
         <img
-            ref={hoverRef}
-            src={src}
-            alt={alt}
-            width="100"
-            height="100"
-            className={styles.image}
-            onLoad={onImageLoadHandler}
-            onClick={onClickHandler}
-          />
+          ref={hoverRef}
+          src={src}
+          alt={alt}
+          width="100"
+          height="100"
+          className={styles.image}
+          onLoad={onImageLoadHandler}
+          onClick={onClickHandler}
+        />
         {/* <LazyLoad
           once
           offset={10000}

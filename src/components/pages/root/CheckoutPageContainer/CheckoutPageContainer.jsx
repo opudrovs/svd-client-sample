@@ -29,7 +29,7 @@ const CheckoutPageContainer = () => {
 
       <div className={styles.productsContainer}>
         {products.length > 0 ? (
-          products.map(({ id, title, quantity }, index) => (
+          products.map(({ id, title, quantity }) => (
             <CheckoutProduct
               key={id}
               title={title}
