@@ -13,8 +13,8 @@ import styles from './Breadcrumb.module.scss';
  */
 const Breadcrumb = ({ text, href }) =>
   href ? (
-    <Link href={href}>
-      <a className={classNames(styles.breadcrumb, styles.link)}>{text}</a>
+    <Link href={href} className={classNames(styles.breadcrumb, styles.link)}>
+      {text}
     </Link>
   ) : (
     <span className={styles.breadcrumb}>{text}</span>

@@ -104,11 +104,7 @@ const ImageGallery = ({ imageData }) => {
           {!imageData ||
             (!isImageLoaded && <div className={styles.imagePlaceholder} />)}
 
-          {containsMultipleImages ? (
-            {image}
-          ) : (
-            image
-          )}
+          {image}
           {/* {containsMultipleImages ? (
             <LazyLoad
               once

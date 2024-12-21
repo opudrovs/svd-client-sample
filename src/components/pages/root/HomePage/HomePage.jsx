@@ -34,23 +34,6 @@ const HomePage = () => (
         <BundlesPreview data={dataBundles} />
       </div>
     </main>
-
-    <div className="row">
-      <div className="col">
-        <h2 className={styles.subtitle}>
-          Custom Software Development Services
-        </h2>
-
-        <p>
-          If you need a React website or would like to automate repetitive
-          graphic design tasks, please have a look at the{' '}
-          <Link href={ABOUT_PATH}>
-            <a className={styles.link}>Hire Me!</a>
-          </Link>{' '}
-          page for more information.
-        </p>
-      </div>
-    </div>
   </Page>
 );
 

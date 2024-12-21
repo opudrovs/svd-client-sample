@@ -59,7 +59,7 @@ const FaqPage = () => (
       <p>
         I would be delighted to! Please have a look at the{' '}
         <Link href={ABOUT_PATH}>
-          <a>Hire Me!</a>
+          Hire Me!
         </Link>{' '}
         page for more information.
       </p>
@@ -80,7 +80,7 @@ const FaqPage = () => (
         can create it for you in Gatsby/React. I have detailed the main benefits
         of a Gatsby website{' '}
         <Link href={`${ABOUT_PATH}#about-gatsby`}>
-          <a>here</a>
+          here
         </Link>
         .
       </p>
