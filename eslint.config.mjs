@@ -30,7 +30,8 @@ export default [
       'dist/**',
       'src/data',
       'src/redux/storage.js',
-      '*.test.js',
+      '**/*.test.js',
+      '**/*.test.jsx',
     ],
     plugins: {
       pluginReact,

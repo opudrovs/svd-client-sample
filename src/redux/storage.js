@@ -10,12 +10,15 @@ import { isBrowser } from 'utils/systemUtils';
 const createNoopStorage = () => {
   return {
     getItem(_key) {
+      void _key;
       return Promise.resolve(null);
     },
     setItem(_key, value) {
+      void _key;
       return Promise.resolve(value);
     },
     removeItem(_key) {
+      void _key;
       return Promise.resolve();
     },
   };

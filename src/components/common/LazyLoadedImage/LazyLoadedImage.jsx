@@ -4,6 +4,8 @@
 
 import { useState } from 'react';
 
+import PropTypes from 'prop-types';
+
 import Image from 'next/image';
 
 const LazyLoadedImage = ({ src, alt }) => {

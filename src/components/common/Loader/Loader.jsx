@@ -13,7 +13,7 @@ import styles from './Loader.module.scss';
 /**
  * Component to display a loading indicator, with or without delay.
  */
-const Loader = ({ delay, isOnButton, externalClassName }) => {
+const Loader = ({ delay = 0, isOnButton, externalClassName }) => {
   const [shouldShowLoader, setShouldShowLoader] = useState(false);
 
   const isMounted = useIsMounted();
@@ -58,11 +58,6 @@ Loader.propTypes = {
   delay: PropTypes.number,
   isOnButton: PropTypes.bool,
   externalClassName: PropTypes.string,
-};
-
-Loader.defaultProps = {
-  delay: 0,
-  isOnButton: false,
 };
 
 export default memo(Loader);

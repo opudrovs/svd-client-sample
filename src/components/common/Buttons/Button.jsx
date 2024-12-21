@@ -11,10 +11,10 @@ import styles from './Button.module.scss';
  */
 const Button = ({
   children,
-  type,
-  theme,
+  type = 'button',
+  theme = BUTTON_THEME.blue,
   isOutline,
-  isEnabled,
+  isEnabled = true,
   externalClassName,
   onClickHandler,
 }) => {
@@ -59,12 +59,6 @@ Button.propTypes = {
   isEnabled: PropTypes.bool,
   externalClassName: PropTypes.string,
   onClickHandler: PropTypes.func,
-};
-
-Button.defaultProps = {
-  type: 'button',
-  theme: BUTTON_THEME.blue,
-  isEnabled: true,
 };
 
 export default Button;

@@ -18,9 +18,9 @@ const Page = ({
   children,
   seoTitle,
   seoDescription,
-  isContentMain,
+  isContentMain = true,
   topComponent,
-  shouldShowCart,
+  shouldShowCart = true,
   externalContentClassName,
 }) => {
   const ContentTag = isContentMain ? 'main' : 'div';
@@ -60,11 +60,6 @@ Page.propTypes = {
   topComponent: PropTypes.element,
   shouldShowCart: PropTypes.bool,
   externalContentClassName: PropTypes.string,
-};
-
-Page.defaultProps = {
-  isContentMain: true,
-  shouldShowCart: true,
 };
 
 export default Page;
