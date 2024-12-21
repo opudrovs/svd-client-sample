@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import { Navbar } from 'react-bootstrap';
 

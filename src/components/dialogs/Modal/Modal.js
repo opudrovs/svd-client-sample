@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import styles from './Modal.module.scss';
 

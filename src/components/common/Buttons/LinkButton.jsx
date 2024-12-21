@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import Link from 'next/link';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import { BUTTON_THEME } from 'constants/uiConstants';
 

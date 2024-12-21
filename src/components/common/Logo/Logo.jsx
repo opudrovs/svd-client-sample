@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Link from 'next/link';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import { INDEX_PATH } from 'constants/navigationConstants';
 import { COMPANY_NAME } from 'constants/textConstants';

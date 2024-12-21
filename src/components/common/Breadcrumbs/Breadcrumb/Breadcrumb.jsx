@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Link from 'next/link';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import styles from './Breadcrumb.module.scss';
 

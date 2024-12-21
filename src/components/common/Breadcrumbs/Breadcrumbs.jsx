@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import NextHead from 'next/head';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import Breadcrumb from './Breadcrumb';
 

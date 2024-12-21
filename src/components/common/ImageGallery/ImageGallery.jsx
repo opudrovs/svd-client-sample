@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { useRouter } from 'next/router';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 import LazyLoad from 'react-lazyload';
 
 import useIsHovered from 'hooks/useIsHovered';

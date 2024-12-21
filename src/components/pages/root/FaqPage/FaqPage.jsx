@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import Link from 'next/link';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import Page from 'components/shared/Page';
 

@@ -2,7 +2,7 @@ import { memo, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 import LazyLoad from 'react-lazyload';
 
 import useIsHovered from 'hooks/useIsHovered';
