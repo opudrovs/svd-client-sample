@@ -10,7 +10,6 @@ const useIsHovered = () => {
   const ref = useRef(null);
 
   const mouseEnterHandler = () => setIsHovered(true);
-
   const mouseLeaveHandler = () => setIsHovered(false);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const useIsHovered = () => {
         node.removeEventListener('mouseleave', mouseLeaveHandler);
       };
     }
-  }, [ref.current]);
+  }, []);
 
   return [ref, isHovered, setIsHovered];
 };

@@ -36,3 +36,5 @@ LazyLoadedImage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
 };
+
+export default LazyLoadedImage;

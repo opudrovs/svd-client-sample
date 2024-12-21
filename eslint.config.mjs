@@ -16,7 +16,7 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-export default [
+const eslintConfig = [
   ...compat.extends('next/core-web-vitals'),
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -54,3 +54,5 @@ export default [
     },
   },
 ];
+
+export default eslintConfig;

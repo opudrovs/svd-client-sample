@@ -36,7 +36,7 @@ const Loader = ({ delay = 0, isOnButton, externalClassName }) => {
         clearTimeout(timeoutId);
       }
     };
-  }, []);
+  }, [delay, isMounted]);
 
   return (
     <div className={externalClassName}>
