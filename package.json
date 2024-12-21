@@ -1,35 +1,42 @@
 {
-    "name": "svd-client-sample",
-    "version": "0.2.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbopack",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "test": "jest",
-        "testupdate": "jest -u",
-        "testwatch": "jest --watchAll"
-    },
-    "dependencies": {
-        "@reduxjs/toolkit": "^2.5.0",
-        "@tippyjs/react": "^4.2.6",
-        "bootstrap": "^5.3.3",
-        "dayjs": "^1.11.13",
-        "html-react-parser": "^5.2.1",
-        "next": "15.1.2",
-        "normalize.css": "^8.0.1",
-        "rc-collapse": "^3.9.0",
-        "react": "^19.0.0",
-        "react-bootstrap": "^2.10.7",
-        "react-cookie-consent": "^9.0.0",
-        "react-dom": "^19.0.0",
-        "react-redux": "^9.2.0",
-        "react-select": "^5.9.0"
-    },
-    "devDependencies": {
-        "@eslint/eslintrc": "^3",
-        "eslint": "^9",
-        "eslint-config-next": "15.1.2"
-    }
+  "name": "svd-client-sample",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "checkformat": "npx eslint .",
+    "format": "npx eslint . --fix",
+    "test": "jest",
+    "testupdate": "jest -u",
+    "testwatch": "jest --watchAll"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
+    "@tippyjs/react": "^4.2.6",
+    "bootstrap": "^5.3.3",
+    "dayjs": "^1.11.13",
+    "html-react-parser": "^5.2.1",
+    "next": "15.1.2",
+    "normalize.css": "^8.0.1",
+    "rc-collapse": "^3.9.0",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.7",
+    "react-cookie-consent": "^9.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-select": "^5.9.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "prettier": "^3.4.2"
+  }
 }
