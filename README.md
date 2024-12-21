@@ -27,8 +27,6 @@ This project uses
 
 - Redux for storing global app state (for example, checkout cart contents), `redux-persist` for persisting Redux store locally, and `redux-state-sync` for syncing Redux state across different browser tabs;
 
-- `react-lazyload` package for lazily loading images on bundle and pack pages;
-
 - a custom inline image gallery component with thumbnails. Third-party image gallery solutions did not fit my design concept, so I rolled out a fast gallery solution based on existing image galleries used on digital asset marketplaces.
 
 Clicking on the large image preview in the inline image gallery opens the image directly in the browser.

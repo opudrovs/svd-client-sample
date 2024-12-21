@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 import classNames from 'classnames';
 import htmlParser from 'html-react-parser';
-import LazyLoad from 'react-lazyload';
 
 import { getFormattedPrice } from 'utils/checkoutUtils.js';
 
@@ -24,7 +23,15 @@ const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
       <Link href={href}>
         <a className={classNames('d-flex', styles.imageLink)}>
           {!isImageLoaded && <div className={styles.imagePlaceholder} />}
-          <LazyLoad
+          <img
+              src={src}
+              alt={alt}
+              width="400"
+              height="400"
+              className={styles.image}
+              onLoad={onImageLoadHandler}
+            />
+          {/* <LazyLoad
             once
             offset={200}
             style={{
@@ -41,7 +48,7 @@ const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
               className={styles.image}
               onLoad={onImageLoadHandler}
             />
-          </LazyLoad>
+          </LazyLoad> */}
         </a>
       </Link>
       <div className={styles.textContainer}>

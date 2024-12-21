@@ -3,7 +3,6 @@ import { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
-import LazyLoad from 'react-lazyload';
 
 import useIsHovered from 'hooks/useIsHovered';
 
@@ -31,7 +30,17 @@ const Thumbnail = ({ src, alt, isActive, onClickHandler }) => {
         })}
       >
         {!isImageLoaded && <div className={styles.imagePlaceholder} />}
-        <LazyLoad
+        <img
+            ref={hoverRef}
+            src={src}
+            alt={alt}
+            width="100"
+            height="100"
+            className={styles.image}
+            onLoad={onImageLoadHandler}
+            onClick={onClickHandler}
+          />
+        {/* <LazyLoad
           once
           offset={10000}
           style={{
@@ -50,7 +59,7 @@ const Thumbnail = ({ src, alt, isActive, onClickHandler }) => {
             onLoad={onImageLoadHandler}
             onClick={onClickHandler}
           />
-        </LazyLoad>
+        </LazyLoad> */}
         {isHovered && !isActive && (
           <div
             className={classNames(

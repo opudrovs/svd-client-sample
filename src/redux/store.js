@@ -1,12 +1,7 @@
 /**
  * Redux store with support for persisting Redux store locally and syncing Redux store state across tabs.
  */
-
-import {
-  combineReducers,
-  configureStore,
-  getDefaultMiddleware,
-} from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import {
   FLUSH,
@@ -44,13 +39,14 @@ const store = configureStore({
     },
     rootReducer
   ),
-  middleware: getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: IGNORED_ACTIONS,
-    },
-  }).concat(
-    IS_BROWSER ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS }) : []
-  ),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: IGNORED_ACTIONS,
+      },
+    }).concat(
+      IS_BROWSER ? createStateSyncMiddleware({ blacklist: IGNORED_ACTIONS }) : []
+    ),
 });
 
 if (IS_BROWSER) {

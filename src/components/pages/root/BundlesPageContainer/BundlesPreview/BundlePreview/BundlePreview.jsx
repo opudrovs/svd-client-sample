@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 import classNames from 'classnames';
 import htmlParser from 'html-react-parser';
-import LazyLoad from 'react-lazyload';
 
 import { getFormattedPrice } from 'utils/checkoutUtils';
 
@@ -32,7 +31,16 @@ const BundlePreview = ({
       <Link href={href}>
         <a className={classNames('d-flex', styles.imageLink)}>
           {!isImageLoaded && <div className={styles.imagePlaceholder} />}
-          <LazyLoad
+          <img
+              src={src}
+              alt={alt}
+              width="400"
+              height="400"
+              className={styles.image}
+              onLoad={onImageLoadHandler}
+            />
+
+          {/* <LazyLoad
             once
             offset={10000}
             style={{
@@ -49,7 +57,7 @@ const BundlePreview = ({
               className={styles.image}
               onLoad={onImageLoadHandler}
             />
-          </LazyLoad>
+          </LazyLoad> */}
           {isImageLoaded && (
             <div className={styles.subtitleContainer} aria-hidden>
               <span className={classNames('d-inline-block', styles.subtitle)}>

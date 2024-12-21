@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import classNames from 'classnames';
-import LazyLoad from 'react-lazyload';
 
 import useIsHovered from 'hooks/useIsHovered';
 
@@ -106,6 +105,11 @@ const ImageGallery = ({ imageData }) => {
             (!isImageLoaded && <div className={styles.imagePlaceholder} />)}
 
           {containsMultipleImages ? (
+            {image}
+          ) : (
+            image
+          )}
+          {/* {containsMultipleImages ? (
             <LazyLoad
               once
               offset={10000}
@@ -119,7 +123,7 @@ const ImageGallery = ({ imageData }) => {
             </LazyLoad>
           ) : (
             image
-          )}
+          )} */}
 
           {isImageLoaded && shouldShowOverlay && (
             <>
