@@ -4,6 +4,10 @@
  * after importing the `theme.scss` file.
  */
 
+ @use 'sass:color';
+ @use 'sass:math';
+ @use 'sass:list';
+
 /* COLOR */
 
 $brandingColor1: #fff;
@@ -26,14 +30,19 @@ $brandingColor17: #aaa;
 $brandingColor18: #f00;
 
 @function getRgbaColorWithOpacity($hexColor, $opacity) {
-  @return rgba(red($hexColor), green($hexColor), blue($hexColor), $opacity);
+  @return rgba(
+    color.channel($hexColor, "red"),
+    color.channel($hexColor, "green"),
+    color.channel($hexColor, "blue"),
+    $opacity
+  );
 }
 
 /* SIZE */
 
 /* Calculate rem size based on passed in px value. */
 @function calculateRem($sizePx) {
-  $remSize: $sizePx / 16px;
+  $remSize: math.div($sizePx, 16px);
   @return #{$remSize}rem;
 }
 
@@ -51,12 +60,12 @@ $brandingColor18: #f00;
 
 /* Use to set values of properties with multiple values (e. g. padding, margin). */
 @mixin remValues($property, $sizePxValues...) {
-  $max: length($sizePxValues);
+  $max: list.length($sizePxValues);
   $pxValues: '';
   $remValues: '';
 
   @for $i from 1 through $max {
-    $value: nth($sizePxValues, $i);
+    $value: list.nth($sizePxValues, $i);
     $pxValues: #{$pxValues + $value};
 
     @if $i < $max {
@@ -65,7 +74,7 @@ $brandingColor18: #f00;
   }
 
   @for $i from 1 through $max {
-    $value: calculateRem(nth($sizePxValues, $i));
+    $value: calculateRem(list.nth($sizePxValues, $i));
     $remValues: #{$remValues + $value};
 
     @if $i < $max {

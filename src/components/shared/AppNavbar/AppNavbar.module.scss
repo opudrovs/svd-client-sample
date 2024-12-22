@@ -1,4 +1,6 @@
 .navbar {
+  background-image: linear-gradient(to left, #667eea 0%, #764ba2 100%);
+  
   @include maxTabletBreakpoint {
     position: fixed;
     z-index: 1000;
@@ -13,8 +15,6 @@
     position: relative;
     z-index: auto;
   }
-
-  background-image: linear-gradient(to left, #667eea 0%, #764ba2 100%);
 }
 
 .navbarPadding {
@@ -36,10 +36,11 @@
 
 .toggle {
   position: absolute;
+  border: none;
+  background-color: transparent;
   @include rem('top', 10px);
   @include rem('right', 10px);
   @include rem('padding', 8px);
-  border: none;
 
   @include tabletBreakpoint {
     display: none;
@@ -51,8 +52,6 @@
     outline: none;
     box-shadow: none;
   }
-
-  background-color: transparent;
 }
 
 .icon > svg {

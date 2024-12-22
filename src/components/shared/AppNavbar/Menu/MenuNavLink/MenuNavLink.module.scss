@@ -2,14 +2,14 @@ $borderWidth: 4px;
 
 .menuNavLink {
   width: 100%;
-  @include rem('height', 50px);
-  @include rem('padding-top', 7px);
-  @include rem('padding-bottom', 7px);
   color: $brandingColor1;
-  @include menuLinkFont;
   box-shadow: inset 0 1px 0 0 $brandingColor3;
   text-align: center;
   white-space: nowrap;
+  @include rem('height', 50px);
+  @include rem('padding-top', 7px);
+  @include rem('padding-bottom', 7px);
+  @include menuLinkFont;
 
   @include tabletBreakpoint {
     width: auto;
