@@ -8,10 +8,18 @@ import PropTypes from 'prop-types';
 
 import Image from 'next/image';
 
-const LazyLoadedImage = ({ src, alt }) => {
+const LazyLoadedImage = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  placeholderClassName
+}) => {
   const [isImageLoaded, setImageLoaded] = useState(false);
 
   return (
+ 
     <div
       style={{
         width: '100%',
@@ -20,14 +28,20 @@ const LazyLoadedImage = ({ src, alt }) => {
         overflow: 'hidden', // Ensures proper sizing
       }}
     >
-      <Image
-        src={src}
-        alt={alt}
-        layout="fill" // Makes image take up full container size
-        objectFit="cover" // Optional: Adjusts how the image scales
-        onLoadingComplete={() => setImageLoaded(true)}
-        placeholder="blur"
-      />
+      {/* {!isImageLoaded && <div className={placeholderClassName} />} */}
+      {/* {src && (
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          priority
+          // layout="fill" // Makes image take up full container size
+          // objectFit="cover" // Optional: Adjusts how the image scales
+          className={className}
+          onLoad={() => setImageLoaded(true)}
+        />
+      )} */}
     </div>
   );
 };
@@ -35,6 +49,11 @@ const LazyLoadedImage = ({ src, alt }) => {
 LazyLoadedImage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  onImageLoadHandler: PropTypes.func,
+  className: PropTypes.string,
+  placeholderClassName: PropTypes.string,
 };
 
 export default LazyLoadedImage;

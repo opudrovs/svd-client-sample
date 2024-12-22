@@ -7,45 +7,47 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import htmlParser from 'html-react-parser';
 
-import LazyLoadedImage from 'components/common/LazyLoadedImage';
+import { getFormattedPrice } from 'utils/checkoutUtils.js';
 
-import { getFormattedPrice } from 'utils/checkoutUtils';
-
-import styles from './BundlePreview.module.scss';
+import styles from './PackPreview.module.scss';
 
 /**
- * Bundle preview component.
+ * Pack preview component.
  */
-const BundlePreview = ({
-  href,
-  src,
-  alt,
-  title,
-  subtitle,
-  license,
-  externalClassName,
-}) => {
+const PackPreview = ({ href, src, alt, title, license, externalClassName }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const onImageLoadHandler = () => setIsImageLoaded(true);
 
   return (
-    <div className={classNames(styles.bundlePreview, externalClassName)}>
+    <div className={classNames(styles.packPreview, externalClassName)}>
       <Link href={href} className={classNames('d-flex', styles.imageLink)}>
         {!isImageLoaded && <div className={styles.imagePlaceholder} />}
-        <LazyLoadedImage
+        <img
           src={src}
           alt={alt}
-          width={400}
-          height={400}
+          width="400"
+          height="400"
           className={styles.image}
-          placeholderClassName={styles.imagePlaceholder}
+          onLoad={onImageLoadHandler}
         />
-        {isImageLoaded && (
-          <div className={styles.subtitleContainer} aria-hidden>
-            <span className={classNames('d-inline-block', styles.subtitle)}>
-              {subtitle}
-            </span>
-          </div>
-        )}
+        {/* <LazyLoad
+          once
+          offset={200}
+          style={{
+            width: '100%',
+            height: '100%',
+            position: isImageLoaded ? 'static' : 'absolute',
+          }}
+        >
+          <img
+            src={src}
+            alt={alt}
+            width="400"
+            height="400"
+            className={styles.image}
+            onLoad={onImageLoadHandler}
+          />
+        </LazyLoad> */}
       </Link>
       <div className={styles.textContainer}>
         <div className={styles.titleContainer}>
@@ -67,14 +69,13 @@ const BundlePreview = ({
   );
 };
 
-BundlePreview.propTypes = {
+PackPreview.propTypes = {
   href: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   title: PropTypes.string,
-  subtitle: PropTypes.string,
   license: PropTypes.object,
   externalClassName: PropTypes.string,
 };
 
-export default BundlePreview;
+export default PackPreview;
