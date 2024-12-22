@@ -16,7 +16,6 @@ import Footer from 'components/shared/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css/normalize.css';
-import 'rc-collapse/assets/index.css';
 import 'tippy.js/dist/tippy.css';
 
 import 'styles/globals.scss';

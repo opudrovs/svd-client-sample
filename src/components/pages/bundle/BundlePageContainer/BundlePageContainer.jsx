@@ -7,7 +7,7 @@ import NextHead from 'next/head';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import htmlParser from 'html-react-parser';
-import Collapse, { Panel } from 'rc-collapse';
+import { Collapse, Card } from 'react-bootstrap';
 import Tippy from '@tippyjs/react';
 
 import PackPreview from './PackPreview';
@@ -62,6 +62,8 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
       )
     ),
   });
+
+  const [open, setOpen] = useState(false);
 
   const { imageData } = state;
 
@@ -240,15 +242,20 @@ const BundlePageContainer = ({ bundleData, bundlePreviewData }) => {
 
               <div>{htmlParser(bundleDescriptionHtml)}</div>
 
-              <Collapse className={styles.colorList}>
-                <Panel
-                  header={COLOR_LIST_TITLE_SOLIDS_NAMED}
-                  headerClass={styles.colorListHeader}
-                  style={{ color: '#000' }}
+              <Card className={styles.colorList}>
+                <Card.Header
+                  onClick={() => setOpen(!open)}
+                  aria-controls="color-list-content"
+                  aria-expanded={open}
+                  className={styles.colorListHeader}
+                  style={{ color: '#000', cursor: 'pointer' }}
                 >
-                  {COLOR_LIST_SOLIDS_NAMED}
-                </Panel>
-              </Collapse>
+                  {COLOR_LIST_TITLE_SOLIDS_NAMED}
+                </Card.Header>
+                <Collapse in={open}>
+                  <div id="color-list-content">{COLOR_LIST_SOLIDS_NAMED}</div>
+                </Collapse>
+              </Card>
             </div>
           </div>
         </main>

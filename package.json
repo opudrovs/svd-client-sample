@@ -21,7 +21,6 @@
     "html-react-parser": "^5.2.1",
     "next": "15.1.2",
     "normalize.css": "^8.0.1",
-    "rc-collapse": "^3.9.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-cookie-consent": "^9.0.0",
