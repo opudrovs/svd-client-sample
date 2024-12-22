@@ -31,8 +31,6 @@ This project uses
 
 Clicking on the large image preview in the inline image gallery opens the image directly in the browser.
 
-- ESLint with custom config for analyzing the code;
-
 - Jest with Enzyme for unit testing (sample tests are available in `src/components/common/Tags/Tag/Tag.test.js` and `src/components/common/Breadcrumbs/Breadcrumb/Breadcrumb.test.js`).
 
 ## Project Structure and Code Style
@@ -55,23 +53,9 @@ Components are arranged by folders:
   - `styles` - global app styles.
   - `utils` - small focused utility functions for working with strings, arrays, data etc.
 
-Code style is validated by ESLint with a custom config (run `npm run lint` from the project folder) and manually.
-
 Imports in each module are organized by categories and alphabetically, by module name and import names.
 
 Exported constants are all caps, constants used locally are camel case. Object constants are named in singular, array constants are named in plural. Keys of object constants are in lowercase.
-
-## Known Issues and Potential Optimizations
-
-- There is a known issue with Next.js that it sometimes does not preserve the correct order of CSS chunk imports in development builds. Because of that, some overridden Bootstrap styles (padding and margins) might be re-enabled in development builds. Please use the production mode to preview the final styling.
-
-- Large complex components (in particular, page containers) could be split into smaller and simpler components to simplify readability, maintenance, and testing. For now, the app layout is frequently changed, and splitting the components was not deemed a priority.
-
-- The project is very image-heavy by design, the size of loaded images is much higher than the size of JS and CSS code, and thus the following optimizations were not planned for the initial release because for such type of project they would be only marginally useful:
-
-- The project uses Bootstrap grid (to place components) with custom styling to speed up development and make collaboration with other developers, if necessary, easier. It is possible to replace Bootstrap navigation bar classes with custom code and instead of importing the whole React Bootstrap code import only Bootstrap grid. This would allow to remove several tens of kilobytes of code from page imports.
-
-- Almost all SCSS variables and mixins are contained in the `theme.scss` file, for simplicity and development speed. This file is automatically prepended to each SCSS file with SASS loader. This file can be split into smaller files to be imported on demand.
 
 ## How to Run the App
 
