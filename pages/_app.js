@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 import NextHead from 'next/head';
 
-import CookieConsent from 'react-cookie-consent';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -53,15 +52,6 @@ const MyApp = ({ Component, pageProps }) => {
           <Footer />
         </PersistGate>
       </Provider>
-      <CookieConsent
-        cookieName="svd-cookie-consent"
-        buttonText="Accept"
-        buttonStyle={{
-          borderRadius: '4px',
-        }}
-      >
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
     </>
   );
 };
