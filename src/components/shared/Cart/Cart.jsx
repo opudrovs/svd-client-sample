@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { useSelector } from 'react-redux';
 
-import { selectProducts } from 'redux/checkout/checkoutSlice';
+import { selectProducts } from '../../../redux/checkout/checkoutSlice';
 
 import CartIcon from 'components/assets/icons/CartIcon';
 

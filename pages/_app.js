@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import store from 'redux/store';
+import store from '../src/redux/store';
 
 import ErrorPage from 'components/pages/root/ErrorPage';
 
