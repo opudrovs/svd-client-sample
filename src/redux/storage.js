@@ -1,4 +1,8 @@
-import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
+import storageModule from 'redux-persist/lib/storage/createWebStorage';
+
+// Accessing `.default` explicitly
+// due to CommonJS and ES module interop issues with createWebStorage.
+const createWebStorage = storageModule.default;
 
 import { isBrowser } from 'utils/systemUtils';
 
@@ -23,6 +27,8 @@ const createNoopStorage = () => {
     },
   };
 };
+
+console.log(createWebStorage)
 
 const storage = isBrowser() ? createWebStorage('local') : createNoopStorage();
 
