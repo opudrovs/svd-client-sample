@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 import { useDispatch } from 'react-redux';
 import ReactSelect from 'react-select';
-import { addProduct } from '@/redux/checkout/checkoutSlice';
+import { addProduct } from 'reduxStore/checkout/checkoutSlice';
 
 import Button from 'components/common/Buttons/Button';
 

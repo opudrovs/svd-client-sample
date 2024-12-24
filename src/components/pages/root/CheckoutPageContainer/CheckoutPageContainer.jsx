@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { removeProduct, selectProducts } from '@/redux/checkout/checkoutSlice';
+import { removeProduct, selectProducts } from 'reduxStore/checkout/checkoutSlice';
 
 import CheckoutProduct from './CheckoutProduct';
 

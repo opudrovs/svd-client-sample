@@ -14,14 +14,6 @@ const nextConfig = {
     additionalData: `@use 'styles/theme' as *;`, // This makes theme.scss accessible
     includePaths: [path.join(__dirname, 'styles')], // Add your styles folder to SCSS include paths
   },
-
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias, // Preserve existing aliases
-      '@': path.resolve(__dirname, 'src'), // Map @ to the src directory
-    };
-    return config;
-  },
 };
 
 export default nextConfig;

@@ -24,10 +24,10 @@ const LazyLoadedImage = ({
         width: '100%',
         height: '100%',
         position: isImageLoaded ? 'static' : 'absolute',
-        overflow: 'hidden', // Ensures proper sizing
+        overflow: 'hidden',
       }}
     >
-      {/* {!isImageLoaded && <div className={placeholderClassName} />} */}
+      {<div className={placeholderClassName} />}
       {/* {src && (
         <Image
           src={src}

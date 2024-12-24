@@ -1,8 +1,7 @@
 import storageModule from 'redux-persist/lib/storage/createWebStorage';
 
-// Accessing `.default` explicitly
-// due to CommonJS and ES module interop issues with createWebStorage.
-const createWebStorage = storageModule.default;
+// Handle both ES Module and CommonJS exports
+const createWebStorage = storageModule?.default || storageModule;
 
 import { isBrowser } from 'utils/systemUtils';
 
