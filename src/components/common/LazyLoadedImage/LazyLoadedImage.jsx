@@ -14,12 +14,11 @@ const LazyLoadedImage = ({
   width,
   height,
   className,
-  placeholderClassName
+  placeholderClassName,
 }) => {
   const [isImageLoaded, setImageLoaded] = useState(false);
 
   return (
- 
     <div
       style={{
         width: '100%',

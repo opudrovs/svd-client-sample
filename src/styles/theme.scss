@@ -4,9 +4,9 @@
  * after importing the `theme.scss` file.
  */
 
- @use 'sass:color';
- @use 'sass:math';
- @use 'sass:list';
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:list';
 
 /* COLOR */
 
@@ -31,9 +31,9 @@ $brandingColor18: #f00;
 
 @function getRgbaColorWithOpacity($hexColor, $opacity) {
   @return rgba(
-    color.channel($hexColor, "red"),
-    color.channel($hexColor, "green"),
-    color.channel($hexColor, "blue"),
+    color.channel($hexColor, 'red'),
+    color.channel($hexColor, 'green'),
+    color.channel($hexColor, 'blue'),
     $opacity
   );
 }

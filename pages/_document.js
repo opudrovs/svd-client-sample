@@ -4,7 +4,7 @@
  * The custom document is only rendered on the server, React components added
  * to it outside of `Main` will not be initialized.
  */
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
@@ -13,7 +13,7 @@ export default function Document() {
       <body>
         {/* Fix for flashes of unstyled content in Firefox, based on:
           https://github.com/vercel/next.js/issues/15642#issuecomment-710747889*/}
-          <script>0</script>
+        <script>0</script>
         <Main />
         <NextScript />
       </body>

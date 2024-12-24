@@ -28,8 +28,6 @@ const createNoopStorage = () => {
   };
 };
 
-console.log(createWebStorage)
-
 const storage = isBrowser() ? createWebStorage('local') : createNoopStorage();
 
 export default storage;

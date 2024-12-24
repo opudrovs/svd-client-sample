@@ -1,6 +1,6 @@
 .navbar {
   background-image: linear-gradient(to left, #667eea 0%, #764ba2 100%);
-  
+
   @include maxTabletBreakpoint {
     position: fixed;
     z-index: 1000;
