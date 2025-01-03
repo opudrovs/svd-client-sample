@@ -1,0 +1,19 @@
+.title {
+  @include titleFont;
+  text-align: center;
+}
+
+.content {
+  a {
+    @include linkText;
+  }
+}
+
+.productsContainer {
+  @include rem('margin-top', 16px);
+  @include rem('margin-bottom', 16px);
+}
+
+.highlighted {
+  background-color: #ff0;
+}
