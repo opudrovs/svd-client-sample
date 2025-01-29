@@ -1,3 +1,1 @@
-import ThumbnailsContainer from './ThumbnailsContainer';
-
-export default ThumbnailsContainer;
+export { default } from './ThumbnailsContainer.jsx';

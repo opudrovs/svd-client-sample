@@ -1,0 +1,17 @@
+# Ignore build output
+dist/
+.next/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore configuration files
+*.config.js
+
+# Ignore public assets
+public/
+
+# Ignore specific files
+src/data
+package-lock.json
+yarn.lock

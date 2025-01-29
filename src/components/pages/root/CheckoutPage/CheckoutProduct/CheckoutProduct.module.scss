@@ -1,0 +1,28 @@
+.checkoutProduct {
+  position: relative;
+  @include rem('padding', 16px);
+  @include rem('border-radius', 4px);
+  background-color: $brandingColor1;
+
+  &:not(:first-child) {
+    @include rem('margin-top', 12px);
+  }
+}
+
+.removeProductIconContainer {
+  @include rem('margin-left', 12px);
+}
+
+.removeProductIcon {
+  cursor: pointer;
+
+  svg {
+    fill: $brandingColor2;
+    @include rem('width', 18px);
+    height: auto;
+  }
+}
+
+.title {
+  @include previewSubtitleFont;
+}

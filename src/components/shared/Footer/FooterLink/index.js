@@ -1,3 +1,1 @@
-import FooterLink from './FooterLink';
-
-export default FooterLink;
+export { default } from './FooterLink.jsx';

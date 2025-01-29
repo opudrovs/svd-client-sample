@@ -1,81 +1,83 @@
 .imagesPreview {
-    @include narrowDesktopBreakpoint {
-        @include remValues('padding', 8px, 24px, 8px, 24px);
-        @include productBlock;
-        background-color: transparent;
-    }
+  @include narrowDesktopBreakpoint {
+    @include remValues('padding', 8px, 24px, 8px, 24px);
+    @include productBlock;
+    background-color: transparent;
+  }
 }
 
 .imageContainer {
-    position: relative;
-    max-width: 600px;
-    overflow: hidden;
+  position: relative;
+  max-width: 600px;
+  overflow: hidden;
 }
 
 .imageContainerHover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .imageHover {
-    transform: scale(1.02);
-}
-
-.imagePlaceholder {
-    @include imagePlaceholder;
+  transform: scale(1.02);
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: getRgbaColorWithOpacity($brandingColor2, $imageGalleryOverlayOpacity);
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: getRgbaColorWithOpacity(
+    $brandingColor2,
+    $imageGalleryOverlayOpacity
+  );
+  pointer-events: none;
 }
 
 .icon > svg {
-    height: auto;
+  height: auto;
 }
 
 .iconLarge > svg {
-    @include rem('width', 56px);
-    fill: $brandingColor1;
-    opacity: $imageGalleryOverlayIconOpacity;
+  @include rem('width', 56px);
+  fill: $brandingColor1;
+  opacity: $imageGalleryOverlayIconOpacity;
 }
 
 .overlayIcons {
-    position: absolute;
-    @include rem('right', 8px);
-    @include rem('bottom', 8px);
-    @include rem('padding', 8px);
-    @include rem('border-radius', 4px);
-    background-color: getRgbaColorWithOpacity($brandingColor1, $productPreviewOverlayOpacity);
-    pointer-events: none;
+  position: absolute;
+  @include rem('right', 8px);
+  @include rem('bottom', 8px);
+  @include rem('padding', 8px);
+  @include rem('border-radius', 4px);
+  background-color: getRgbaColorWithOpacity(
+    $brandingColor1,
+    $productPreviewOverlayOpacity
+  );
+  pointer-events: none;
 }
 
 .iconSmall > svg {
-    @include rem('width', 24px);
-    fill: $brandingColor9;
+  @include rem('width', 24px);
+  fill: $brandingColor9;
 }
 
 .loaderContainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 .loader {
-    position: absolute;
-    @include rem('width', 32px);
-    @include rem('height', 32px);
-    opacity: 0.5;
+  position: absolute;
+  @include rem('width', 32px);
+  @include rem('height', 32px);
+  opacity: 0.5;
 }

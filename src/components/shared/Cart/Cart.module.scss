@@ -1,22 +1,22 @@
 .cart {
-    position: relative;
-    @include rem('padding', 16px);
-    border: 1px solid $brandingColor2;
-    @include rem('border-radius', 4px);
+  position: relative;
+  @include rem('padding', 16px);
+  border: 1px solid $brandingColor2;
+  @include rem('border-radius', 4px);
 
-    svg {
-        fill: $brandingColor2;
-        @include rem('width', 32px);
-        height: auto;
-    }
+  svg {
+    fill: $brandingColor2;
+    @include rem('width', 32px);
+    height: auto;
+  }
 }
 
 .caption {
-    position: absolute;
-    width: 100%;
-    @include rem('bottom', 2px);
-    right: 0;
-    color: $brandingColor18;
-    @include cartFont;
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  @include rem('bottom', 2px);
+  right: 0;
+  color: $brandingColor18;
+  @include cartFont;
+  text-align: center;
 }

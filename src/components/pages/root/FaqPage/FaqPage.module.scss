@@ -1,42 +1,42 @@
 .title {
-    @include titleFont;
-    text-align: center;
+  @include titleFont;
+  text-align: center;
 }
 
 .subtitle {
-    @include subtitleFont;
+  @include subtitleFont;
 
-    &:not(:first-of-type) {
-        @include rem('margin-top', 24px);
-    }
+  &:not(:first-of-type) {
+    @include rem('margin-top', 24px);
+  }
 }
 
 .content {
-    a {
-        @include linkText;
-    }
+  a {
+    @include linkText;
+  }
 }
 
 .answer {
-    @include rem('padding-right', 16px);
-    @include rem('padding-left', 16px);
-    @include rem('margin-top', 48px);
+  @include rem('padding-right', 16px);
+  @include rem('padding-left', 16px);
+  @include rem('margin-top', 48px);
 }
 
 .question {
-    @include rem('padding-right', 2px);
-    @include rem('padding-left', 2px);
-    @include rem('margin-left', -2px);
+  @include rem('padding-right', 2px);
+  @include rem('padding-left', 2px);
+  @include rem('margin-left', -2px);
 }
 
 .highlighted {
-    background-color: #ff0;
+  background-color: #ff0;
 }
 
 .divider {
-    width: 100%;
-    height: 3px;
-    @include rem('margin-top', 24px);
-    background-color: $brandingColor1;
-    box-shadow: inset 0 1px 0 0 $brandingColor3;
+  width: 100%;
+  height: 3px;
+  @include rem('margin-top', 24px);
+  background-color: $brandingColor1;
+  box-shadow: inset 0 1px 0 0 $brandingColor3;
 }

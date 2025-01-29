@@ -1,8 +1,5 @@
-/* COMPONENTS */
+import CheckoutPage from 'components/pages/root/CheckoutPage';
 
-import CheckoutPageContainer from 'components/pages/root/CheckoutPageContainer';
-
-
-const Checkout = () => <CheckoutPageContainer />;
+const Checkout = () => <CheckoutPage />;
 
 export default Checkout;

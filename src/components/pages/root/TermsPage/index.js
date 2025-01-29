@@ -1,3 +1,1 @@
-import TermsPage from './TermsPage';
-
-export default TermsPage;
+export { default } from './TermsPage.jsx';

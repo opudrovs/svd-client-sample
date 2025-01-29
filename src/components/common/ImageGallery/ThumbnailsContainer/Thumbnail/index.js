@@ -1,3 +1,1 @@
-import Thumbnail from './Thumbnail';
-
-export default Thumbnail;
+export { default } from './Thumbnail.jsx';

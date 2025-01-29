@@ -1,15 +1,15 @@
 .title {
-    @include titleFont;
-    text-align: center;
+  @include titleFont;
+  text-align: center;
 }
 
 .subtitle {
-    @include subtitleFont;
-    text-align: center;
+  @include subtitleFont;
+  text-align: center;
 }
 
 .content {
-    a {
-        @include linkText;
-    }
+  a {
+    @include linkText;
+  }
 }

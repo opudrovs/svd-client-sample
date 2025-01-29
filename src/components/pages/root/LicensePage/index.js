@@ -1,3 +1,1 @@
-import LicensePage from './LicensePage';
-
-export default LicensePage;
+export { default } from './LicensePage.jsx';

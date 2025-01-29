@@ -4,6 +4,10 @@
  * after importing the `theme.scss` file.
  */
 
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:list';
+
 /* COLOR */
 
 $brandingColor1: #fff;
@@ -26,55 +30,60 @@ $brandingColor17: #aaa;
 $brandingColor18: #f00;
 
 @function getRgbaColorWithOpacity($hexColor, $opacity) {
-    @return rgba(red($hexColor), green($hexColor), blue($hexColor), $opacity);
+  @return rgba(
+    color.channel($hexColor, 'red'),
+    color.channel($hexColor, 'green'),
+    color.channel($hexColor, 'blue'),
+    $opacity
+  );
 }
 
 /* SIZE */
 
 /* Calculate rem size based on passed in px value. */
 @function calculateRem($sizePx) {
-    $remSize: $sizePx / 16px;
-    @return #{$remSize}rem;
+  $remSize: math.div($sizePx, 16px);
+  @return #{$remSize}rem;
 }
 
 @mixin rem($property, $sizePx) {
-    #{$property}: $sizePx; // Fallback in px.
-    #{$property}: calculateRem($sizePx);
+  #{$property}: $sizePx; // Fallback in px.
+  #{$property}: calculateRem($sizePx);
 }
 
 @mixin remImportant($property, $sizePx) {
-    #{$property}: $sizePx !important; // Fallback in px.
-    #{$property}: calculateRem($sizePx) !important;
+  #{$property}: $sizePx !important; // Fallback in px.
+  #{$property}: calculateRem($sizePx) !important;
 }
 
 // Based on a reworked mixin from https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 
- /* Use to set values of properties with multiple values (e. g. padding, margin). */
+/* Use to set values of properties with multiple values (e. g. padding, margin). */
 @mixin remValues($property, $sizePxValues...) {
-    $max: length($sizePxValues);
-    $pxValues: '';
-    $remValues: '';
+  $max: list.length($sizePxValues);
+  $pxValues: '';
+  $remValues: '';
 
-    @for $i from 1 through $max {
-        $value: nth($sizePxValues, $i);
-        $pxValues: #{$pxValues + $value};
+  @for $i from 1 through $max {
+    $value: list.nth($sizePxValues, $i);
+    $pxValues: #{$pxValues + $value};
 
-        @if $i < $max {
-            $pxValues: #{$pxValues + " "};
-        }
+    @if $i < $max {
+      $pxValues: #{$pxValues + ' '};
     }
+  }
 
-    @for $i from 1 through $max {
-        $value: calculateRem(nth($sizePxValues, $i));
-        $remValues: #{$remValues + $value};
+  @for $i from 1 through $max {
+    $value: calculateRem(list.nth($sizePxValues, $i));
+    $remValues: #{$remValues + $value};
 
-        @if $i < $max {
-            $remValues: #{$remValues + " "};
-        }
+    @if $i < $max {
+      $remValues: #{$remValues + ' '};
     }
+  }
 
-    #{$property}: $pxValues;
-    #{$property}: $remValues;
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
 }
 
 $minContentWidthPx: 360px;
@@ -88,138 +97,141 @@ $screenLgMin: 992px;
 $screenXlMin: 1200px;
 
 @mixin narrowSm {
-    @media (min-width: #{$screenNarrowSmMin}) {
-        @content;
-    }
+  @media (min-width: #{$screenNarrowSmMin}) {
+    @content;
+  }
 }
 
 @mixin sm {
-    @media (min-width: #{$screenSmMin}) {
-        @content;
-    }
+  @media (min-width: #{$screenSmMin}) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media (min-width: #{$screenMdMin}) {
-        @content;
-    }
+  @media (min-width: #{$screenMdMin}) {
+    @content;
+  }
 }
 
 @mixin lg {
-    @media (min-width: #{$screenLgMin}) {
-        @content;
-    }
+  @media (min-width: #{$screenLgMin}) {
+    @content;
+  }
 }
 
 @mixin xl {
-    @media (min-width: #{$screenXlMin}) {
-        @content;
-    }
+  @media (min-width: #{$screenXlMin}) {
+    @content;
+  }
 }
 
 @mixin narrowMobileBreakpoint {
-    @include narrowSm {
-        @content;
-    }
+  @include narrowSm {
+    @content;
+  }
 }
 
 @mixin mobileBreakpoint {
-    @include sm {
-        @content;
-    }
+  @include sm {
+    @content;
+  }
 }
 
 @mixin maxMobileBreakpoint {
-    @media (max-width: 575px) {
-        @content;
-    }
+  @media (max-width: 575px) {
+    @content;
+  }
 }
 
 @mixin tabletBreakpoint {
-    @include md {
-        @content;
-    }
+  @include md {
+    @content;
+  }
 }
 
 @mixin maxTabletBreakpoint {
-    @media (max-width: 767px) {
-        @content;
-    }
+  @media (max-width: 767px) {
+    @content;
+  }
 }
 
 @mixin narrowDesktopBreakpoint {
-    @include lg {
-        @content;
-    }
+  @include lg {
+    @content;
+  }
 }
 
 @mixin desktopBreakpoint {
-    @include xl {
-        @content;
-    }
+  @include xl {
+    @content;
+  }
 }
 
 @mixin isRetina {
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        @content;
-    }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
 }
 
 /* FONTS */
 
 /* Font families */
 
-$font1Family: Roboto, -apple-system, sans-serif;
+$font1Family:
+  Roboto,
+  -apple-system,
+  sans-serif;
 
 @mixin font1Regular {
-    font-family: $font1Family;
-    font-weight: 400;
+  font-family: $font1Family;
+  font-weight: 400;
 }
 
 @mixin font1Medium {
-    font-family: $font1Family;
-    font-weight: 500;
+  font-family: $font1Family;
+  font-weight: 500;
 }
 
 @mixin font1Bold {
-    font-family: $font1Family;
-    font-weight: 700;
+  font-family: $font1Family;
+  font-weight: 700;
 }
 
 @mixin titleFont {
-    @include font1Bold;
-    @include rem('font-size', 22px);
-    @include rem('line-height', 24px);
+  @include font1Bold;
+  @include rem('font-size', 22px);
+  @include rem('line-height', 24px);
 }
 
 @mixin subtitleFont {
-    @include font1Bold;
-    @include rem('font-size', 18px);
-    @include rem('line-height', 20px);
+  @include font1Bold;
+  @include rem('font-size', 18px);
+  @include rem('line-height', 20px);
 }
 
 @mixin previewTitleFont {
-    @include font1Bold;
-    @include rem('font-size', 18px);
-    @include rem('line-height', 22px);
+  @include font1Bold;
+  @include rem('font-size', 18px);
+  @include rem('line-height', 22px);
 }
 
 @mixin previewSubtitleFont {
-    @include font1Bold;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Bold;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 @mixin previewSecondaryContentFont {
-    @include font1Medium;
-    @include rem('font-size', 16px);
-    @include rem('line-height', 18px);
+  @include font1Medium;
+  @include rem('font-size', 16px);
+  @include rem('line-height', 18px);
 }
 
 @mixin secondaryContentFont {
-    @include font1Regular;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Regular;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 /* Fonts for specific elements */
@@ -227,118 +239,118 @@ $font1Family: Roboto, -apple-system, sans-serif;
 /* Menu */
 
 @mixin menuLinkFont {
-    @include font1Regular;
-    @include rem('font-size', 16px);
+  @include font1Regular;
+  @include rem('font-size', 16px);
 
-    @include tabletBreakpoint {
-        @include font1Medium;
-        @include rem('font-size', 15px);
-        @include rem('letter-spacing', 1px);
-        @include rem('line-height', 17px);
-    }
+  @include tabletBreakpoint {
+    @include font1Medium;
+    @include rem('font-size', 15px);
+    @include rem('letter-spacing', 1px);
+    @include rem('line-height', 17px);
+  }
 }
 
 /* Footer */
 
 @mixin footerFont {
-    @include font1Regular;
-    @include rem('font-size', 16px);
-    @include rem('line-height', 18px);
+  @include font1Regular;
+  @include rem('font-size', 16px);
+  @include rem('line-height', 18px);
 }
 
 /* Product */
 
 @mixin productTitleFont {
-    @include font1Bold;
-    @include rem('font-size', 20px);
-    @include rem('line-height', 22px);
+  @include font1Bold;
+  @include rem('font-size', 20px);
+  @include rem('line-height', 22px);
 }
 
 @mixin productSubtitleFont {
-    @include font1Bold;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Bold;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 /* Pack */
 
 @mixin packSubtitleFont {
-    @include font1Bold;
-    @include rem('font-size', 18px);
-    @include rem('line-height', 20px);
+  @include font1Bold;
+  @include rem('font-size', 18px);
+  @include rem('line-height', 20px);
 }
 
 /* Tags */
 
 @mixin tagFont {
-    @include font1Regular;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Regular;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 /* Breadcrumbs */
 
 @mixin breadcrumbFont {
-    @include font1Regular;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Regular;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 /* Button */
 
 @mixin buttonFont {
-    @include font1Regular;
-    @include rem('font-size', 16px);
-    @include rem('line-height', 18px);
-    letter-spacing: 0;
+  @include font1Regular;
+  @include rem('font-size', 16px);
+  @include rem('line-height', 18px);
+  letter-spacing: 0;
 }
 
 /* Checkout */
 
 @mixin checkoutPriceFont {
-    @include font1Bold;
-    @include rem('font-size', 18px);
-    @include rem('line-height', 20px);
+  @include font1Bold;
+  @include rem('font-size', 18px);
+  @include rem('line-height', 20px);
 }
 
 @mixin largeCheckoutFont {
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
-};
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
+}
 
 @mixin checkoutDiscountFont {
-    @include font1Regular;
-    @include rem('font-size', 12px);
-    @include rem('line-height', 14px);
+  @include font1Regular;
+  @include rem('font-size', 12px);
+  @include rem('line-height', 14px);
 }
 
 @mixin checkoutSelectFont {
-    @include font1Regular;
+  @include font1Regular;
 
+  @include largeCheckoutFont;
+
+  @include tabletBreakpoint {
+    @include rem('font-size', 12px);
+    @include rem('line-height', 14px);
+  }
+
+  @include narrowDesktopBreakpoint {
     @include largeCheckoutFont;
-
-    @include  tabletBreakpoint {
-        @include rem('font-size', 12px);
-        @include rem('line-height', 14px);
-    }
-
-    @include narrowDesktopBreakpoint {
-        @include largeCheckoutFont;
-    }
+  }
 }
 
 @mixin cartFont {
-    @include font1Regular;
-    @include rem('font-size', 12px);
-    @include rem('line-height', 14px);
+  @include font1Regular;
+  @include rem('font-size', 12px);
+  @include rem('line-height', 14px);
 }
 
 /* Disclaimer */
 
 @mixin disclaimerFont {
-    @include font1Regular;
-    @include rem('font-size', 14px);
-    @include rem('line-height', 16px);
+  @include font1Regular;
+  @include rem('font-size', 14px);
+  @include rem('line-height', 16px);
 }
 
 /* THEME */
@@ -355,17 +367,20 @@ $navbarOverlayOpacity: 0.5;
 /* Link */
 
 @mixin linkPadding {
-    @include remValues('padding', 4px, 2px, 4px, 2px);
+  @include remValues('padding', 4px, 2px, 4px, 2px);
 }
 
 @mixin linkText {
-    &, &:hover, &:focus {
-        color: $brandingColor11;
-    }
+  &,
+  &:hover,
+  &:focus {
+    color: $brandingColor11;
+  }
 
-    &:hover, &:focus {
-        text-decoration: underline;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 /* Bundles */
@@ -382,44 +397,31 @@ $packBoxShadowHover: 0 0 12px $brandingColor13;
 /* Product */
 
 @mixin productBlock {
-    border: 1px solid $brandingColor6;
-    @include rem('border-radius', 4px);
-    background-color: $brandingColor1;
+  border: 1px solid $brandingColor6;
+  @include rem('border-radius', 4px);
+  background-color: $brandingColor1;
 }
 
 @mixin productPadding {
-    @include remValues('padding', 36px, 16px, 16px, 16px);
+  @include remValues('padding', 36px, 16px, 16px, 16px);
 }
 
 @mixin productBlockMargin {
-    @include rem('margin-top', 16px);
+  @include rem('margin-top', 16px);
 }
 
 @mixin productSubtitle {
-    @include productSubtitleFont;
-    text-transform: uppercase;
+  @include productSubtitleFont;
+  text-transform: uppercase;
 }
 
 @mixin productInfoSubtitle {
-    @include productSubtitleFont;
+  @include productSubtitleFont;
 }
 
 /* Product preview */
 
 $productPreviewOverlayOpacity: 0.75;
-
-/* Images */
-
-@mixin imagePlaceholder {
-    width: 100%;
-    height: 100%;
-
-    &:after {
-        content: "";
-        display: block;
-        padding-bottom: 100%;
-    }
-}
 
 /* Image gallery */
 
@@ -432,7 +434,7 @@ $imageGalleryOverlayIconOpacity: 0.9;
 /* Button's border */
 
 @mixin buttonBorder {
-    border-width: 2px;
-    border-style: solid;
-    @include rem('border-radius', 4px);
+  border-width: 2px;
+  border-style: solid;
+  @include rem('border-radius', 4px);
 }

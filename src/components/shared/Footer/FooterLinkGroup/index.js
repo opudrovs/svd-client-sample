@@ -1,3 +1,1 @@
-import FooterLinkGroup from './FooterLinkGroup';
-
-export default FooterLinkGroup;
+export { default } from './FooterLinkGroup.jsx';

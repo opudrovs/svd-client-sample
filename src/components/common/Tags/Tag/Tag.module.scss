@@ -1,14 +1,14 @@
 .tag {
-    overflow: hidden;
-    max-width: 100%;
-    @include remValues('padding', 4px, 8px, 4px, 8px);
-    border: 1px solid $brandingColor13;
-    @include rem('border-radius', 4px);
-    @include rem('margin-bottom', 4px);
-    @include rem('margin-left', 4px);
-    color: #333;
-    @include tagFont;
-    text-align: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  @include remValues('padding', 4px, 8px, 4px, 8px);
+  border: 1px solid $brandingColor13;
+  @include rem('border-radius', 4px);
+  @include rem('margin-bottom', 4px);
+  @include rem('margin-left', 4px);
+  color: #333;
+  @include tagFont;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

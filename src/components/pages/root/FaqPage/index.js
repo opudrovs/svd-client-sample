@@ -1,3 +1,1 @@
-import FaqPage from './FaqPage';
-
-export default FaqPage;
+export { default } from './FaqPage.jsx';

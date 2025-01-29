@@ -1,123 +1,125 @@
 .footer {
-    background-color: $brandingColor5;
-    @include footerFont;
+  background-color: $brandingColor5;
+  @include footerFont;
 }
 
 .footerPadding {
-    @include rem('padding-top', 20px);
-    @include rem('padding-bottom', 196px);
+  @include rem('padding-top', 20px);
+  @include rem('padding-bottom', 196px);
 
-    @include tabletBreakpoint {
-        @include rem('padding-right', 15px);
-        @include rem('padding-bottom', 168px);
-        @include rem('padding-left', 15px);
-    }
+  @include tabletBreakpoint {
+    @include rem('padding-right', 15px);
+    @include rem('padding-bottom', 168px);
+    @include rem('padding-left', 15px);
+  }
 }
 
 .logo {
-    @include rem('height', 40px);
-    @include linkPadding;
+  @include rem('height', 40px);
+  @include linkPadding;
 }
 
 .links {
-    @include rem('margin-top', 54px);
+  @include rem('margin-top', 54px);
+
+  @include tabletBreakpoint {
+    margin-top: 0;
+  }
+
+  .linkContainer:not(:last-child) {
+    @include rem('margin-bottom', 15px);
 
     @include tabletBreakpoint {
-        margin-top: 0;
+      @include rem('margin-bottom', 10px);
     }
-
-    .linkContainer:not(:last-child) {
-        @include rem('margin-bottom', 15px);
-
-        @include tabletBreakpoint {
-            @include rem('margin-bottom', 10px);
-        }
-    }
+  }
 }
 
 .link {
-    color: $brandingColor3;
+  color: $brandingColor3;
 
-    &:hover {
-        color: $brandingColor1;
-    }
+  &:hover {
+    color: $brandingColor1;
+  }
 }
 
 .linkIcon {
-    @include rem('margin-left', 12px);
+  @include rem('margin-left', 12px);
 
-    & > svg {
-        @include rem('width', 16px);
-        height: auto;
-    }
+  & > svg {
+    @include rem('width', 16px);
+    height: auto;
+  }
 }
 
 .secondaryContent {
-    @include rem('margin-top', 54px);
+  @include rem('margin-top', 54px);
+  display: flex;
+  flex-wrap: wrap;
 
-    @include tabletBreakpoint {
-        @include rem('margin-top', 32px);
-    }
+  @include tabletBreakpoint {
+    @include rem('margin-top', 32px);
+  }
 }
 
 .secondaryText {
-    color: $brandingColor3;
-    @include secondaryContentFont;
+  color: $brandingColor3;
+  @include secondaryContentFont;
 }
 
 $narrowHorizontalLinkMarginPx: 8px;
 $horizontalLinkMarginPx: 16px;
 
 .secondaryLink {
-    color: $brandingColor3;
-    @include secondaryContentFont;
-    text-align: center;
+  color: $brandingColor3;
+  @include secondaryContentFont;
+  text-align: center;
+
+  svg {
+    fill: $brandingColor3;
+  }
+
+  &:not(:first-child) {
+    @include rem('margin-left', $narrowHorizontalLinkMarginPx);
+
+    @include mobileBreakpoint {
+      @include rem('margin-left', $horizontalLinkMarginPx);
+    }
+  }
+
+  @include tabletBreakpoint {
+    @include rem('margin-left', $horizontalLinkMarginPx);
+  }
+
+  @include narrowDesktopBreakpoint {
+    text-align: left;
+  }
+
+  &:hover {
+    color: $brandingColor1;
 
     svg {
-        fill: $brandingColor3;
-    }
-
-    &:not(:first-child) {
-        @include rem('margin-left', $narrowHorizontalLinkMarginPx);
-
-        @include mobileBreakpoint {
-            @include rem('margin-left', $horizontalLinkMarginPx);
-        }
+      fill: $brandingColor1;
     }
 
     @include tabletBreakpoint {
-        @include rem('margin-left', $horizontalLinkMarginPx);
+      text-decoration: underline;
     }
-
-    @include narrowDesktopBreakpoint {
-        text-align: left;
-    }
-
-    &:hover {
-        color: $brandingColor1;
-
-        svg {
-            fill: $brandingColor1;
-        }
-
-        @include tabletBreakpoint {
-            text-decoration: underline;
-        }
-    }
+  }
 }
 
 .copyright {
-    text-align: center;
+  text-align: center;
 
-    @include tabletBreakpoint {
-        @include rem('min-width', 360px);
-    }
+  @include tabletBreakpoint {
+    @include rem('min-width', 360px);
+  }
 
-    @include narrowDesktopBreakpoint {
-        min-width: auto;
-    }
+  @include narrowDesktopBreakpoint {
+    min-width: auto;
+  }
 
-    @include maxTabletBreakpoint {
-        @include rem('margin-top', 20px);
-    }
+  @include maxTabletBreakpoint {
+    @include rem('margin-top', 20px);
+  }
 }
